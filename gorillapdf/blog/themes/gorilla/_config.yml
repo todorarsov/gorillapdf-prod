@@ -1,0 +1,10 @@
+# Header
+menu:
+  Home: /
+  Archives: /archives
+
+rss: /atom.xml
+
+# Read More text
+excerpt_link: Read More
+fancybox: true

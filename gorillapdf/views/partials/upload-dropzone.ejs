@@ -1,0 +1,75 @@
+<div class="upload-dropzone-wrapper">
+    <div id="dropzone-container">
+        <span class="upload-description">
+<span class="badge badge-pill bg-warning">
+<%=pageData.cardTitle%>
+</span>
+        </span>
+        <input id="fileToBeProcessed" type="file" data-pdf-component-extra-params="toolbar=0&navpanes=0&scrollbar=0&view=fitW" />
+    </div>
+    <% if(pageData.serviceName==="password-protect-pdf" ){ %>
+        <div class="enter-pwd el-display-none">
+            <label for="pwd">
+<%=root.upload.enterPassword%>
+</label>
+            <input type="password" autocomplete="false" class="form-control" name="pwd" id="pwd" placeholder="<%=root.upload.passwordMinLength%>">
+        </div>
+        <% } %>
+            <% if(pageData.serviceName==="unlock-pdf" ){ %>
+                <div class="enter-decpwd el-display-none">
+                    <div class='alert alert-warning'>
+                        <span><i class="fa fa-bell" aria-hidden="true"></i>
+  <%=root.upload.weDidOurBest%>
+</div>
+<input type="password" class="form-control" name="decpwd" id="decpwd" autocomplete="false"
+placeholder="<%=root.upload.passwordExisting%>">
+</div>
+<%}%>
+<% if(pageData.serviceName==="compress-pdf" ){ %>
+<div class="enter-compression-type el-display-none">
+  <select class="form-control" name="compression" id="compression">
+    <option value="low">
+      <%=root.upload.lowCompression%>
+    </option>
+    <option value="medium">
+      <%=root.upload.mediumCompression%>
+    </option>
+    <option value="high">
+      <%=root.upload.highCompression%>
+    </option>
+    <option value="very high">
+      <%=root.upload.veryHighCompression%>
+    </option>
+  </select>
+</div>
+<%}%>
+
+  <div id="convert-buttons">
+    <button type="button" id="submit-btn" onClick="gorillaHelper.submitData()"
+      class="btn btn-danger el-display-none btn-lg el-margin-top-10">
+      <i class="fa fa-cog"></i>
+      <% switch (pageData.serviceName) { case "password-protect-pdf" : %>
+        <%=root.services.passwordprotectpdf.text%>
+          <% break; case "unlock-pdf" : %>
+            <%=root.services.unlockpdf.text%>
+              <% break; case "merge-pdf" : %>
+                <%=root.services.mergepdf.text%>
+                  <% break; case "compress-pdf" : %>
+                    <%=root.services.compresspdf.text%>
+                      <% break; default: %>
+                        <%=root.index.convertBtn%>
+                          <% break; }%>
+    </button>
+    <button type="button" id="start-over-new" onclick="window.location.reload()"
+      class="btn btn-outline-danger btn-lg">
+      <i class="fa fa-plus-circle"></i>
+      <%=root.upload.startOver%>
+    </button>
+  </div>
+  <div id="postDataStatus">
+    <progress id="progressBar" class="el-display-none" value="0" max="100"></progress>
+    <div id="status"></div>
+  </div>
+  <input type="hidden" id="processCompleteHidden" value="" />
+  <input type="hidden" id="fileUploadedPath" value="" />
+</div>

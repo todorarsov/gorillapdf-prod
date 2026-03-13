@@ -1,0 +1,24 @@
+<div class="card">
+    <div class="card-body">
+        <strong class="card-title">
+Enter valid URL so we can transform to PDF
+</strong>
+        <p class="card-text el-margin-top-15">
+            Just be sure to enter valid URL and we will do the magic in a couple of seconds
+        </p>
+        <form action="<%=pageData.serviceName%>" enctype="multipart/form-data" method="POST">
+            <div class="custom-file mb-3">
+                <input type="text" id="urlToBeProcessed" name="urlToBeProcessed" class="form-control" value="http://gorillapdf.com" />
+            </div>
+            <div class="client-validation-size-message el-display-none">
+                <div class='alert alert-danger'>
+                    <strong><i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+<%=root.upload.uploadFileMax%>
+</strong>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>
+<% include buttons-without-upload-control %>

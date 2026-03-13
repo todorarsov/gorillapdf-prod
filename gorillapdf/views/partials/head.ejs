@@ -1,0 +1,375 @@
+<style>
+    .cookie-popup {
+        display: none;
+	    position: fixed;
+        bottom: 0;
+		left: 0;
+		z-index: 9999;
+		box-sizing: border-box;
+		width: 100%;
+        background-color: #333;
+        color: #fff;
+        z-index: 9999;
+        }
+		.cookie-popup-inner {
+        max-width: 960px;
+		margin: 0 auto;
+		padding: 30px;
+        }
+		.cookie-popup-description {}
+		.cookie-popup-inner-copy {margin-bottom: 16px;}
+		.cookie-popup-inner-description {font-weight: normal;color: #fff;font-size: 16px;line-height: 24px;}
+		.cookie-popup-banner-actions {}
+
+    .cookie-settings-popup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+       width: 100%;
+        transform: translate(-50%, -50%);
+        background-color: #212121;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+        z-index: 9999;
+        /* Set a high z-index value */
+        border-radius: 10px;
+        /* Add border-radius for rounded corners */
+        font-size: small
+    }
+	
+	.cookie-settings-popup .nav-tabs .nav-link.active {color: #212121 !important;}
+	.cookie-settings-popup .tab-content > .active {display: block;background: #ffffff;color: #000000;}
+	.cookie-settings-popup .tab-pane {line-height: 20px;padding: 20px;text-align:left;}
+    .cookie-settings-popup-inner {max-width: 960px;margin: 0 auto;padding: 32px 0;}
+
+    .cookie-popup button {
+        color: white;
+        padding: 5px 10px;
+        border: none;
+        cursor: pointer;
+        margin: 3px;
+        border-radius: 3px;
+    }
+
+    .cookie-popup button.common {
+        background-color: #878b87;
+        /* Gray*/
+    }
+
+    .cookie-popup button.accept {
+        background-color: #4CAF50;
+        /* Green */
+    }
+
+    .cookie-settings-popup ul {
+        list-style: none;
+        /* Remove default list styles (bullets) */
+        padding: 0;
+        /* Remove default padding */
+        margin: 0;
+        /* Remove default margin */
+    }
+
+    .cookie-settings-popup ul li {
+        margin-bottom: 10px;
+        /* Add spacing between list items if needed */
+    }
+
+
+    .cookie-settings-popup label {
+       display: block;
+	   margin: 15px auto;
+       text-align: center;
+    }
+
+    .cookie-settings-popup button {
+        background-color: #4CAF50;
+        /* Green */
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        margin: 30px 0px 0px 0px;
+        border-radius: 5px;
+    }
+
+    /* Disable style for buttons in the settings popup */
+    .cookie-settings-popup button:disabled {
+        background-color: #808080;
+        /* Gray */
+        cursor: not-allowed;
+    }
+
+    .close-icon {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 20px;
+        cursor: pointer;
+        color: #fff;
+    }
+
+    .desc-section {
+      /*  background-color: rgb(103 102 102 / 80%); */
+        padding: 15px;
+        margin-bottom: 5px;
+        border-radius: 5px;
+    }
+
+    .cookie-settings-popup label {
+        display: block;
+        margin-bottom: 10px;
+    }
+</style>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="msvalidate.01" content="F0D3E23A6481C3A733E5A1B62C65EE3E" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+<link href="/stylesheets/style.css" rel="stylesheet">
+<!-- <link href="/stylesheets/style.min.css" rel="stylesheet"> -->
+<link rel="stylesheet" href="/stylesheets/notyf.min.css">
+<link href="/stylesheets/filepond.css" rel="stylesheet" />
+
+<script src="/javascripts/notyf.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/ejs@3.1.9/ejs.min.js"></script>
+<script src="/javascripts/axios.min.js"></script>
+<script src="/javascripts/gorillaHelper.js"></script>
+<!-- <script src="/javascripts/gorillaHelper.min.js"></script> -->
+<script src="/javascripts/filepond-plugins.min.js"></script>
+<script src="/javascripts/filepond.min.js"></script>
+<script src="/javascripts/bootstrap.min.js" defer></script>
+<!--
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-154777132-1"></script>
+ <script>window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'UA-154777132-1');</script>
+ <script data-ad-client="ca-pub-3282126219211438" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3282126219211438"
+    crossorigin="anonymous"></script> -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3282126219211438" crossorigin="anonymous"></script>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-868HMX7EQ1"></script>
+
+<script>
+    // Define dataLayer and the gtag function.
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    
+    // Set default consent to 'denied' as a placeholder
+    // Determine actual values based on your own requirements
+    gtag('consent', 'default', {
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
+      'analytics_storage': 'granted'
+    });
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-868HMX7EQ1">
+    </script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+    
+      gtag('js', new Date());
+      gtag('config', 'G-868HMX7EQ1');
+    </script>
+
+<script>
+
+    const storedPreferences = JSON.parse(localStorage.getItem('consentManagerData')) || {};
+
+    const hasMadeChangesBefore = localStorage.getItem('hasMadeChangesBefore');
+
+if (!hasMadeChangesBefore) {
+
+    document.addEventListener('DOMContentLoaded', function () {
+        var cookiePopup = document.getElementById('cookiePopup');
+        if (cookiePopup) {
+            cookiePopup.style.display = 'block';
+        }
+    });
+}
+
+    gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'analytics_storage': 'granted'
+    });
+
+    (function () {
+        const script = document.createElement('script');
+        script.async = true;
+        script.src = 'https://www.googletagmanager.com/gtag/js?id=G-868HMX7EQ1';
+        document.head.appendChild(script);
+    })();
+
+
+    function updateLocalStorage() {
+        localStorage.setItem('consentManagerData', JSON.stringify(storedPreferences));
+    }
+
+    function consentGrantedAdStorage() {
+        const adScript = document.createElement('script');
+            adScript.dataset.adClient = 'ca-pub-3282126219211438';
+            adScript.async = true;
+            adScript.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js';
+            document.head.appendChild(adScript);
+
+            gtag('consent', 'default', {
+                'ad_storage': 'granted',
+                'ad_user_data': 'granted',
+                'ad_personalization': 'granted',
+            });
+    }
+
+    function consentDeniedAdStorage() {
+        gtag('consent', 'update', {
+            'ad_storage': 'denied',
+            'ad_user_data': 'denied',
+            'ad_personalization': 'denied'
+        });
+    }
+
+    function consentGrantedAnalyticsStorage() {
+        gtag('consent', 'update', {
+            'analytics_storage': 'granted'
+        });
+    }
+
+    function consentDeniedAnalyticsStorage() {
+        gtag('consent', 'update', {
+            'analytics_storage': 'denied'
+        });
+    }
+
+
+    function showCookieSettings() {
+        const cookieSettingsPopup = document.getElementById('cookieSettingsPopup');
+        if (cookieSettingsPopup) {
+            const analyticsCheckbox = document.getElementById('analyticsCheckbox');
+            const adCheckbox = document.getElementById('adCheckbox');
+
+            if (!hasMadeChangesBefore) {
+                analyticsCheckbox.checked = true;
+                adCheckbox.checked = true;
+            } else {
+                analyticsCheckbox.checked = storedPreferences.states?.analytics;
+                adCheckbox.checked = storedPreferences.states?.ad;
+            }
+
+            cookieSettingsPopup.style.display = 'block';
+        }
+    }
+
+    function saveCookieSettings() {
+        const analyticsEnabled = document.getElementById('analyticsCheckbox').checked;
+        const adEnabled = document.getElementById('adCheckbox').checked;
+
+        storedPreferences.states = {
+            analytics: analyticsEnabled,
+            ad: adEnabled,
+        };
+        storedPreferences.allAccepted = true;
+        storedPreferences.timestamp = Date.now();
+
+        updateLocalStorage();
+
+        if (analyticsEnabled) {
+            gtag('consent', 'default', {
+                'analytics_storage': 'granted'
+            });
+        } else {
+            gtag('consent', 'default', {
+                'analytics_storage': 'denied'
+            });
+        }
+
+        if (adEnabled) {
+            consentGrantedAdStorage()
+
+        } else {
+            gtag('consent', 'default', {
+                'ad_storage': 'denied',
+                'ad_user_data': 'denied',
+                'ad_personalization': 'denied',
+            });
+        }
+
+        const cookieSettingsPopup = document.getElementById('cookieSettingsPopup');
+        if (cookieSettingsPopup) {
+            cookieSettingsPopup.style.display = 'none';
+        }
+
+        localStorage.setItem('hasMadeChangesBefore', true);
+        closeCookiePopup();
+    }
+
+    function acceptRecommendedCookies() {
+    storedPreferences.allAccepted = true;
+    storedPreferences.timestamp = Date.now();
+    localStorage.setItem('hasMadeChangesBefore', true);
+    includeAllScripts();
+    storedPreferences.states = {
+        analytics: true,
+        ad: true,
+    };
+    updateLocalStorage();
+
+    // Check if the user has made changes before and update the consent accordingly
+    if (hasMadeChangesBefore) {
+        // User has made changes before, update the consent
+        if (storedPreferences.states.analytics) {
+            consentGrantedAnalyticsStorage();
+        } else {
+            consentDeniedAnalyticsStorage();
+        }
+
+        if (storedPreferences.states.ad) {
+            consentGrantedAdStorage();
+        } else {
+            consentDeniedAdStorage();
+        }
+    }
+
+    const cookiePopup = document.getElementById('cookiePopup');
+    if (cookiePopup) {
+        cookiePopup.style.display = 'none';
+    }
+
+    closeCookieSettingsPopup();
+}
+
+    function includeAllScripts() {
+        const adScript = document.createElement('script');
+            adScript.dataset.adClient = 'ca-pub-3282126219211438';
+            adScript.async = true;
+            adScript.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js';
+            document.head.appendChild(adScript);
+        gtag('consent', 'default', {
+            'ad_user_data': 'granted',
+            'ad_storage': 'granted',
+            'ad_personalization': 'granted',
+            'analytics_storage': 'granted'
+        });
+    }
+
+    function closeCookiePopup() {
+        const cookiePopup = document.getElementById('cookiePopup');
+        if (cookiePopup) {
+            cookiePopup.style.display = 'none';
+        }
+    }
+
+    function closeCookieSettingsPopup() {
+        var cookiePopup = document.getElementById('cookieSettingsPopup');
+        if (cookiePopup) {
+            cookiePopup.style.display = 'none';
+        }
+    }
+
+</script>
+
+

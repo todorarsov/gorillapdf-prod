@@ -1,0 +1,61 @@
+<%
+  var title = page.title;
+
+  if (is_archive()){
+    title = __('archive');
+
+    if (is_month()){
+      title += ': ' + page.year + '/' + page.month;
+    } else if (is_year()){
+      title += ': ' + page.year;
+    }
+  } else if (is_category()){
+    title = __('category') + ': ' + page.category;
+  } else if (is_tag()){
+    title = __('tag') + ': ' + page.tag;
+  }
+  
+  var description = '';
+
+  if (page.description) {
+    description = page.description;
+  } else if (page.excerpt) {
+    description = page.excerpt
+                      .replace(/<[^>]*>?/gm, ' ')
+                      .substring(0, 155)
+                      .trim();
+  }
+
+_%>
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-52F8638');</script>
+<!-- End Google Tag Manager -->
+<meta name="google-site-verification" content="zd1T-vVHT7ANiuiw7Tw5ayKf2D_Har3lxZgVNGtf0nE" />
+<meta name="msvalidate.01" content="F0D3E23A6481C3A733E5A1B62C65EE3E" />
+  <%- partial('meta/html') %>
+  <title><%= title || config.title %></title>
+  <% if (theme.favicon){ %>
+     <link href="<%- theme.favicon %>" rel="shortcut icon" type="image/x-icon" />
+  <% } %>
+  <%- canonicalLink(config, page) %>
+  <%- partial('meta/seo', {description: description}) %>  
+  <%- partial('meta/opengraph', {title: title, description: description}) %>
+  <%- partial('meta/twitter', {title: title, description: description}) %>
+  <%/* unused */%>
+   <%- css('bootstrap/css/bootstrap.min.css') %>
+   <!-- Custom styles for this template -->
+    <style>body{font-family:Georgia,"Times New Roman",Times,serif;color:#141414}p,img{margin-bottom:1.6666em}h1{font-size:3rem}h4{font-size:1.3rem}h1,h4{margin-top:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Roboto','Helvetica Neue',Arial,sans-serif;font-weight:800;color:#0c0c0c}@media only screen and (max-width:767px){.navbar-brand img{width:55px!important;position:absolute;top:0px;left:15px!important}h1{font-size:2rem}h4{font-size:1.2rem}}.bg-dark{background:#db1820!important}.navbar-brand img{width:100px;position:absolute;top:0px;left:46.6%}.navbar-nav{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Roboto','Helvetica Neue',Arial,sans-serif;font-weight:bold}.blog-main{font-size:18px;line-height:1.5}.sidebar-module{padding:15px;margin:0 -15px 15px}.sidebar-module-inset{padding:15px;background-color:#f5f5f5;border-radius:4px}.sidebar-module-inset p:last-child{margin-bottom:0}.blog-post{margin-bottom:60px}.blog-post-title{margin-bottom:5px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Roboto','Helvetica Neue',Arial,sans-serif;font-weight:900}.blog-post-meta{margin-bottom:20px;color:#999}.btn-warning{background-color:none!important;border-color:#ffc107!important}.contain-pad{margin-top:50px}</style>
+	<link rel="preload" href="/blog/css/blog.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<link rel="preload" href="/blog/bootstrap/css/all.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<!-- <link href="https://fonts.googleapis.com/css?family=Montserrat:700,900" rel="stylesheet"> -->
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+</head>

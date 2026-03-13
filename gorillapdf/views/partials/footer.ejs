@@ -1,0 +1,141 @@
+<% var lang=root.lang%>
+<% var langCode= lang==="en" ? "" : "/"+lang %>
+<footer class="page-footer font-small blue pt-4">
+    <div class="bg-custom mt-5 pt-30 pt-60 pb-5">
+       <div class="row">
+	   <div class="col-md-12 text-center">
+          <a rel="noopener noreferrer" href="https://www.facebook.com/Gorillapdf/" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+          <a rel="noopener noreferrer" href="https://twitter.com/GorillaPdf" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
+          <a rel="noopener noreferrer" href="https://www.linkedin.com/company/gorillapdf" aria-label="LinkedIn"><i class="fa fa-linkedin"></i></a>
+		</div>
+		<div class="col-md-12 p-5">
+          <div class="row">
+            <div class="col-md-3">
+              <span><%=root.footer.about%></span>
+              <p class="pt-4"><%=root.footer.messagePart1%><br/>
+			  <%=root.footer.messagePart2%>
+			 </p>
+            </div>
+            <div class="col-md-3">
+              <span><%=root.footer.info%></span>
+              <ul>
+                <li><a href="/<%=root.index.url%>"><%=root.index.text%></a></li>
+                <li><a href="/<%=root.about.url%>"><%=root.footer.about%></a></li>
+                <li><a href="/<%=root.contact.url%>"><%=root.footer.contact%></a></li>
+                <%if(lang ==="en"){ %>
+                  <li><a  href="/<%=root.blog.url%>"><%=root.footer.blog%></a></li>
+                  <li><a href="/careers">Careers</a></li>
+              <% } %>
+
+				<li><a href="<%=langCode%>/sitemap"><%=root.footer.sitemap%></a></li>
+              </ul>
+            </div>
+            <div class="col-md-3">
+              <span><%=root.footer.tools%></span>
+              <ul>
+                <li><a href="/<%=root.terms.url%>"><%=root.footer.terms%></a></li>
+                <li><a href="/<%=root.privacy.url%>"><%=root.footer.privacy%></a></li>
+                <li><a href="#" id="openCookiePopupLink"><%=root.cookieSettings%></a></li>
+              </ul>
+            </div>
+            <div class="col-md-3 mobile-none">
+			  <span><%=root.footer.signup%></span>
+              <div class="input-group mb-3">
+              <a href="http://eepurl.com/hcBV7v" target="_blank" role="button" rel="nofollow noopener" class="btn btn-outline-warning"><%=root.footer.subscribe%></a>
+                   </div>
+              </div>
+          </div>
+        </div>
+       </div>
+    </div>
+    <div class="row bg-bottom">
+      <div class="col-md-12">
+        <p class="text-center pt-2 mb-2"><%=(root.footer.copyright)%><i class="fa fa-tree fa-lg" aria-hidden="true"></i></p>
+      </div>
+    </div>
+</footer>
+<!-- <script>!function(t,h,e,j,s,n){t.hj=t.hj||function(){(t.hj.q=t.hj.q||[]).push(arguments)},t._hjSettings={hjid:2094635,hjsv:6},s=h.getElementsByTagName("head")[0],(n=h.createElement("script")).async=1,n.src="https://static.hotjar.com/c/hotjar-"+t._hjSettings.hjid+".js?sv="+t._hjSettings.hjsv,s.appendChild(n)}(window,document);</script>
+<script id="cookieinfo" src="/javascripts/cookieinfo.min.js" defer></script> 
+-->
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+      let openCookiePopupLink = document.getElementById('openCookiePopupLink');
+      let cookiePopup = document.getElementById('cookieSettingsPopup');
+
+      let storedPreferences = JSON.parse(localStorage.getItem('consentManagerData')) || {};
+      let hasMadeChanges = localStorage.getItem('hasMadeChangesBefore');
+    
+
+      if (openCookiePopupLink && cookiePopup) {
+        let analyticsCheckbox = document.getElementById('analyticsCheckbox');
+        let adCheckbox = document.getElementById('adCheckbox');
+
+        // If it's the user's first time, set checkboxes to default checked state
+        if (!hasMadeChanges) {
+            analyticsCheckbox.checked = true;
+            adCheckbox.checked = true;
+        } else {
+            // Otherwise, set the checked state based on stored preferences
+            analyticsCheckbox.checked = storedPreferences.states && storedPreferences.states.analytics;
+            adCheckbox.checked = storedPreferences.states && storedPreferences.states.ad;
+        }
+          openCookiePopupLink.addEventListener('click', function (event) {
+              event.preventDefault(); // Prevent the default anchor behavior
+
+              // Show the cookiePopup
+              cookiePopup.style.display = 'block';
+          });
+      }
+  });
+</script>
+
+<script src="/javascripts/rater.js"></script>
+
+<div class="cookie-popup" id="cookiePopup">
+<div class="cookie-popup-inner">
+<div class="cookie-popup-copy">
+<div class="cookie-popup-description">
+    <p><%=root.privacy.coo1%></p>
+	<p><%=root.privacy.coo2%><a href="https://gorillapdf.com/<%=root.privacy.url%>"><%=root.privacy.anchorTitle%></a>.</p>
+</div>        
+</div>
+<div class="cookie-popup-banner-actions">
+        <button class="common" onclick="showCookieSettings()">
+            <%=root.cookieSettings%>
+        </button>
+        <button class="accept" id="acceptAllButton" onclick="acceptRecommendedCookies()">
+            <%=root.acceptRecommended%>
+        </button>
+</div>
+</div>
+</div>
+<div class="cookie-settings-popup" id="cookieSettingsPopup">
+<div class="cookie-settings-popup-inner">
+    <span class="close-icon" onclick="closeCookieSettingsPopup()">&times;</span>
+    <span>
+        <%=root.cookieSettings%>
+    </span>
+    <div class="desc-section">
+         <%=root.privacy.copo1%>
+    </div>
+    	<!-- Nav tabs -->
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" id="analytics-tab" data-toggle="tab" href="#analytics" role="tab" aria-controls="analytics" aria-selected="true">Measurement</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="advertising-tab" data-toggle="tab" href="#advertising" role="tab" aria-controls="advertising" aria-selected="false">Advertising</a>
+  </li>
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content">
+  <div class="tab-pane active" id="analytics" role="tabpanel" aria-labelledby="analytics-tab"><%=root.privacy.copo2%><label><input type="checkbox" id="analyticsCheckbox" checked> Google Analytics</label></div>
+  <div class="tab-pane" id="advertising" role="tabpanel" aria-labelledby="advertising-tab"><%=root.privacy.copo3%><label><input type="checkbox" id="adCheckbox" checked> Google AdSense</label></div>
+</div>
+    <button onclick="saveCookieSettings()">
+        <%=root.saveSettings%>
+    </button>
+</div>
+</div>

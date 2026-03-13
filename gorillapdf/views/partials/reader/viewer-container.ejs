@@ -1,0 +1,23 @@
+<div id="viewerContainer" tabindex="0">
+    <div id="viewer" class="pdfViewer"></div>
+    <div id="open">
+    <p><i class="material-icons">description</i></p>
+    <p><%=root.services.pdfreader.dragAndDrop%></p>
+    <p><i class="material-icons">get_app</i></p>
+    <p>or</p>
+    <p>&nbsp;</p>
+    <p id="btns">
+    <button type="button" id="openFile2" title="Open File" aria-label="Open File" class="btn btn-light"><i class="material-icons">folder_open</i> <%=root.services.pdfreader.openPdfFile%></button>
+    </p>
+    <div class="collapse" id="collapseOpenURL">
+    </div>
+    <div class="card card-body mt-5" id="cardOpenURL">
+    <div class="input-group input-group-lg">
+    <input type="text" id="openurl" class="form-control" placeholder="https://www.example.com/file.pdf" spellcheck="false">
+    <div class="input-group-append">
+    <button type="button" id="geturlbtn" onclick="gorillaHelper.OnGetURL()" aria-label="Open URL" title="Open URL" class="btn btn-outline-secondary"><%=root.services.pdfreader.open%></button>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<% var language= root.lang%> 
+<% var convertBtn= root.index.convertBtn%>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title><%=root.services.mergepdf.headTitle%> </title>
+    <meta name="description" content="<%=root.services.mergepdf.metaTitle%>">
+    <link rel="canonical" href="<%=root.domain%><%=root.services.mergepdf.url%>" />
+	<script type="application/ld+json"> {"@context": "https://schema.org","@type": "WebApplication","name": "Merge PDF","url": "https://gorillapdf.com/merge-pdf","description": "Combine two or more PDF files into a single document with PDF Merger online tool.","applicationCategory": "BusinessApplication","applicationSubCategory": "PDF Software","brand": "applicationSuite","featureList": "Drag and drop PDF filles, arrange PDFs by dragging.","screenshot": "https://gorillapdf.com/img/merge-pdf-screenshot.png","operatingSystem": "All","aggregateRating": {"@type": "AggregateRating","ratingValue": <%= pageData.ratingAverage %>,"ratingCount": <%= pageData.numberOfVotes %>},"offers": {"@type": "Offer","price": "0","priceCurrency": "USD"}}</script>
+    <link rel="alternate" hreflang="x-default" href="https://gorillapdf.com/merge-pdf" />
+    <link rel="alternate" hreflang="en" href="https://gorillapdf.com/merge-pdf" />
+    <link rel="alternate" hreflang="de" href="https://gorillapdf.com/de/pdf-zusammenfuhren" />
+    <link rel="alternate" hreflang="fr" href="https://gorillapdf.com/fr/fusionner-pdf" />
+    <link rel="alternate" hreflang="es" href="https://gorillapdf.com/es/fusionar-pdf" />
+    <link rel="alternate" hreflang="pt" href="https://gorillapdf.com/pt/mesclar-pdf" />
+    <link rel="alternate" hreflang="ja" href="https://gorillapdf.com/ja/pdf-merge" />
+    <link rel="alternate" hreflang="it" href="https://gorillapdf.com/it/unisci-pdf" />
+	<link rel="alternate" hreflang="ru" href="https://gorillapdf.com/ru/obedinit-pdf" />
+	<link rel="alternate" hreflang="mk" href="https://gorillapdf.com/mk/kombiniraj-pdf" />
+	<link rel="alternate" hreflang="tr" href="https://gorillapdf.com/tr/pdf-birlestirme" />
+	<link rel="alternate" hreflang="uk" href="https://gorillapdf.com/uk/merge-pdf" />
+	<link rel="alternate" hreflang="id" href="https://gorillapdf.com/id/gabung-pdf" />
+	<link rel="alternate" hreflang="ms" href="https://gorillapdf.com/ms/gabungkan-pdf" />
+	<link rel="alternate" hreflang="zh" href="https://gorillapdf.com/zh/pdf-merge" />
+    <% include partials/head %>
+  </head>
+  <body>
+    <% include partials/menu %>
+	<main>
+        <div class="container container-cards">
+            <% include partials/upload-section %>
+                <div class="row justify-content-center">
+                    <div class="col-sm-9 col-lg-6 col-xs-12">
+                       <% include partials/download-single-section %>
+                    </div>
+                </div>
+                <% include partials/ad-section %>
+        </div>
+<!-- Benefits --><div class="container howtsecextra bene">
+  <div class="row">
+    <div class="col-sm-4"><h3><%=root.services.mergepdf.bene1Title%></h3><p><%=root.services.mergepdf.bene1Txt%></p></div>
+    <div class="col-sm-4"><h3><%=root.services.mergepdf.bene2Title%></h3><p><%=root.services.mergepdf.bene2Txt%></p></div>
+    <div class="col-sm-4"><h3><%=root.services.mergepdf.bene3Title%></h3><p><%=root.services.mergepdf.bene3Txt%></p></div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4"><h3><%=root.services.mergepdf.bene4Title%></h3><p><%=root.services.mergepdf.bene4Txt%></p></div>
+    <div class="col-sm-4"><h3><%=root.services.mergepdf.bene5Title%></h3><p><%=root.services.mergepdf.bene5Txt%></p></div>
+    <div class="col-sm-4"><h3><%=root.services.mergepdf.bene6Title%></h3><p><%=root.services.mergepdf.bene6Txt%></p></div>
+  </div>
+</div>
+  
+       <!-- HowTo --><div class="container-fluid howtsec howtsecnew">
+                <div class="container blckprod">
+                    <div class="row">
+                        <div class="col-sm-12 headprod">
+                                <h2>
+                                    <%=root.services.mergepdf.title1%>
+                                </h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="video">
+								<div class="video__youtube" data-youtube>
+									<img src="/img/merge-pdf/how-to-merge-pdf-files.png" alt="How to merge PDF video" class="video__placeholder img-fluid" />
+									<button class="video__button" data-youtube-button="https://www.youtube.com/embed/riGMO1-C534"></button>
+								</div>
+							</div>
+							<script>
+  (function (window) {
+
+    'use strict';
+
+    window.code = window.code || {};
+
+    window.code.lightweightYoutubePlayer = function () {
+
+        var dataYoutubeVideos = '[data-youtube]';
+
+        var youtubeVideos = [...document.querySelectorAll(dataYoutubeVideos)];
+
+        function init() {
+            youtubeVideos.forEach(function(element) {
+                bindYoutubeVideoEvent(element);
+            });
+        }
+
+        function bindYoutubeVideoEvent(element) {
+            var button = element.querySelector('[data-youtube-button]');
+
+            button.addEventListener('click', createIframe);
+        }
+
+        function createIframe(event) {
+            var url = event.target.dataset.youtubeButton;
+            var youtubePlaceholder = event.target.parentNode;
+
+            var htmlString = '<div class="video__youtube"> <iframe class="video__iframe" src="' + url + '?autoplay=1" frameborder="0" allowfullscreen></iframe></div>';
+
+            youtubePlaceholder.style.display = 'none';
+            youtubePlaceholder.insertAdjacentHTML('beforebegin', htmlString);
+            youtubePlaceholder.parentNode.removeChild(youtubePlaceholder);
+        }
+
+        return {
+           init: init
+        }
+    };
+
+})(window)
+
+ready();
+
+function ready() {
+    var lightweightYoutubePlayer = new code.lightweightYoutubePlayer()
+
+    if (document.readyState != 'loading') {
+        page.init()
+    } else {
+        document.addEventListener('DOMContentLoaded', lightweightYoutubePlayer.init);
+    }
+}
+  </script>
+                        </div>
+                        <div class="col-sm-6">
+                            <ol>
+                                <li>
+                                    <%=root.services.mergepdf.li1%>
+                                </li>
+                                <li>
+                                    <%=root.services.mergepdf.li2%>
+                                </li>
+                                <li>
+                                    <%=root.services.mergepdf.li3%>
+                                </li>
+                                <li>
+                                    <%=root.services.mergepdf.li4%>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+  
+ <!-- Features --><div class="container howtsecextra">
+                <div class="row">
+                    <div class="col-sm-12 headprod">
+                        <h2><%=root.services.mergepdf.title2%></h2>
+                    </div>
+                </div>
+                <div class="row whyuserow">
+                    <div class="col-sm-6">
+                        <h3><%=root.services.mergepdf.sTitle1%></h3>
+                        <p><%=root.services.mergepdf.p1%></p>
+                        <p><%=root.services.mergepdf.p2%></p>
+					</div>
+                    <div class="col-sm-6 text-center">
+                        <img class="img-fluid" src="<%=root.services.mergepdf.img2Url%>" alt="<%=root.services.mergepdf.img2Alt%>" />
+                    </div>
+                </div>
+                <div class="row whyuserow">
+                    <div class="col-sm-6 text-center">
+                        <img class="img-fluid" src="<%=root.services.mergepdf.img3Url%>" alt="<%=root.services.mergepdf.img3Alt%>" />
+                    </div>
+                    <div class="col-sm-6">
+                        <h3><%=root.services.mergepdf.sTitle2%></h3>
+                        <p><%=root.services.mergepdf.p3%></p>
+                        <p><%=root.services.mergepdf.p4%></p>
+                    </div>
+                </div>
+                <div class="row whyuserow">
+                    <div class="col-sm-6">
+                        <h3><%=root.services.mergepdf.sTitle3%></h3>
+                        <p><%=root.services.mergepdf.p5%></p>
+                        <p><%=root.services.mergepdf.p6%></p>
+                    </div>
+                    <div class="col-sm-6 text-center">
+                        <img class="img-fluid" src="<%=root.services.mergepdf.img4Url%>" alt="<%=root.services.mergepdf.img4Alt%>" />
+                    </div>
+                </div>
+                <div class="row whyuserow">
+                    <div class="col-sm-6 text-center">
+                        <img class="img-fluid" src="<%=root.services.mergepdf.img5Url%>" alt="<%=root.services.mergepdf.img5Alt%>" />
+                    </div>
+                    <div class="col-sm-6">
+                        <h3><%=root.services.mergepdf.sTitle4%></h3>
+                        <p><%=root.services.mergepdf.p7%></p>
+                        <p><%=root.services.mergepdf.p8%></p>
+						<p><%=root.services.mergepdf.p9%></p>
+                    </div>
+                </div>
+            </div>
+			
+			<!-- Hightlight --><div class="container-fluid howtsec howtsecnew">
+            <div class="row">
+                <div class="col-sm-12 headprod">
+                    <h2><%=root.services.mergepdf.highlightTitle%></h2>
+                </div>
+            </div>
+            <div class="row">
+				<div class="col-sm-6 text-center">
+                    <img class="img-fluid" src="<%=root.services.mergepdf.highlightImgUrl%>" 
+                    alt="<%=root.services.mergepdf.highlightImgAlt%>" />
+                </div>
+                <div class="col-sm-6">
+                    <p><%=root.services.mergepdf.h1%></p>
+                    <p><%=root.services.mergepdf.h2%></p>
+					<p><%=root.services.mergepdf.h3%></p>
+					<p><%=root.services.mergepdf.h4%></p>
+                </div>
+            </div>
+</div>
+
+<!-- FAQ --><div class="container fuq">
+<h2><%=root.services.mergepdf.faqTitle%></h2>	
+  <div id="accordion">
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h5 class="mb-0">
+        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+          <%=root.services.mergepdf.faq1Q%>
+        </button>
+      </h5>
+    </div>
+
+    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+      <div class="card-body">
+       <%=root.services.mergepdf.faq1A%>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingTwo">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          <%=root.services.mergepdf.faq2Q%>
+        </button>
+      </h5>
+    </div>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+      <div class="card-body">
+        <%=root.services.mergepdf.faq2A%>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingThree">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+         <%=root.services.mergepdf.faq3Q%>
+        </button>
+      </h5>
+    </div>
+    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+      <div class="card-body">
+        <%=root.services.mergepdf.faq3A%>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingFour">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+         <%=root.services.mergepdf.faq4Q%>
+        </button>
+      </h5>
+    </div>
+    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+      <div class="card-body">
+        <%=root.services.mergepdf.faq4A%>
+      </div>
+    </div>
+  </div>
+   <div class="card">
+    <div class="card-header" id="headingFive">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+         <%=root.services.mergepdf.faq5Q%>
+        </button>
+      </h5>
+    </div>
+    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+      <div class="card-body">
+        <%=root.services.mergepdf.faq5A%>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+ <!-- Rating --><div class="container container-cards">
+             <div class="row justify-content-center">
+                <div class="col-sm-9 col-lg-6 col-xs-12">
+                    <% include partials/rating-section %>
+                </div>
+            </div>
+        </div>
+ 
+  </main>
+    <%include partials/footer %>
+    <script>window.addEventListener("load",gorillaHelper.onRaterLoad("#rater-step","form-rating","gorillapdf-merge-pdf",gorillaHelper.setCookieForPage("gorillapdf-merge-pdf"),365),1);</script>
+  </body>
+</html>

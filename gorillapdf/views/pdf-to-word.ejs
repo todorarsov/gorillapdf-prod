@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<% var lang=root.lang %>
+<html lang="<%= lang %>">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title><%=root.services.pdftoword.headTitle%> </title>
+    <meta name="description" content="<%=root.services.pdftoword.metaTitle%>">
+    <link rel="canonical" href="<%=root.domain%><%=root.services.pdftoword.url%>" />
+	<link rel="alternate" hreflang="x-default" href="<%=root.domain%><%=root.services.pdftoword.url%>" />
+    <link rel="alternate" hreflang="en" href="<%=root.domain%><%=root.services.pdftoword.url%>" />
+    <link rel="alternate" hreflang="fr" href="https://gorillapdf.com/fr/pdf-en-word" />
+    <link rel="alternate" hreflang="de" href="https://gorillapdf.com/de/pdf-in-word" />
+    <link rel="alternate" hreflang="es" href="https://gorillapdf.com/es/pdf-a-word" />
+    <link rel="alternate" hreflang="pt" href="https://gorillapdf.com/pt/pdf-para-word" />
+    <link rel="alternate" hreflang="ja" href="https://gorillapdf.com/ja/pdf-text" />
+	<link rel="alternate" hreflang="it" href="https://gorillapdf.com/it/da-pdf-a-word" />
+    <link rel="alternate" hreflang="ru" href="https://gorillapdf.com/ru/pdf-v-word" />
+    <link rel="alternate" hreflang="mk" href="https://gorillapdf.com/mk/pdf-vo-word" />
+    <link rel="alternate" hreflang="tr" href="https://gorillapdf.com/tr/pdf-word" />
+    <link rel="alternate" hreflang="uk" href="https://gorillapdf.com/uk/pdf-to-word" />
+    <link rel="alternate" hreflang="id" href="https://gorillapdf.com/id/pdf-ke-word" />
+    <link rel="alternate" hreflang="ms" href="https://gorillapdf.com/ms/pdf-ke-perkataan" />
+    <link rel="alternate" hreflang="zh" href="https://gorillapdf.com/zh/pdf-word" />
+   <script type="application/ld+json">{ "@context": "https://schema.org", "@type": "WebApplication", "name": "PDF to Word", "description": "Convert your PDFs to Word documents and easily modify text, images, and formatting. Great for repurposing content or making edits in the original document.", "image": " https://gorillapdf.com/img/pdf-to-word/en/pdf-to-word-converting.png", "applicationCategory": "BusinessApplication", "applicationSubCategory": "PDF Converter", "operatingSystem": "All", "aggregateRating": { "@type": "AggregateRating", "ratingValue": <%= pageData.ratingAverage %>, "ratingCount": <%= pageData.numberOfVotes %>}, "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD"} }</script>
+   <% include partials/head %>
+</head>
+<body>
+    <% include partials/menu %>
+	<main>
+    <!-- Upload -->  <div class="container container-cards">
+                <% include partials/upload-section %>
+                    <div class="row justify-content-center">
+                        <div class="col-sm-9 col-lg-6 col-xs-12">
+                           <% include partials/download-single-section %>
+                        </div>
+                    </div>
+                    <% include partials/ad-section %>
+          </div>
+  <!-- Benefits --><div class="container howtsecextra bene">
+  <div class="row">
+    <div class="col-sm-4"><h3><%=root.services.pdftoword.bene1Title%></h3><p><%=root.services.pdftoword.bene1Txt%></p></div>
+    <div class="col-sm-4"><h3><%=root.services.pdftoword.bene2Title%></h3><p><%=root.services.pdftoword.bene2Txt%></p></div>
+    <div class="col-sm-4"><h3><%=root.services.pdftoword.bene3Title%></h3><p><%=root.services.pdftoword.bene3Txt%></p></div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4"><h3><%=root.services.pdftoword.bene4Title%></h3><p><%=root.services.pdftoword.bene4Txt%></p></div>
+    <div class="col-sm-4"><h3><%=root.services.pdftoword.bene5Title%></h3><p><%=root.services.pdftoword.bene5Txt%></p></div>
+    <div class="col-sm-4"><h3><%=root.services.pdftoword.bene6Title%></h3><p><%=root.services.pdftoword.bene6Txt%></p></div>
+  </div>
+</div>	
+	<!-- HowTo --><div class="container-fluid howtsec howtsecnew">
+                <div class="container blckprod">
+                    <div class="row">
+                        <div class="col-sm-12 headprod">
+                                <h2>
+                                    <%=root.services.pdftoword.stepMainTitle%>
+                                </h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="video">
+								<div class="video__youtube" data-youtube>
+									<img src="/img/pdf-to-word/en/how-to-convert-pdf-to-word.png" alt="How to convert PDF to Word video tutorial" class="video__placeholder img-fluid" />
+									<button class="video__button" data-youtube-button="https://www.youtube.com/embed/XLKa2gqK21w"></button>
+								</div>
+							</div>
+							<script>
+  (function (window) {
+
+    'use strict';
+
+    window.code = window.code || {};
+
+    window.code.lightweightYoutubePlayer = function () {
+
+        var dataYoutubeVideos = '[data-youtube]';
+
+        var youtubeVideos = [...document.querySelectorAll(dataYoutubeVideos)];
+
+        function init() {
+            youtubeVideos.forEach(function(element) {
+                bindYoutubeVideoEvent(element);
+            });
+        }
+
+        function bindYoutubeVideoEvent(element) {
+            var button = element.querySelector('[data-youtube-button]');
+
+            button.addEventListener('click', createIframe);
+        }
+
+        function createIframe(event) {
+            var url = event.target.dataset.youtubeButton;
+            var youtubePlaceholder = event.target.parentNode;
+
+            var htmlString = '<div class="video__youtube"> <iframe class="video__iframe" src="' + url + '?autoplay=1" frameborder="0" allowfullscreen></iframe></div>';
+
+            youtubePlaceholder.style.display = 'none';
+            youtubePlaceholder.insertAdjacentHTML('beforebegin', htmlString);
+            youtubePlaceholder.parentNode.removeChild(youtubePlaceholder);
+        }
+
+        return {
+           init: init
+        }
+    };
+
+})(window)
+
+ready();
+
+function ready() {
+    var lightweightYoutubePlayer = new code.lightweightYoutubePlayer()
+
+    if (document.readyState != 'loading') {
+        page.init()
+    } else {
+        document.addEventListener('DOMContentLoaded', lightweightYoutubePlayer.init);
+    }
+}
+  </script>
+                        </div>
+                        <div class="col-sm-6">
+                            <ol>
+                                <li>
+                                    <%=root.services.pdftoword.li1%>
+                                </li>
+                                <li>
+                                    <%=root.services.pdftoword.li2%>
+                                </li>
+                                <li>
+                                    <%=root.services.pdftoword.li3%>
+                                </li>
+                                <li>
+                                    <%=root.services.pdftoword.li4%>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>	
+<!-- Features --><div class="container howtsecextra">
+                <div class="row">
+                    <div class="col-sm-12 headprod">
+                        <h2><%=root.services.pdftoword.title2%></h2>
+                    </div>
+                </div>
+                <div class="row whyuserow">
+                    <div class="col-sm-6">
+                        <h3><%=root.services.pdftoword.sTitle1%></h3>
+                        <p><%=root.services.pdftoword.p1%></p>
+                    </div>
+                    <div class="col-sm-6 text-center">
+                        <img class="img-fluid" src="<%=root.services.pdftoword.img2Url%>" alt="<%=root.services.pdftoword.img2Alt%>" />
+                    </div>
+                </div>
+                <div class="row whyuserow">
+                    <div class="col-sm-6 text-center">
+                        <img class="img-fluid" src="<%=root.services.pdftoword.img3Url%>" alt="<%=root.services.pdftoword.img3Alt%>" />
+                    </div>
+                    <div class="col-sm-6">
+                        <h3><%=root.services.pdftoword.sTitle2%></h3>
+                        <p><%=root.services.pdftoword.p2%></p>
+                    </div>
+                </div>
+                <div class="row whyuserow">
+                    <div class="col-sm-6">
+                        <h3><%=root.services.pdftoword.sTitle3%></h3>
+                        <p><%=root.services.pdftoword.p3%></p>
+                    </div>
+                    <div class="col-sm-6 text-center">
+                        <img class="img-fluid" src="<%=root.services.pdftoword.img4Url%>" alt="<%=root.services.pdftoword.img4Alt%>" />
+                    </div>
+                </div>
+                <div class="row whyuserow">
+                    <div class="col-sm-6 text-center">
+                        <img class="img-fluid" src="<%=root.services.pdftoword.img5Url%>" alt="<%=root.services.pdftoword.img5Alt%>" />
+                    </div>
+                    <div class="col-sm-6">
+                        <h3><%=root.services.pdftoword.sTitle4%></h3>
+                        <p><%=root.services.pdftoword.p4%></p>
+                   </div>
+                </div>
+            </div>		
+<!-- Hightlight --><div class="container-fluid howtsec howtsecnew">
+            <div class="row">
+                <div class="col-sm-12 headprod">
+                    <h2><%=root.services.pdftoword.highlightTitle%></h2>
+                </div>
+            </div>
+            <div class="row">
+				<div class="col-sm-6 text-center">
+                    <img class="img-fluid" src="<%=root.services.pdftoword.highlightImgUrl%>" 
+                    alt="<%=root.services.pdftoword.highlightImgAlt%>" />
+                </div>
+                <div class="col-sm-6">
+                    <p><%=root.services.pdftoword.h1%></p>
+                    <p><%=root.services.pdftoword.h2%></p>
+					<p><%=root.services.pdftoword.h3%></p>
+		        </div>
+            </div>
+</div>
+		<!-- FAQ --><div class="container fuq">
+<h2><%=root.services.pdftoword.faqTitle%></h2>	
+  <div id="accordion">
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h5 class="mb-0">
+        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+          <%=root.services.pdftoword.faq1Q%>
+        </button>
+      </h5>
+    </div>
+
+    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+      <div class="card-body">
+       <%=root.services.pdftoword.faq1A%>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingTwo">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          <%=root.services.pdftoword.faq2Q%>
+        </button>
+      </h5>
+    </div>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+      <div class="card-body">
+        <%=root.services.pdftoword.faq2A%>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingThree">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+         <%=root.services.pdftoword.faq3Q%>
+        </button>
+      </h5>
+    </div>
+    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+      <div class="card-body">
+        <%=root.services.pdftoword.faq3A%>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingFour">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+         <%=root.services.pdftoword.faq4Q%>
+        </button>
+      </h5>
+    </div>
+    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+      <div class="card-body">
+        <%=root.services.pdftoword.faq4A%>
+      </div>
+    </div>
+  </div>
+   <div class="card">
+    <div class="card-header" id="headingFive">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+         <%=root.services.pdftoword.faq5Q%>
+        </button>
+      </h5>
+    </div>
+    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+      <div class="card-body">
+        <%=root.services.pdftoword.faq5A%>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+		<!-- Rating --><div class="container container-cards">
+             <div class="row justify-content-center">
+                <div class="col-sm-9 col-lg-6 col-xs-12">
+                    <% include partials/rating-section %>
+                </div>
+            </div>
+        </div>
+</main>
+        <% include partials/footer %>
+        <script>window.addEventListener("load", gorillaHelper.onRaterLoad("#rater-step", "form-rating","gorillapdf-pdf-to-txt", gorillaHelper.setCookieForPage("gorillapdf-pdf-to-txt"), 365), false);</script>
+</body>
+</html>

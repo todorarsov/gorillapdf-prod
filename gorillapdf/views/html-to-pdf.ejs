@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<% var lang=__('root.lang') %>
+    <html lang="<%= lang %>">
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>
+            <%=root.services.htmltopdf.headTitle%>
+        </title>
+        <meta name="description" content="<%=root.services.htmltopdf.metaTitle%>">
+        <link rel="canonical" href="<%=root.domain%><%=root.services.htmltopdf.url%>" />
+        <link rel="alternate" hreflang="x-default" href="https://gorillapdf.com/html-to-pdf" />
+        <link rel="alternate" hreflang="en" href="https://gorillapdf.com/html-to-pdf" />
+        <link rel="alternate" hreflang="de" href="https://gorillapdf.com/de/html-in-pdf" />
+        <link rel="alternate" hreflang="fr" href="https://gorillapdf.com/fr/html-en-pdf" />
+        <link rel="alternate" hreflang="es" href="https://gorillapdf.com/es/html-a-pdf" />
+        <link rel="alternate" hreflang="pt" href="https://gorillapdf.com/pt/html-para-pdf" />
+        <link rel="alternate" hreflang="ja" href="https://gorillapdf.com/ja/html-pdf" />
+        <link rel="alternate" hreflang="it" href="https://gorillapdf.com/it/da-html-a-pdf" />
+        <link rel="alternate" hreflang="ru" href="https://gorillapdf.com/ru/html-v-pdf" />
+        <link rel="alternate" hreflang="mk" href="https://gorillapdf.com/mk/html-vo-pdf" />
+        <link rel="alternate" hreflang="tr" href="https://gorillapdf.com/tr/html-pdf-cevirme" />
+        <link rel="alternate" hreflang="uk" href="https://gorillapdf.com/uk/html-v-pdf" />
+        <link rel="alternate" hreflang="id" href="https://gorillapdf.com/id/html-ke-pdf" />
+        <link rel="alternate" hreflang="ms" href="https://gorillapdf.com/ms/html-kepada-pdf" />
+        <link rel="alternate" hreflang="zh" href="https://gorillapdf.com/zh/html-pdf" />
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "WebApplication",
+                "name": "HTML to PDF Converter",
+                "url": "https://gorillapdf.com/html-to-pdf",
+                "description": "Convert HTML files or web URLs to PDF files with online HTML to PDF converter.",
+                "applicationCategory": "BusinessApplication",
+                "applicationSubCategory": "PDF Software",
+				"applicationSuite": "GorillaPDF",
+                "featureList": "Upload a HTML file or enter a URL to convert to PDF.",
+                "screenshot": "https://gorillapdf.com/img/html-to-pdf-converter.png",
+                "operatingSystem": "All",
+                "aggregateRating": {
+                    "@type": "AggregateRating",
+                    "ratingValue": <%= pageData.ratingAverage %>,
+                    "ratingCount": <%= pageData.numberOfVotes %>
+                },
+                "offers": {
+                    "@type": "Offer",
+                    "price": "0",
+                    "priceCurrency": "USD"
+                }
+            }
+        </script>
+        <% include partials/head %>
+    </head>
+
+    <body>
+        <% include partials/menu %>
+            <div class="container container-cards">
+                <% include partials/upload-section %>
+                    <div class="row justify-content-center">
+                        <div class="col-sm-9 col-lg-6 col-xs-12">
+                            <% include partials/rating-section %>
+                                <% include partials/download-single-section %>
+                        </div>
+                    </div>
+                     <% include partials/ad-section %>
+            </div>
+
+            <div class="container-fluid howtsec">
+                <div class="container blckprod">
+                    <div class="row">
+                        <div class="col-sm-12 headprod">
+                                <h2>
+                                    <%=root.services.htmltopdf.title1%>
+                                </h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <img src="<%=root.services.htmltopdf.img1Url%>"
+                                alt="<%=root.services.htmltopdf.img1Alt%>" class="img-fluid" />
+                        </div>
+                        <div class="col-sm-6">
+                            <ol>
+                                <li>
+                                    <%=root.services.htmltopdf.li1%>
+                                </li>
+                                <li>
+                                    <%=root.services.htmltopdf.li2%>
+                                </li>
+                                <li>
+                                    <%=root.services.htmltopdf.li3%>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 headprod">
+                        <h2>
+                            <%=root.services.htmltopdf.title2%>
+                        </h2>
+                    </div>
+                </div>
+                <div class="row whyuserow">
+                    <div class="col-sm-6">
+                        <h3>
+                            <%=root.services.htmltopdf.sTitle1%>
+                        </h3>
+                        <p>
+                            <%=root.services.htmltopdf.p1%>
+                        </p>
+                        <p>
+                            <%=root.services.htmltopdf.p2%>
+                        </p>
+                        <p>
+                            <%=root.services.htmltopdf.p3%>
+                        </p>
+                        <p>
+                            <%=root.services.htmltopdf.p4%>
+                        </p>
+                        <p>
+                            <%=root.services.htmltopdf.p5%>
+                        </p>
+                        <p>
+                            <%=root.services.htmltopdf.p6%>
+                        </p>
+                    </div>
+                    <div class="col-sm-6 text-center">
+                        <img class="img-fluid" src="<%=root.services.htmltopdf.img2Url%>"
+                            alt="<%=root.services.htmltopdf.img2Alt%>" />
+                    </div>
+                </div>
+                <div class="row whyuserow">
+                    <div class="col-sm-6 text-center">
+                        <img class="img-fluid" src="<%=root.services.htmltopdf.img3Url%>"
+                            alt="<%=root.services.htmltopdf.img3Alt%>" />
+                    </div>
+                    <div class="col-sm-6">
+                        <h3>
+                            <%=root.services.htmltopdf.sTitle2%>
+                        </h3>
+                        <p>
+                            <%=root.services.htmltopdf.p7%>
+                        </p>
+                    </div>
+                </div>
+                <div class="row whyuserow">
+                    <div class="col-sm-6">
+                        <h3>
+                            <%=root.services.htmltopdf.sTitle3%>
+                        </h3>
+                        <p>
+                            <%=root.services.htmltopdf.p8%>
+                        </p>
+                        <p>
+                            <%=root.services.htmltopdf.p9%>
+                        </p>
+                    </div>
+                    <div class="col-sm-6 text-center">
+                        <img class="img-fluid" src="<%=root.services.htmltopdf.img4Url%>"
+                            alt="<%=root.services.htmltopdf.img4Alt%>" />
+                    </div>
+                </div>
+                <div class="row whyuserow">
+                    <div class="col-sm-6 text-center">
+                        <img class="img-fluid" src="<%=root.services.htmltopdf.img5Url%>"
+                            alt="<%=root.services.htmltopdf.img5Alt%>" />
+                    </div>
+                    <div class="col-sm-6">
+                        <h3>
+                            <%=root.services.htmltopdf.sTitle4%>
+                        </h3>
+                        <p>
+                            <%=root.services.htmltopdf.p10%>
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+
+            <% include partials/footer %>
+    </body>
+    <script>window.addEventListener("load", gorillaHelper.onRaterLoad("#rater-step","form-rating","gorillapdf-html-to-pdf",gorillaHelper.setCookieForPage("gorillapdf-html-to-pdf"),365),!1);</script>
+    </html>

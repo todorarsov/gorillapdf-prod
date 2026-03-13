@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<%var lang=root.lang %>
+    <html lang="<%=lang%>">
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>
+            <%=root.services.wordtopdf.headTitle%>
+        </title>
+        <meta name="description" content="<%=root.services.wordtopdf.metaTitle%>" />
+        <link rel="canonical" href="<%=root.domain%><%=root.services.wordtopdf.url%>" />
+        <link rel="alternate" hreflang="x-default" href="https://gorillapdf.com/word-to-pdf" />
+        <link rel="alternate" hreflang="en" href="https://gorillapdf.com/word-to-pdf" />
+        <link rel="alternate" hreflang="de" href="https://gorillapdf.com/de/word-in-pdf" />
+        <link rel="alternate" hreflang="fr" href="https://gorillapdf.com/fr/word-en-pdf" />
+        <link rel="alternate" hreflang="es" href="https://gorillapdf.com/es/word-a-pdf" />
+        <link rel="alternate" hreflang="pt" href="https://gorillapdf.com/pt/word-para-pdf" />
+        <link rel="alternate" hreflang="ja" href="https://gorillapdf.com/ja/word-pdf" />
+        <link rel="alternate" hreflang="it" href="https://gorillapdf.com/it/da-word-a-pdf" />
+        <link rel="alternate" hreflang="ru" href="https://gorillapdf.com/ru/word-v-pdf" />
+        <link rel="alternate" hreflang="mk" href="https://gorillapdf.com/mk/word-vo-pdf" />
+        <link rel="alternate" hreflang="tr" href="https://gorillapdf.com/tr/word-pdf-cevirme" />
+        <link rel="alternate" hreflang="uk" href="https://gorillapdf.com/uk/word-v-pdf" />
+        <link rel="alternate" hreflang="id" href="https://gorillapdf.com/id/word-ke-pdf" />
+        <link rel="alternate" hreflang="ms" href="https://gorillapdf.com/ms/word-kepada-pdf" />
+        <link rel="alternate" hreflang="zh" href="https://gorillapdf.com/zh/word-pdf" />
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "WebApplication",
+                "name": "Word to PDF Converter",
+                "description": "Free online Word to PDF converter that will convert all your MS Word document to PDF files. Open the Word document, click on Convert button and download the converted PDF file.",
+                "image": "https://gorillapdf.com/img/word-to-pdf/en/convert-word-document-into-easy-to-share-pdf.png",
+                "applicationCategory": "BusinessApplication",
+                "applicationSubCategory": "PDF Software",
+				"applicationSuite": "GorillaPDF",
+                "operatingSystem": "All",
+                "aggregateRating": {
+                    "@type": "AggregateRating",
+                    "ratingValue": <%= pageData.ratingAverage %>,
+                    "ratingCount": <%= pageData.numberOfVotes %>
+                },
+                "offers": {
+                    "@type": "Offer",
+                    "price": "0",
+                    "priceCurrency": "USD"
+                }
+            }
+        </script>
+        <% include partials/head %>
+    </head>
+
+    <body>
+        <% include partials/menu %>
+	<main>
+<!-- Upload -->  <div class="container container-cards">
+                <% include partials/upload-section %>
+                    <div class="row justify-content-center">
+                        <div class="col-sm-9 col-lg-6 col-xs-12">
+                           <% include partials/download-single-section %>
+                        </div>
+                    </div>
+                    <% include partials/ad-section %>
+            </div>
+<!-- Benefits --><div class="container howtsecextra bene">
+  <div class="row">
+    <div class="col-sm-4"><h3><%=root.services.wordtopdf.bene1Title%></h3><p><%=root.services.wordtopdf.bene1Txt%></p></div>
+    <div class="col-sm-4"><h3><%=root.services.wordtopdf.bene2Title%></h3><p><%=root.services.wordtopdf.bene2Txt%></p></div>
+    <div class="col-sm-4"><h3><%=root.services.wordtopdf.bene3Title%></h3><p><%=root.services.wordtopdf.bene3Txt%></p></div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4"><h3><%=root.services.wordtopdf.bene4Title%></h3><p><%=root.services.wordtopdf.bene4Txt%></p></div>
+    <div class="col-sm-4"><h3><%=root.services.wordtopdf.bene5Title%></h3><p><%=root.services.wordtopdf.bene5Txt%></p></div>
+    <div class="col-sm-4"><h3><%=root.services.wordtopdf.bene6Title%></h3><p><%=root.services.wordtopdf.bene6Txt%></p></div>
+  </div>
+</div>
+<!-- HowTo --><div class="container-fluid howtsec howtsecnew">
+                <div class="container blckprod">
+                    <div class="row">
+                        <div class="col-sm-12 headprod">
+                                <h2>
+                                    <%=root.services.wordtopdf.stepMainTitle%>
+                                </h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="video">
+								<div class="video__youtube" data-youtube>
+									<img src="/img/word-to-pdf/how-to-convert-word-to-pdf.png" alt="How to convert Word to PDF video tutorial" class="video__placeholder img-fluid" />
+									<button class="video__button" data-youtube-button="https://www.youtube.com/embed/m1tuxxgSW7s"></button>
+								</div>
+							</div>
+							<script>
+  (function (window) {
+
+    'use strict';
+
+    window.code = window.code || {};
+
+    window.code.lightweightYoutubePlayer = function () {
+
+        var dataYoutubeVideos = '[data-youtube]';
+
+        var youtubeVideos = [...document.querySelectorAll(dataYoutubeVideos)];
+
+        function init() {
+            youtubeVideos.forEach(function(element) {
+                bindYoutubeVideoEvent(element);
+            });
+        }
+
+        function bindYoutubeVideoEvent(element) {
+            var button = element.querySelector('[data-youtube-button]');
+
+            button.addEventListener('click', createIframe);
+        }
+
+        function createIframe(event) {
+            var url = event.target.dataset.youtubeButton;
+            var youtubePlaceholder = event.target.parentNode;
+
+            var htmlString = '<div class="video__youtube"> <iframe class="video__iframe" src="' + url + '?autoplay=1" frameborder="0" allowfullscreen></iframe></div>';
+
+            youtubePlaceholder.style.display = 'none';
+            youtubePlaceholder.insertAdjacentHTML('beforebegin', htmlString);
+            youtubePlaceholder.parentNode.removeChild(youtubePlaceholder);
+        }
+
+        return {
+           init: init
+        }
+    };
+
+})(window)
+
+ready();
+
+function ready() {
+    var lightweightYoutubePlayer = new code.lightweightYoutubePlayer()
+
+    if (document.readyState != 'loading') {
+        page.init()
+    } else {
+        document.addEventListener('DOMContentLoaded', lightweightYoutubePlayer.init);
+    }
+}
+  </script>
+                        </div>
+                        <div class="col-sm-6">
+                            <ol>
+                                <li>
+                                    <%=root.services.wordtopdf.li1%>
+                                </li>
+                                <li>
+                                    <%=root.services.wordtopdf.li2%>
+                                </li>
+                                <li>
+                                    <%=root.services.wordtopdf.li3%>
+                                </li>
+                                <li>
+                                    <%=root.services.wordtopdf.li4%>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+<!-- Features --><div class="container howtsecextra">
+                <div class="row">
+                    <div class="col-sm-12 headprod">
+                        <h2><%=root.services.wordtopdf.title2%></h2>
+                    </div>
+                </div>
+                <div class="row whyuserow">
+                    <div class="col-sm-6">
+                        <h3><%=root.services.wordtopdf.sTitle1%></h3>
+                        <p><%=root.services.wordtopdf.p1%></p>
+                        <p><%=root.services.wordtopdf.p2%></p>
+						<p><%=root.services.wordtopdf.p3%></p>
+                    </div>
+                    <div class="col-sm-6 text-center">
+                        <img class="img-fluid" src="<%=root.services.wordtopdf.img2Url%>" alt="<%=root.services.wordtopdf.img2Alt%>" />
+                    </div>
+                </div>
+                <div class="row whyuserow">
+                    <div class="col-sm-6 text-center">
+                        <img class="img-fluid" src="<%=root.services.wordtopdf.img3Url%>" alt="<%=root.services.wordtopdf.img3Alt%>" />
+                    </div>
+                    <div class="col-sm-6">
+                        <h3><%=root.services.wordtopdf.sTitle2%></h3>
+                        <p><%=root.services.wordtopdf.p4%></p>
+                        <p><%=root.services.wordtopdf.p5%></p>
+                    </div>
+                </div>
+                <div class="row whyuserow">
+                    <div class="col-sm-6">
+                        <h3><%=root.services.wordtopdf.sTitle3%></h3>
+                        <p><%=root.services.wordtopdf.p6%></p>
+                        <p><%=root.services.wordtopdf.p7%></p>
+                    </div>
+                    <div class="col-sm-6 text-center">
+                        <img class="img-fluid" src="<%=root.services.wordtopdf.img4Url%>" alt="<%=root.services.wordtopdf.img4Alt%>" />
+                    </div>
+                </div>
+                <div class="row whyuserow">
+                    <div class="col-sm-6 text-center">
+                        <img class="img-fluid" src="<%=root.services.wordtopdf.img5Url%>" alt="<%=root.services.wordtopdf.img5Alt%>" />
+                    </div>
+                    <div class="col-sm-6">
+                        <h3><%=root.services.wordtopdf.sTitle4%></h3>
+                        <p><%=root.services.wordtopdf.p8%></p>
+                        <p><%=root.services.wordtopdf.p9%></p>
+                    </div>
+                </div>
+            </div>
+<!-- Hightlight --><div class="container-fluid howtsec howtsecnew">
+            <div class="row">
+                <div class="col-sm-12 headprod">
+                    <h2><%=root.services.wordtopdf.highlightTitle%></h2>
+                </div>
+            </div>
+            <div class="row">
+				<div class="col-sm-6 text-center">
+                    <img class="img-fluid" src="<%=root.services.wordtopdf.highlightImgUrl%>" 
+                    alt="<%=root.services.wordtopdf.highlightImgAlt%>" />
+                </div>
+                <div class="col-sm-6">
+                    <p><%=root.services.wordtopdf.h1%></p>
+                    <p><%=root.services.wordtopdf.h2%></p>
+					<p><%=root.services.wordtopdf.h3%></p>
+					<p><%=root.services.wordtopdf.h4%></p>
+                </div>
+            </div>
+</div>
+<!-- FAQ --><div class="container fuq">
+<h2><%=root.services.wordtopdf.faqTitle%></h2>	
+  <div id="accordion">
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h5 class="mb-0">
+        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+          <%=root.services.wordtopdf.faq1Q%>
+        </button>
+      </h5>
+    </div>
+
+    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+      <div class="card-body">
+       <%=root.services.wordtopdf.faq1A%>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingTwo">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          <%=root.services.wordtopdf.faq2Q%>
+        </button>
+      </h5>
+    </div>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+      <div class="card-body">
+        <%=root.services.wordtopdf.faq2A%>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingThree">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+         <%=root.services.wordtopdf.faq3Q%>
+        </button>
+      </h5>
+    </div>
+    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+      <div class="card-body">
+        <%=root.services.wordtopdf.faq3A%>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingFour">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+         <%=root.services.wordtopdf.faq4Q%>
+        </button>
+      </h5>
+    </div>
+    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+      <div class="card-body">
+        <%=root.services.wordtopdf.faq4A%>
+      </div>
+    </div>
+  </div>
+   <div class="card">
+    <div class="card-header" id="headingFive">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+         <%=root.services.wordtopdf.faq5Q%>
+        </button>
+      </h5>
+    </div>
+    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+      <div class="card-body">
+        <%=root.services.wordtopdf.faq5A%>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- Rating --><div class="container container-cards">
+             <div class="row justify-content-center">
+                <div class="col-sm-9 col-lg-6 col-xs-12">
+                    <% include partials/rating-section %>
+                </div>
+            </div>
+        </div>
+ </main>
+            <% include partials/footer %>
+                <script>window.addEventListener("load", gorillaHelper.onRaterLoad("#rater-step", "form-rating", "gorillapdf-word-to-pdf", gorillaHelper.setCookieForPage("gorillapdf-word-to-pdf"), 365), !1);</script>
+</body></html>

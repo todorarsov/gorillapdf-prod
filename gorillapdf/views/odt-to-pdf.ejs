@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<%var lang=root.lang %>
+<html lang="<%=lang%>">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title><%=root.services.odttopdf.headTitle%> </title>
+    <meta name="description" content="<%=root.services.odttopdf.metaTitle%>">
+     <link rel="canonical" href="<%=root.domain%><%=root.services.odttopdf.url%>" />
+     <link rel="alternate" hreflang="x-default" href="https://gorillapdf.com/odt-to-pdf" />
+     <link rel="alternate" hreflang="en" href="https://gorillapdf.com/odt-to-pdf" />
+     <link rel="alternate" hreflang="de" href="https://gorillapdf.com/de/odt-in-pdf" />
+     <link rel="alternate" hreflang="fr" href="https://gorillapdf.com/fr/odt-en-pdf" />
+     <link rel="alternate" hreflang="es" href="https://gorillapdf.com/es/odt-a-pdf" />
+     <link rel="alternate" hreflang="pt" href="https://gorillapdf.com/pt/odt-para-pdf" />
+     <link rel="alternate" hreflang="ja" href="https://gorillapdf.com/ja/odt-pdf" />
+     <link rel="alternate" hreflang="it" href="https://gorillapdf.com/it/da-odt-a-pdf" />
+     <link rel="alternate" hreflang="ru" href="https://gorillapdf.com/ru/odt-v-pdf" />
+	 <link rel="alternate" hreflang="mk" href="https://gorillapdf.com/mk/odt-vo-pdf" />
+	 <link rel="alternate" hreflang="tr" href="https://gorillapdf.com/tr/odt-pdf-cevirme" />
+	 <link rel="alternate" hreflang="uk" href="https://gorillapdf.com/uk/odt-v-pdf" />
+	 <link rel="alternate" hreflang="id" href="https://gorillapdf.com/id/odt-ke-pdf" />
+	 <link rel="alternate" hreflang="ms" href="https://gorillapdf.com/ms/odt-kepada-pdf" />
+	 <link rel="alternate" hreflang="zh" href="https://gorillapdf.com/zh/odt-pdf" />
+     <script type="application/ld+json">{"@context": "https://schema.org","@type": "WebApplication","name": "ODT to PDF Converter","description": "Convert OpenOffce word documents to PDF. Load your file, and click on Convert button. After converting, download your file.","applicationCategory": "BusinessApplication","applicationSubCategory": "PDF Software","applicationSuite": "GorillaPDF","operatingSystem": "All","aggregateRating": {"@type": "AggregateRating","ratingValue": <%= pageData.ratingAverage %>,"ratingCount": <%= pageData.numberOfVotes %>},"offers": {"@type": "Offer","price": "0","priceCurrency": "USD"}}</script>
+    <% include partials/head %>
+</head>
+<body>
+    <% include partials/menu %>
+    <div class="container container-cards">
+        <% include partials/upload-section %>
+            <div class="row justify-content-center">
+                <div class="col-sm-9 col-lg-6 col-xs-12">
+                    <% include partials/rating-section %>
+                    <% include partials/download-single-section %>
+                </div>
+            </div>
+            <% include partials/ad-section %>
+    </div>
+        <div class="container-fluid howtsec">
+            <div class="container blckprod">
+                <div class="row">
+                    <div class="col-sm-12 headprod">
+                        <h2><%=root.services.odttopdf.title1%></h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <img src="<%=root.services.odttopdf.img1Url%>" 
+                        alt="<%=root.services.odttopdf.img1Alt%>" class="img-fluid" />
+                    </div>
+                    <div class="col-sm-6">
+                        <ol>
+                            <li><%=root.services.odttopdf.li1%></li>
+                            <li><%=root.services.odttopdf.li2%></li>
+                            <li><%=root.services.odttopdf.li3%></li>
+                            <li><%=root.services.odttopdf.li4%></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 headprod">
+                    <h2><%=root.services.odttopdf.title2%></h2>
+                </div>
+            </div>
+            <div class="row whyuserow">
+                <div class="col-sm-6">
+                    <h3><%=root.services.odttopdf.sTitle1%></h3>
+                    <p><%=root.services.odttopdf.p1%></p>
+                    <p><%=root.services.odttopdf.p2%></p>
+                    <p><%=root.services.odttopdf.p3%></p>
+                </div>
+                <div class="col-sm-6 text-center">
+                    <img class="img-fluid" src="<%=root.services.odttopdf.img2Url%>" 
+                    alt="<%=root.services.odttopdf.img2Alt%>" />
+                </div>
+            </div>
+            <div class="row whyuserow">
+                <div class="col-sm-6 text-center">
+                    <img class="img-fluid" src="<%=root.services.odttopdf.img3Url%>" 
+                    alt="<%=root.services.odttopdf.img3Alt%>"  />
+                </div>
+                <div class="col-sm-6">
+                    <h3><%=root.services.odttopdf.sTitle2%></h3>
+                    <p><%=root.services.odttopdf.p4%></p>
+                    <p><%=root.services.odttopdf.p5%></p>
+                    <p><%=root.services.odttopdf.p6%></p>
+                </div>
+            </div>
+            <div class="row whyuserow">
+                <div class="col-sm-6">
+                    <h3><%=root.services.odttopdf.sTitle3%></h3>
+                    <p><%=root.services.odttopdf.p7%></p>
+                    <p><%=root.services.odttopdf.p8%></p>
+                    <p><%=root.services.odttopdf.p9%></p>
+                </div>
+                <div class="col-sm-6 text-center">
+                    <img class="img-fluid" src="<%=root.services.odttopdf.img4Url%>"
+                     alt="<%=root.services.odttopdf.img4Alt%>" />
+                </div>
+            </div>
+            <div class="row whyuserow">
+                <div class="col-sm-6 text-center">
+                    <img class="img-fluid" src="<%=root.services.odttopdf.img5Url%>" 
+                    alt="<%=root.services.odttopdf.img5Alt%>"  />
+                </div>
+                <div class="col-sm-6">
+                    <h3><%=root.services.odttopdf.sTitle4%></h3>
+                    <p><%=root.services.odttopdf.p10%></p>
+                    <p><%=root.services.odttopdf.p11%></p>
+                    <p><%=root.services.odttopdf.p12%></p>
+                </div>
+            </div>
+        </div>
+        <% include partials/footer %>
+        <script>window.addEventListener("load", gorillaHelper.onRaterLoad("#rater-step", "form-rating","gorillapdf-odt-pdf", gorillaHelper.setCookieForPage("gorillapdf-odt-pdf"), 365), false);</script>
+</body>
+</html>

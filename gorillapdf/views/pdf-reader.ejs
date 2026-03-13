@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<% var lang=__('root.lang') %>
+<html lang="<%= lang %>">
+<html dir="ltr" mozdisallowselectionprint>
+<head>
+<title><%=root.services.pdfreader.headTitle%></title>
+<meta name="description" content="<%=root.services.pdfreader.metaTitle%>">
+<link rel="canonical" href="<%=root.domain%><%=root.services.pdfreader.url%>" />
+<link rel="alternate" hreflang="x-default" href="https://gorillapdf.com/pdf-reader" />
+<link rel="alternate" hreflang="en" href="https://gorillapdf.com/pdf-reader" />
+<link rel="alternate" hreflang="fr" href="https://gorillapdf.com/fr/lecteur-pdf" />
+<link rel="alternate" hreflang="de" href="https://gorillapdf.com/de/pdf-reader" />
+<link rel="alternate" hreflang="es" href="https://gorillapdf.com/es/lector-pdf" />
+<link rel="alternate" hreflang="pt" href="https://gorillapdf.com/pt/leitor-de-pdf" />
+<link rel="alternate" hreflang="ja" href="https://gorillapdf.com/ja/pdf-reader" />
+<link rel="alternate" hreflang="it" href="https://gorillapdf.com/it/lettore-pdf" />
+<link rel="alternate" hreflang="ru" href="https://gorillapdf.com/ru/chitatel-pdf" />
+<link rel="alternate" hreflang="mk" href="https://gorillapdf.com/mk/pdf-rider" />
+<link rel="alternate" hreflang="tr" href="https://gorillapdf.com/tr/pdf-okuyucu" />
+<link rel="alternate" hreflang="uk" href="https://gorillapdf.com/uk/pdf-reader" />
+<link rel="alternate" hreflang="id" href="https://gorillapdf.com/id/pembaca-pdf" />
+<link rel="alternate" hreflang="ms" href="https://gorillapdf.com/ms/pembaca-pdf" />
+<link rel="alternate" hreflang="zh" href="https://gorillapdf.com/zh/pdf-viewer" />
+<link rel="stylesheet" href="./../stylesheets/viewer.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="resource" type="application/l10n" href="pdf-reader/locale/locale.properties">
+<script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@2.2.2/build/pdf.min.js" defer></script>
+<script src="./../javascripts/viewer.js" type="module"></script>
+<% include partials/head %>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"PDF Reader","description":"Open and read your PDF documents online with a simple and intuitive app. Load your PDF, and you can view the content.","applicationCategory":"BusinessApplication","applicationSubCategory":"PDF Software","operatingSystem":"All","aggregateRating":{"@type":"AggregateRating","ratingValue":<%= pageData.ratingAverage %>,"ratingCount":<%= pageData.numberOfVotes %>},"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}} </script>
+    
+</head>
+<body tabindex="1" class="loadingInProgress">S
+<div id="outerContainer">
+<div id="sidebarContainer">
+   <% include partials/reader/toolbar-sidebar %>
+   <% include partials/reader/sidebar %>
+</div> 
+<div id="mainContainer">
+   <% include partials/reader/find-bar %>
+   <% include partials/reader/sec-toolbar %>
+   <% include partials/reader/toolbar %>
+   <% include partials/reader/context-menu %>
+   <% include partials/reader/viewer-container %>
+   <% include partials/reader/error-wrapper %>
+   <% include partials/reader/overlay-container %>
+</div> 
+
+</div> 
+<% include partials/reader/print-container %>
+</body>
+</html>

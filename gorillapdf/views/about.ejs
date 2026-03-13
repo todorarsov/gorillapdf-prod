@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<%var lang=root.lang %>
+<html lang="<%=lang%>">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title><%=root.about.headTitle%></title>
+    <meta name="description" content="<%=root.about.metaDescription%>">
+    <link rel="canonical" href="<%=root.about.canonical%>"/>
+    <link rel="alternate" hreflang="x-default" href="https://gorillapdf.com/about" />
+    <link rel="alternate" hreflang="en" href="https://gorillapdf.com/about" />
+    <link rel="alternate" hreflang="de" href="https://gorillapdf.com/de/uber-uns" />
+    <link rel="alternate" hreflang="fr" href="https://gorillapdf.com/fr/a-propos" />
+    <link rel="alternate" hreflang="es" href="https://gorillapdf.com/es/acerca" />
+    <link rel="alternate" hreflang="pt" href="https://gorillapdf.com/pt/sobre" />
+    <link rel="alternate" hreflang="ja" href="https://gorillapdf.com/ja/about" />
+    <link rel="alternate" hreflang="id" href="https://gorillapdf.com/id/tentang" />
+    <link rel="alternate" hreflang="it" href="https://gorillapdf.com/it/about" />
+    <link rel="alternate" hreflang="mk" href="https://gorillapdf.com/mk/za-nas" />
+    <link rel="alternate" hreflang="tr" href="https://gorillapdf.com/tr/about" />
+    <link rel="alternate" hreflang="ru" href="https://gorillapdf.com/ru/about" />
+    <link rel="alternate" hreflang="zh" href="https://gorillapdf.com/zh/about" />
+    <link rel="alternate" hreflang="uk" href="https://gorillapdf.com/uk/about" />
+    <link rel="alternate" hreflang="ms" href="https://gorillapdf.com/ms/about" />
+    <% include partials/head %>
+</head>
+<body>
+    <% include partials/menu %>
+	<div class="container-fluid howtsecnew">
+	<div class="row">
+	<div class="col-sm-12"><h1><%=root.about.text%></h1></div>
+	</div>
+	</div>
+	
+	<!--
+        <div class="container container-fluid">
+            <h1><%=root.about.text%></h1>
+            <br>
+            <div class="row">
+                <div class="col-sm-12">              
+                    <p><%=root.about.description1%></p>
+                    <p><%=root.about.description2%></p>
+                    <p><%=root.about.description3%></p>
+                    <p><%=root.about.description3a%></p>
+                    <p><%=root.about.description3b%></p>
+                   	<ul>
+                            <li><%=root.about.s1%></li>
+                            <li><%=root.about.s2%></li>
+                            <li><%=root.about.s3%></li>
+                            <li><%=root.about.s4%></li>
+						    <li><%=root.about.s5%></li>
+                            <li><%=root.about.s6%></li>
+                            <li><%=root.about.s7%></li>
+                            <li><%=root.about.s8%></li>
+						    <li><%=root.about.s9%></li>
+                            <li><%=root.about.s10%></li>
+                            <li><%=root.about.s11%></li>
+                            <li><%=root.about.s12%></li>
+							<li><%=root.about.s13%></li>
+                            <li><%=root.about.s14%></li>
+                            <li><%=root.about.s15%></li>
+                            <li><%=root.about.s16%></li>
+							 <li><%=root.about.s17%></li>
+                            </ul>
+					 <p><%=root.about.description4%></p>
+					 <p><%=root.about.description5%></p>
+					 <p><%=root.about.description6%></p>
+					 <p><%=root.about.description7%></p>
+                </div>
+            </div>
+        </div> -->
+		
+		<div class="container-fluid howtsec howtsecnew">
+		<div class="container blckprod">
+								
+				<div class="row">
+                        <div class="col-md-8 offset-md-2">
+                           <p><%=root.about.a1%></p>
+						   <p><%=root.about.a2%></p>
+						   <p><%=root.about.a3%></p>
+						   <p><%=root.about.a4%></p>
+						 
+                        </div>
+                </div>
+		</div>
+		</div>
+		
+		<div class="container-fluid howtsec howtsecnew">
+                <div class="container blckprod">
+							
+					
+				<div class="row">
+                        <div class="col text-center">
+						 <img class="img-fluid" src="<%=root.about.statsImg1%>" alt="<%=root.about.statsImg1Alt%>" />
+                           <h3 class="text-center"><%=root.about.statsText1%></h3>
+                        </div>
+						<div class="col text-center">
+						<img class="img-fluid" src="<%=root.about.statsImg2%>" alt="<%=root.about.statsImg2Alt%>" />
+                           <h3><%=root.about.statsText2%></h3>
+                        </div>
+						<div class="col text-center">
+						<img class="img-fluid" src="<%=root.about.statsImg3%>" alt="<%=root.about.statsImg3Alt%>" />
+                           <h3><%=root.about.statsText3%></h3>
+                        </div>
+						<div class="col text-center">
+						<img class="img-fluid" src="<%=root.about.statsImg4%>" alt="<%=root.about.statsImg4Alt%>" />
+                           <h3><%=root.about.statsText4%></h3>
+                        </div>
+                </div>
+					
+				</div>
+		</div>
+		
+		<div class="container-fluid howtsec howtsecnew pt-5 pb-5">
+                <div class="container blckprod">
+                 
+                    <div class="row">
+                        <div class="mx-2 rounded col bg-secondary text-white pt-5 pb-5">
+                           <h3 class="text-white text-center">Convert to PDF</h3>
+						   <ul>
+   						    <li><a class="dropdown-item" href="/<%=root.services.jpgtopdf.url%>"><%=root.services.jpgtopdf.text%></a></li>
+							<li><a class="dropdown-item" href="/<%=root.services.pngtopdf.url%>"><%=root.services.pngtopdf.text%></a></li>
+							<li><a class="dropdown-item" href="/<%=root.services.txttopdf.url%>"><%=root.services.txttopdf.text%></a></li>
+							<li><a class="dropdown-item" href="/<%=root.services.odstopdf.url%>"><%=root.services.odstopdf.text%></a></li>
+							<li><a class="dropdown-item" href="/<%=root.services.odptopdf.url%>"><%=root.services.odptopdf.text%></a></li>
+							<li><a class="dropdown-item" href="/<%=root.services.odttopdf.url%>"><%=root.services.odttopdf.text%></a></li>
+							<li><a class="dropdown-item" href="/<%=root.services.wordtopdf.url%>"><%=root.services.wordtopdf.text%></a></li>
+							<li><a class="dropdown-item" href="/<%=root.services.exceltopdf.url%>"><%=root.services.exceltopdf.text%></a></li>
+							<li><a class="dropdown-item" href="/<%=root.services.powerpointtopdf.url%>"><%=root.services.powerpointtopdf.text%></a></li>
+							<li><a class="dropdown-item" href="/<%=root.services.htmltopdf.url%>"><%=root.services.htmltopdf.text%></a></li>
+						   </ul>
+                        </div>
+						
+						<div class="mx-2 rounded col bg-success text-white pt-5 pb-5">
+                           <h3 class="text-white text-center">Convert from PDF</h3>
+						   <ul>
+						   <li><a class="dropdown-item" href="/<%=root.services.onlineocr.url%>"><%=root.services.onlineocr.text%></a></li>
+						   <li><a class="dropdown-item" href="/<%=root.services.pdftotxt.url%>"><%=root.services.pdftotxt.text%></a></li>
+						   <li><a class="dropdown-item" href="/<%=root.services.pdftoword.url%>"><%=root.services.pdftoword.text%></a></li>
+						   </ul>
+                        </div>
+						
+						<div class="mx-2 rounded col bg-warning text-dark pt-5 pb-5">
+                           <h3 class="text-center">Protect</h3>
+						   <ul>
+						   <li><a class="dropdown-item" href="/<%=root.services.passwordprotectpdf.url%>"><%=root.services.passwordprotectpdf.text%></a></li>
+						   <li><a class="dropdown-item" href="/<%=root.services.unlockpdf.url%>"><%=root.services.unlockpdf.text%></a></li>
+						   </ul>
+                        </div>
+						
+						<div class="mx-2 rounded col bg-info text-white pt-5 pb-5">
+                           <h3 class="text-white text-center">Manage</h3>
+						   <ul>
+						   <li><a class="dropdown-item" href="/<%=root.services.compresspdf.url%>"><%=root.services.compresspdf.text%></a></li>
+						   <li><a class="dropdown-item" href="/<%=root.services.mergepdf.url%>"><%=root.services.mergepdf.text%></a></li>
+						   </ul>
+                        </div>
+						
+						<div class="mx-2 rounded col bg-danger text-white pt-5 pb-5">
+                           <h3 class="text-white text-center">View</h3>
+						   <ul>
+						   <li><a class="dropdown-item" href="/<%=root.services.pdfreader.url%>"><%=root.services.pdfreader.text%></a></li>
+						   </ul>
+                        </div>
+						
+						
+                       
+                    </div>
+                </div>
+            </div> 
+		
+		<div class="container-fluid howtsec pt-5 pb-5" style="background: #fff9b5;">
+		<div class="container blckprod">
+				<!-- <div class="row">
+                        <div class="col-sm-12 headprod">
+                           <h2><%=root.about.missionTitle%></h2>
+                        </div>
+                </div> -->
+				
+				<div class="row align-items-center text-center">
+                        <div class="col-md-4">
+                          <img class="img-fluid" src="<%=root.about.missionImg%>" alt="<%=root.about.missionImgAlt%>" />
+                        </div>
+						
+						<div class="col-md-8">
+						   <h2><%=root.about.missionTitle%></h2>
+                          <p><%=root.about.missionText%></p>
+                        </div>
+                </div>
+		</div>
+		</div>
+		
+		<div class="container-fluid howtsec howtsecnew pt-5 pb-5 mb-5">
+		<div class="container blckprod">
+				<div class="row">
+                        <div class="col-sm-12 headprod">
+                           <h2><%=root.about.autorHead%></h2>
+                        </div>
+                </div>
+				
+				<div class="row align-items-center text-center">
+                        <div class="col-md-6">
+                          <img class="img-fluid" src="<%=root.about.autor1Img%>" alt="<%=root.about.autor1ImgAlt%>" />
+						  <h3><i>Todor</i></h3>
+						  <p><%=root.about.autor1Txt%></p>
+						  <a href="https://www.linkedin.com/in/todor-arsov-9688a528/"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a> <a href="mailto: todor@gorillapdf.com"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
+
+                        </div>
+						
+						
+                
+				
+                        <div class="col-md-6">
+						  <img class="img-fluid" src="<%=root.about.autor2Img%>" alt="<%=root.about.autor2ImgAlt%>" />
+						  <h3 id="darko"><i>Darko</i></h3>
+                          <p><%=root.about.autor2Txt%></p>
+						  <a href="https://www.linkedin.com/in/darkoatanasov/"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a> <a href="mailto: darko@gorillapdf.com"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
+                        </div>
+						
+						
+                </div>
+		</div>
+		</div>
+		
+		<div class="container-fluid howtsec mt-2 mb-5">
+		<div class="container blckprod">
+		<div class="row">
+				    <div class="col-md-12 headprod">
+                           <h2><%=root.about.helpTitle%></h2>
+                    </div>  
+		</div>
+		<div class="row justify-content-md-center">
+				    <div class="col-sm-3 headprod rounded">
+					
+							<div class="pt-3 pb-3 mr-md-2 rounded bg-light"><h3><%=root.about.helpServ1%></h3>
+							<img class="img-fluid" src="<%=root.about.helpServ1Img%>" alt="<%=root.about.helpServ1Alt%>" />
+							<a href="/<%=root.contact.url%>"><%=root.about.helpServ1%> <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+							</div>
+                    </div>
+					<div class="col-sm-3 headprod rounded">
+					
+							<div class="pt-3 pb-3 bg-light mr-md-2 rounded"><h3><%=root.about.helpServ2%></h3>
+							<img class="img-fluid" src="<%=root.about.helpServ2Img%>" alt="<%=root.about.helpServ2Alt%>" />
+							<a href="http://eepurl.com/hcBV7v"><%=root.about.helpServ2%> <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+							</div>
+                    </div> 
+					
+		</div>
+		<div class="row justify-content-md-center">
+				    <div class="col-sm-3 headprod rounded">
+					
+							<div class="pt-3 pb-3 bg-light mr-md-2 rounded"><h3><%=root.about.helpServ3%></h3>
+							<img class="img-fluid" src="<%=root.about.helpServ3Img%>" alt="<%=root.about.helpServ3Alt%>" />
+							<a href="https://gorillapdf.com/blog/"><%=root.about.helpServ3%> <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+							</div>
+                    </div>
+					<div class="col-sm-3 headprod">
+                          
+                    </div>  
+				</div>
+
+		</div>
+		</div>
+<!--	<div class="container-fluid howtsec howtsecnew">
+		<div class="container blckprod">
+				<div class="row">
+                        <div class="col-sm-12 headprod">
+                           <h1>About</h1>
+                        </div>
+                </div>
+				
+				<div class="row">
+                        <div class="col-md-8 offset-md-2">
+                           <p>When people share the same vision and core values, something great is bound to happen. Such is the story of GorillaPDF, where people passionate about innovation and transformation create helpful products for working with PDF documents.</p>
+						   <p>Launched in 2020, it all started with three services for converting PDF files. We quickly found that busy people are in need for more PDF tools to support their operations with PDFs.</p>
+						   <p>Today, GorillaPDF tools are seventeen in number, including merging, compressing, protecting and reading PDF documents.</p>
+						   <p>The path to follow is keep on delivering products and solutions that save time, paper, and contribute for a greener world.</p>
+						 
+                        </div>
+                </div>
+		</div>
+		</div>
+				
+				
+				
+	<div class="container-fluid howtsec howtsecnew">
+                <div class="container blckprod">
+				<div class="row">
+                        <div class="col-sm-12 headprod">
+                           <h2>Tools</h2>
+                        </div>
+                </div>
+					
+					
+				<div class="row">
+                        <div class="col text-center">
+						<img src="/img/about/en/on-going-development.png">
+                           <h3 class="text-center">On-going Development</h3>
+                        </div>
+						<div class="col text-center">
+						<img src="/img/about/en/free-online-pdf-tools.png">
+                           <h3>17 Tools</h3>
+                        </div>
+						<div class="col text-center">
+						<img src="/img/about/en/different-languages.png">
+                           <h3>14 Languages</h3>
+                        </div>
+						<div class="col text-center">
+						<img src="/img/about/en/all-platforms-supported.png">
+                           <h3>Platform-independent</h3>
+                        </div>
+                </div>
+					
+				</div>
+		</div>
+				
+				
+			
+		<div class="container-fluid howtsec howtsecnew">
+                <div class="container blckprod">
+                    <div class="row">
+                        <div class="col-sm-12 headprod">
+                           <h2>Tools</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col bg-secondary text-white">
+                           <h3 class="text-white text-center">Convert to PDF</h3>
+						   <ul>
+   						    <li><a class="dropdown-item" href="/<%=root.services.jpgtopdf.url%>"><%=root.services.jpgtopdf.text%></a></li>
+							<li><a class="dropdown-item" href="/<%=root.services.pngtopdf.url%>"><%=root.services.pngtopdf.text%></a></li>
+							<li><a class="dropdown-item" href="/<%=root.services.txttopdf.url%>"><%=root.services.txttopdf.text%></a></li>
+							<li><a class="dropdown-item" href="/<%=root.services.odstopdf.url%>"><%=root.services.odstopdf.text%></a></li>
+							<li><a class="dropdown-item" href="/<%=root.services.odptopdf.url%>"><%=root.services.odptopdf.text%></a></li>
+							<li><a class="dropdown-item" href="/<%=root.services.odttopdf.url%>"><%=root.services.odttopdf.text%></a></li>
+							<li><a class="dropdown-item" href="/<%=root.services.wordtopdf.url%>"><%=root.services.wordtopdf.text%></a></li>
+							<li><a class="dropdown-item" href="/<%=root.services.exceltopdf.url%>"><%=root.services.exceltopdf.text%></a></li>
+							<li><a class="dropdown-item" href="/<%=root.services.powerpointtopdf.url%>"><%=root.services.powerpointtopdf.text%></a></li>
+							<li><a class="dropdown-item" href="/<%=root.services.htmltopdf.url%>"><%=root.services.htmltopdf.text%></a></li>
+						   </ul>
+                        </div>
+						
+						<div class="col bg-success text-white">
+                           <h3 class="text-white text-center">Convert from PDF</h3>
+						   <ul>
+						   <li><a class="dropdown-item" href="/<%=root.services.onlineocr.url%>"><%=root.services.onlineocr.text%></a></li>
+						   <li><a class="dropdown-item" href="/<%=root.services.pdftotxt.url%>"><%=root.services.pdftotxt.text%></a></li>
+						   </ul>
+                        </div>
+						
+						<div class="col bg-warning text-dark">
+                           <h3 class="text-center">Protect</h3>
+						   <ul>
+						   <li><a class="dropdown-item" href="/<%=root.services.passwordprotectpdf.url%>"><%=root.services.passwordprotectpdf.text%></a></li>
+						   <li><a class="dropdown-item" href="/<%=root.services.unlockpdf.url%>"><%=root.services.unlockpdf.text%></a></li>
+						   </ul>
+                        </div>
+						
+						<div class="col bg-info text-white">
+                           <h3 class="text-white text-center">Manage</h3>
+						   <ul>
+						   <li><a class="dropdown-item" href="/<%=root.services.compresspdf.url%>"><%=root.services.compresspdf.text%></a></li>
+						   <li><a class="dropdown-item" href="/<%=root.services.mergepdf.url%>"><%=root.services.mergepdf.text%></a></li>
+						   </ul>
+                        </div>
+						
+						<div class="col bg-danger text-white">
+                           <h3 class="text-white text-center">View</h3>
+						   <ul>
+						   <li><a class="dropdown-item" href="/<%=root.services.pdfreader.url%>"><%=root.services.pdfreader.text%></a></li>
+						   </ul>
+                        </div>
+						
+						
+                       
+                    </div>
+                </div>
+            </div> 
+		
+		
+		<div class="container-fluid howtsec howtsecnew">
+		<div class="container blckprod">
+				<div class="row">
+                        <div class="col-sm-12 headprod">
+                           <h2>Mission</h2>
+                        </div>
+                </div>
+				
+				<div class="row align-items-center text-center">
+                        <div class="col-md-4">
+                          <img src="/img/about/en/green-earth-mission.png">
+                        </div>
+						
+						<div class="col-md-8">
+                          <p>We want to contribute to a more sustainable world and promote paperless culture. We believe in complete digitalization of our society that will have positive impact on reducing emissions. </p>
+                        </div>
+                </div>
+		</div>
+		</div> 
+		
+	<div class="container-fluid howtsec howtsecnew">
+		<div class="container blckprod">
+				<div class="row">
+                        <div class="col-sm-12 headprod">
+                           <h2>People</h2>
+                        </div>
+                </div>
+				
+				<div class="row align-items-center text-center">
+                        <div class="col-md-6">
+                          <img src="/img/about/en/todor-arsov.png">
+						  <p><i>Todor</i></p>
+						  <p>The Software Engineer who's building and sharpening the tools at users' disposal, and make amazing things with code.</p>
+						  <i class="fa fa-linkedin-square" aria-hidden="true"></i> <i class="fa fa-envelope-o" aria-hidden="true"></i>
+
+                        </div>
+						
+						
+                
+				
+                        <div class="col-md-6">
+						<img src="/img/about/en/darko-atanasov.png">
+							<p><i>Darko</i></p>
+                          <p>The brand ambasador and Chief Content Officer, who's telling the world about the great stuff here on this website.</p>
+						  <i class="fa fa-linkedin-square" aria-hidden="true"></i> <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                        </div>
+						
+						
+                </div>
+		</div>
+		</div>
+		
+		<div class="container-fluid howtsec howtsecnew">
+			<div class="container blckprod">
+				<div class="row">
+				    <div class="col-md-12 headprod">
+                           <h2>Let's connect</h2>
+                    </div>  
+				</div>
+				<div class="row justify-content-md-center">
+				    <div class="col-sm-3 headprod rounded">
+					
+							<div class="bg-white mr-md-2 rounded"><h3>Contact us</h3>
+							<img src="/img/about/en/contact-us.png">
+							<a href="#">Interlink <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+							</div>
+                    </div>
+					<div class="col-sm-3 headprod rounded">
+					
+							<div class="bg-white mr-md-2 rounded"><h3>Subscribe</h3>
+							<img src="/img/about/en/subscribe-for-the-news.png">
+							<a href="#">Interlink <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+							</div>
+                    </div> 
+				</div>
+				<div class="row justify-content-md-center">
+				    <div class="col-sm-3 headprod rounded">
+					
+							<div class="bg-white mr-md-2 rounded"><h3>Read the blog</h3>
+							<img src="/img/about/en/read-the-blog.png">
+							<a href="#">Interlink <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+							</div>
+                    </div>
+					<div class="col-sm-3 headprod">
+                          
+                    </div>  
+				</div>  
+
+
+<div class="row justify-content-md-center">
+				    <div class="col-sm-3 headprod">
+					
+							<i class="fa fa-facebook fa-3x" aria-hidden="true"></i><i class="fa fa-linkedin fa-3x" aria-hidden="true"></i>
+<i class="fa fa-twitter fa-3x" aria-hidden="true"></i><i class="fa fa-youtube fa-3x" aria-hidden="true"></i>
+
+                    </div>
+					
+				</div> 
+
+				
+				
+				</div>
+			</div>
+		</div> -->
+		
+		
+           <% include partials/footer %>
+</body>
+</html>
