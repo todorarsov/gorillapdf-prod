@@ -1,9 +1,14 @@
 node_modules
 .git
+.env
 .gitignore
 .vscode
+.eslintrc
 Dockerfile
 docker-compose.yml
 npm-debug.log
 dist
 build
+ecosystem.config.js
+webpack.config.js
+gulpfile.js
