@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<% var lang=root.lang %>
+<html lang="<%=lang%>">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title><%=root.sitemap.headTitle%></title>
+    <meta name="description" content="<%=root.sitemap.metaDescription%>">
+    <link rel="canonical" href="<%=root.sitemap.canonical%>" />
+    <link rel="alternate" hreflang="x-default" href="https://gorillapdf.com/sitemap" />
+    <link rel="alternate" hreflang="en" href="https://gorillapdf.com/sitemap" />
+    <link rel="alternate" hreflang="de" href="https://gorillapdf.com/de/sitemap" />
+    <link rel="alternate" hreflang="fr" href="https://gorillapdf.com/fr/sitemap" />
+    <link rel="alternate" hreflang="es" href="https://gorillapdf.com/es/sitemap" />
+    <link rel="alternate" hreflang="pt" href="https://gorillapdf.com/pt/sitemap" />
+    <link rel="alternate" hreflang="ja" href="https://gorillapdf.com/ja/sitemap" />
+    <link rel="alternate" hreflang="id" href="https://gorillapdf.com/id/sitemap" />
+    <link rel="alternate" hreflang="it" href="https://gorillapdf.com/it/sitemap" />
+    <link rel="alternate" hreflang="mk" href="https://gorillapdf.com/mk/sitemap" />
+    <link rel="alternate" hreflang="tr" href="https://gorillapdf.com/tr/sitemap" />
+    <link rel="alternate" hreflang="ru" href="https://gorillapdf.com/ru/sitemap" />
+    <link rel="alternate" hreflang="zh" href="https://gorillapdf.com/zh/sitemap" />
+    <link rel="alternate" hreflang="uk" href="https://gorillapdf.com/uk/sitemap" />
+    <link rel="alternate" hreflang="ms" href="https://gorillapdf.com/ms/sitemap" />
+    
+    <% include partials/head %>
+</head>
+
+<body>
+    <% include partials/menu %>
+        <div class="container container-fluid">
+            <h1><%=root.sitemap.sitemapTitle%></h1><br>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><%=root.sitemap.pages%></h2>
+                    <ul>
+                        <li><a href="/" title="GorillaPDF Homepage"><%=root.home.text%></a></li>
+                        <li><a href="/<%=root.about.url%>" title="<%=root.footer.about%>"><%=root.footer.about%></a></li>
+                        <li><a href="/<%=root.contact.url%>" title="<%=root.footer.contact%>"><%=root.footer.contact%></a></li>
+                        <%if(lang ==="en"){ %><li><a href="https://gorillapdf.com/blog/" title="Blog">Blog</a></li><% } %>
+                        <li><a href="/<%=root.terms.url%>" title="<%=root.footer.terms%>"><%=root.footer.terms%></a></li>
+                        <li><a href="/<%=root.privacy.url%>" title="<%=root.footer.privacy%>"><%=root.footer.privacy%></a></li>
+                    </ul>
+                    <h2><%=root.sitemap.pdfTools%></h2>
+
+                    <ul>
+                        <li><a href="/<%=root.services.txttopdf.url%>"><%=root.services.txttopdf.text%></a></li>
+                        <li><a href="/<%=root.services.jpgtopdf.url%>"><%=root.services.jpgtopdf.text%></a></li>
+                        <li><a href="/<%=root.services.pngtopdf.url%>"><%=root.services.pngtopdf.text%></a></li>
+                        <li><a href="/<%=root.services.passwordprotectpdf.url%>"><%=root.services.passwordprotectpdf.text%></a></li>
+                        <li><a href="/<%=root.services.unlockpdf.url%>"><%=root.services.unlockpdf.text%></a></li>
+                        <li><a href="/<%=root.services.wordtopdf.url%>"><%=root.services.wordtopdf.text%></a></li>
+                        <li><a href="/<%=root.services.odttopdf.url%>"><%=root.services.odttopdf.text%></a></li>
+                        <li><a href="/<%=root.services.odstopdf.url%>"><%=root.services.odstopdf.text%></a></li>
+                        <li><a href="/<%=root.services.odptopdf.url%>"><%=root.services.odptopdf.text%></a></li>
+                        <li><a href="/<%=root.services.exceltopdf.url%>"><%=root.services.exceltopdf.text%></a></li>
+                        <li><a href="/<%=root.services.powerpointtopdf.url%>"><%=root.services.powerpointtopdf.text%></a></li>
+                        <li><a href="/<%=root.services.compresspdf.url%>"><%=root.services.compresspdf.text%></a></li>
+						<li><a href="/<%=root.services.pdftotxt.url%>"><%=root.services.pdftotxt.text%></a></li>
+                        <li><a href="/<%=root.services.pdfreader.url%>"><%=root.services.pdfreader.text%></a></li>
+						<li><a href="/<%=root.services.mergepdf.url%>"><%=root.services.mergepdf.text%></a></li>
+						<li><a href="/<%=root.services.htmltopdf.url%>"><%=root.services.htmltopdf.text%></a></li>
+                        <li><a href="/<%=root.services.onlineocr.url%>"><%=root.services.onlineocr.text%></a></li>
+                        <li><a href="/<%=root.services.pdftoword.url%>"><%=root.services.pdftoword.text%></a></li>
+					 </ul>
+                    <%if(lang ==="en"){ %>
+                        <h2>Posts</h2>
+                        <ul>
+						<li><a href="https://gorillapdf.com/blog/when-to-use-pdf-encryption-for-personal-documents/" title="When to Use PDF Encryption for Personal Documents?
+">When to Use PDF Encryption for Personal Documents?</a></li>
+						<li><a href="https://gorillapdf.com/blog/how-to-combine-multiple-images-into-pdf/" title="How to Combine Multiple Images into PDF">How to Combine Multiple Images into PDF</a></li>
+						<li><a href="https://gorillapdf.com/blog/how-to-convert-a-web-page-to-pdf-in-different-ways/" title="How to Convert a Web Page to PDF">How to Convert a Web Page to PDF</a></li>
+						<li><a href="https://gorillapdf.com/blog/best-pdf-compressor-tools/" title="14 Best PDF Compressor Tools For 2023">14 Best PDF Compressor Tools For 2023</a></li>
+						<li><a href="https://gorillapdf.com/blog/how-to-convert-pdf-to-word/" title="How To Convert PDF to Word?">How To Convert PDF to Word?</a></li>
+						<li><a href="https://gorillapdf.com/blog/pdf-to-word-conversion-made-effortless-with-our-new-tool/" title="PDF to Word Conversion Made Effortless with Our New Tool">PDF to Word Conversion Made Effortless with Our New Tool</a></li>
+						<li><a href="https://gorillapdf.com/blog/embracing-the-future-how-digital-transformation-is-reshaping-industries/" title="Embracing the Future: How Digital Transformation is Reshaping Industries">Embracing the Future: How Digital Transformation is Reshaping Industries</a></li>
+						<li><a href="https://gorillapdf.com/blog/how-to-make-pdf-searchable/" title="How to Make PDF Searchable">How to Make PDF Searchable</a></li>
+						<li><a href="https://gorillapdf.com/blog/how-to-insert-pdf-into-word/" title="How to insert PDF into Word">How to insert PDF into Word</a></li>
+						<li><a href="https://gorillapdf.com/blog/8-benefits-of-pdf-vs-paper-in-the-workplace/" title="8 Benefits of PDF vs Paper in the Workplace">8 Benefits of PDF vs Paper in the Workplace</a></li>
+						<li><a href="https://gorillapdf.com/blog/the-history-of-optical-character-recognition/" title="The History of Optical Character Recognition">The History of Optical Character Recognition</a></li>
+							<li><a href="https://gorillapdf.com/blog/11-good-ways-to-use-pdf-in-the-classroom/" title="11 Good Ways to Use PDF in the Classroom">11 Good Ways to Use PDF in the Classroom</a></li>
+						    <li><a href="https://gorillapdf.com/blog/new-ui-improvements-and-languages-to-close-out-the-year/" title="New UI Improvements and Languages to Close Out The Year">New UI Improvements and Languages to Close Out The Year</a></li>
+							<li><a href="https://gorillapdf.com/blog/why-should-graphic-designers-use-pdf/" title="Why Should Graphic Designers Use PDF">Why Should Graphic Designers Use PDF</a></li>
+						    <li><a href="https://gorillapdf.com/blog/all-about-pdf-a-what-it-is-and-its-benefits/" title="All about PDF/A: What It Is and Its Benefits">All about PDF/A: What It Is and Its Benefits</a></li>
+						    <li><a href="https://gorillapdf.com/blog/10-tips-for-effective-document-management/" title="14 Tips for Effective Document Management in 2021">14 Tips for Effective Document Management in 2021</a></li>
+						    <li><a href="https://gorillapdf.com/blog/say-hello-to-the-new-ocr-converter-tool/" title="Say Hello to the New OCR Converter Tool">Say Hello to the New OCR Converter Tool</a></li>
+						    <li><a href="https://gorillapdf.com/blog/can-you-print-password-protected-pdfs/" title="Can You Print Password-Protected PDFs?">Can You Print Password-Protected PDFs?</a></li>
+							<li><a href="https://gorillapdf.com/blog/15-tips-to-go-paperless-at-work/" title="15 Tips To Go Paperless At Work">15 Tips To Go Paperless At Work</a></li>
+							<li><a href="https://gorillapdf.com/blog/new-merger-reader-and-html-to-pdf-converter/" title="New Merger, PDF Reader and HTML to PDF Converter">New Merger, PDF Reader and HTML to PDF Converter</a></li>
+							<li><a href="https://gorillapdf.com/blog/jpg-vs-png-vs-pdf-which-is-the-best-format/" title="JPG vs. PNG vs. PDF">JPG vs PNG vs PDF: Which Is the Best Format?</a></li>
+							<li><a href="https://gorillapdf.com/blog/can-pdf-files-have-viruses/" title="Can PDF Files Have Viruses">Can PDF Files Have Viruses</a></li>
+							<li><a href="https://gorillapdf.com/blog/5-benefits-of-sending-pdf-versus-word-document/" title="5 Benefits of Sending PDF versus Word Document">5 Benefits of Sending PDF versus Word Document</a></li>
+							<li><a href="https://gorillapdf.com/blog/11-tips-to-create-seo-friendly-pdf-documents/" title="11 Tips to Create SEO Friendly PDF Documents">11 Tips to Create SEO Friendly PDF Documents</a></li>
+							<li><a href="https://gorillapdf.com/blog/20-popular-work-from-home-jobs/" title="20 Popular Work From Home Jobs">20 Popular Work From Home Jobs</a></li>
+							<li><a href="https://gorillapdf.com/blog/how-to-convert-screenshot-to-pdf/" title="How to Convert Screenshot to PDF">How to Convert Screenshot to PDF</a></li>
+						    <li><a href="https://gorillapdf.com/blog/key-reasons-to-secure-your-pdf-files/" title="7 Key Reasons to Secure Your PDF Files">7 Key Reasons to Secure Your PDF Files</a></li>
+                            <li><a href="https://gorillapdf.com/blog/18-tools-to-digitalize-teaching/" title="18 Tools to Digitalize Teaching">18 Tools to Digitalize Teaching</a></li>
+                            <li><a href="https://gorillapdf.com/blog/word-vs-pdf-resume-best-file-format-for-your-cv/" title="Word vs PDF Resume - The Best File Format For Your CV">Word vs PDF Resume - The Best File Format For Your CV</a></li>
+                            <li><a href="https://gorillapdf.com/blog/10-best-websites-to-download-free-pdf-ebooks/" title="Best Websites to Download Free PDF eBooks">10 Best Websites to Download Free PDF eBooks</a></li>
+                            <li><a href="https://gorillapdf.com/blog/why-is-your-word-document-so-large-and-how-to-reduce-its-size/" title="Why Is Your Word Document So Large and How to Reduce Its Size?">Why Is Your Word Document So Large and How to Reduce Its Size?</a></li>
+                            <li><a href="https://gorillapdf.com/blog/14-remote-working-trends-for-2020/" title="14 Remote working trends">14 Remote Working Trends for 2020</a></li>
+                            <li><a href="https://gorillapdf.com/blog/new-tools-from-the-odf-family/" title="New tools from the ODF family">New Tools from the ODF Family</a></li>
+                            <li><a href="https://gorillapdf.com/blog/how-to-search-for-pdf-on-google/" title="How to Search for PDF on Google">How to Search for PDF on Google</a></li>
+                            <li><a href="https://gorillapdf.com/blog/file-sharing-websites/" title="Best File Sharing Websites">15 Popular File Sharing Websites</a></li>
+                            <li><a href="https://gorillapdf.com/blog/10-facts-about-pdf-infographic/" title="10 facts about PDF">10 Facts About PDF</a></li>
+                            <li><a href="https://gorillapdf.com/blog/how-to-screenshot-on-mac/" title="How to Screenshot on Mac">How to Screenshot on Mac</a></li>
+                            <li><a href="https://gorillapdf.com/blog/meet-gorillapdf-compressor-tool/" title="Meet GorillaPDF Compressor Tool">Meet GorillaPDF Compressor Tool</a></li>
+                            <li><a href="https://gorillapdf.com/blog/moving-from-128-to-256-bit-aes-encryption/" title="Moving From 128 to 256-bit AES Encryption">Moving From 128 to 256-bit AES Encryption</a></li>
+                            <li><a href="https://gorillapdf.com/blog/unlock-pdf-files-like-a-pro-with-the-new-tool/" title="Unlock PDF Files Like a Pro With The New Tool">Unlock PDF Files Like a Pro With The New Tool</a></li>
+                            <li><a href="https://gorillapdf.com/blog/gorillapdf-features-new-powerpoint-to-pdf-and-excel-to-pdf-tools/" title="GorillaPDF Features New PowerPoint to PDF and Excel to PDF Tools">GorillaPDF Features New PowerPoint to PDF and Excel to PDF Tools</a></li>
+                            <li><a href="https://gorillapdf.com/blog/desktop-vs-online-pdf-converters/" title="Desktop vs Online PDF Converters">Desktop vs Online PDF Converters</a></li>
+                            <li><a href="https://gorillapdf.com/blog/what-does-pdf-stand-for/" title="What Does PDF Stand For?">What Does PDF Stand For?</a></li>
+                        </ul>
+                        <h2>Blog Categories</h2>
+                        <ul>
+                            <li><a href="https://gorillapdf.com/blog/categories/how-to/" title="How To">How To</a></li>
+                            <li><a href="https://gorillapdf.com/blog/categories/pdf/" title="PDF">PDF</a></li>
+                            <li><a href="https://gorillapdf.com/blog/categories/news/" title="News">News</a></li>
+                            <li><a href="https://gorillapdf.com/blog/categories/trends/" title="How To">Trends</a></li>
+                        </ul>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+        <% include partials/footer %>
+</body>
+</html>

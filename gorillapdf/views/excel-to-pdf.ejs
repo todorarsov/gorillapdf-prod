@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<%var lang=root.lang %>
+<html lang="<%=lang%>">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title><%=root.services.exceltopdf.headTitle%> </title>
+    <meta name="description" content="<%=root.services.exceltopdf.metaTitle%>">
+     <link rel="canonical" href="<%=root.domain%><%=root.services.exceltopdf.url%>" />
+     <link rel="alternate" hreflang="x-default" href="https://gorillapdf.com/excel-to-pdf" />
+     <link rel="alternate" hreflang="en" href="https://gorillapdf.com/excel-to-pdf" />
+     <link rel="alternate" hreflang="de" href="https://gorillapdf.com/de/excel-in-pdf" />
+     <link rel="alternate" hreflang="fr" href="https://gorillapdf.com/fr/excel-en-pdf" />
+     <link rel="alternate" hreflang="es" href="https://gorillapdf.com/es/excel-a-pdf" />
+     <link rel="alternate" hreflang="pt" href="https://gorillapdf.com/pt/excel-para-pdf" />
+     <link rel="alternate" hreflang="ja" href="https://gorillapdf.com/ja/excel-pdf" />
+     <link rel="alternate" hreflang="it" href="https://gorillapdf.com/it/da-excel-a-pdf" />
+     <link rel="alternate" hreflang="ru" href="https://gorillapdf.com/ru/excel-v-pdf" />
+     <link rel="alternate" hreflang="mk" href="https://gorillapdf.com/mk/excel-vo-pdf" />
+	 <link rel="alternate" hreflang="tr" href="https://gorillapdf.com/tr/excel-pdf-cevirme" />
+	 <link rel="alternate" hreflang="uk" href="https://gorillapdf.com/uk/excel-v-pdf" />
+	 <link rel="alternate" hreflang="id" href="https://gorillapdf.com/id/excel-ke-pdf" />
+	 <link rel="alternate" hreflang="ms" href="https://gorillapdf.com/ms/excel-kepada-pdf" />
+	 <link rel="alternate" hreflang="zh" href="https://gorillapdf.com/zh/excel-pdf" />
+     <script type="application/ld+json"> {"@context": "https://schema.org","@type": "WebApplication","name": "Excel to PDF Online Converter","description": "Online tool to convert Microsoft Excel to PDF. Convert XLS and XLSX workbooks into PDF. It's free & unlimited.","applicationCategory": "BusinessApplication","applicationSubCategory": "PDF Software","applicationSuite": "GorillaPDF","operatingSystem": "All","aggregateRating": {"@type": "AggregateRating","ratingValue": <%= pageData.ratingAverage %>,"ratingCount": <%= pageData.numberOfVotes %>},"offers": {"@type": "Offer","price": "0","priceCurrency": "USD"}}</script>
+     <% include partials/head %>
+</head>
+<body>
+    <% include partials/menu %>
+	<main>
+    <div class="container container-cards">
+        <% include partials/upload-section %>
+            <div class="row justify-content-center">
+                <div class="col-sm-9 col-lg-6 col-xs-12">
+                    <% include partials/rating-section %>
+                    <% include partials/download-single-section %>
+                </div>
+            </div>
+            <% include partials/ad-section %>
+    </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 headprod">
+                    <h2><%=root.services.exceltopdf.title2%></h2>
+                </div>
+            </div>
+            <div class="row whyuserow">
+                <div class="col-sm-6">
+                    <h3><%=root.services.exceltopdf.sTitle1%></h3>
+                    <p><%=root.services.exceltopdf.p1%></p>
+                    <p><%=root.services.exceltopdf.p2%></p>
+                </div>
+                <div class="col-sm-6 text-center">
+                    <img class="img-fluid" src="<%=root.services.exceltopdf.img2Url%>" 
+                    alt="<%=root.services.exceltopdf.img2Alt%>" />
+                </div>
+            </div>
+            <div class="row whyuserow">
+                <div class="col-sm-6 text-center">
+                    <img class="img-fluid" src="<%=root.services.exceltopdf.img3Url%>" 
+                    alt="<%=root.services.exceltopdf.img3Alt%>"  />
+                </div>
+                <div class="col-sm-6">
+                    <h3><%=root.services.exceltopdf.sTitle2%></h3>
+                    <p><%=root.services.exceltopdf.p3%></p>
+                    <p><%=root.services.exceltopdf.p4%></p>
+                 </div>
+            </div>
+            <div class="row whyuserow">
+                <div class="col-sm-6">
+                    <h3><%=root.services.exceltopdf.sTitle3%></h3>
+                    <p><%=root.services.exceltopdf.p5%></p>
+					<p><%=root.services.exceltopdf.p6%></p>
+                </div>
+                <div class="col-sm-6 text-center">
+                    <img class="img-fluid" src="<%=root.services.exceltopdf.img4Url%>"
+                    alt="<%=root.services.exceltopdf.img4Alt%>" />
+                </div>
+            </div>
+            <div class="row whyuserow">
+                <div class="col-sm-6 text-center">
+                    <img class="img-fluid" src="<%=root.services.exceltopdf.img5Url%>"
+                    alt="<%=root.services.exceltopdf.img5Alt%>" />
+                </div>
+                <div class="col-sm-6">
+                    <h3><%=root.services.exceltopdf.sTitle4%></h3>
+                    <p><%=root.services.exceltopdf.p7%></p>
+                    <p><%=root.services.exceltopdf.p8%></p>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid howtsec howtsecnew">
+            <div class="container blckprod">
+                <div class="row">
+                    <div class="col-sm-12 headprod">
+                        <h2><%=root.services.exceltopdf.title1%></h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <img src="<%=root.services.exceltopdf.img1Url%>" class="img-fluid" alt="<%=root.services.exceltopdf.img1Alt%>" />
+                    </div>
+                    <div class="col-sm-6">
+                        <ol>
+                            <li><%=root.services.exceltopdf.li1%></li>
+                            <li><%=root.services.exceltopdf.li2%></li>
+                            <li><%=root.services.exceltopdf.li3%></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+		</div>
+		<div class="container">
+            <div class="row">
+                <div class="col-sm-12 headprod">
+                    <h2><%=root.services.exceltopdf.title3%></h2>
+                </div>
+            </div>
+            <div class="row">
+				<div class="col-sm-6 text-center">
+                    <img class="img-fluid" src="<%=root.services.exceltopdf.img6Url%>" 
+                    alt="<%=root.services.exceltopdf.img6Alt%>" />
+                </div>
+                <div class="col-sm-6">
+                    <p><%=root.services.exceltopdf.p9%></p>
+                    <p><%=root.services.exceltopdf.p10%></p>
+					<p><%=root.services.exceltopdf.p11%></p>
+                </div>
+            </div>
+		</div>
+		</main>
+        <% include partials/footer %>
+        <script>window.addEventListener("load", gorillaHelper.onRaterLoad("#rater-step","form-rating","gorillapdf-excel-to-pdf",gorillaHelper.setCookieForPage("gorillapdf-excel-to-pdf"),365),!1);</script>
+</body>
+</html>

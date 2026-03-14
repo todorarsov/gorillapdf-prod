@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<% var lang=root.lang %>
+<html lang="<%= lang %>">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title><%=root.services.powerpointtopdf.headTitle%> </title>
+    <meta name="description" content="<%=root.services.powerpointtopdf.metaTitle%>">
+    <link rel="canonical" href="<%=root.domain%><%=root.services.powerpointtopdf.url%>" />
+    <link rel="alternate" hreflang="x-default" href="https://gorillapdf.com/ppt-to-pdf" />
+    <link rel="alternate" hreflang="en" href="https://gorillapdf.com/ppt-to-pdf" />
+    <link rel="alternate" hreflang="de" href="https://gorillapdf.com/de/ppt-in-pdf" />
+    <link rel="alternate" hreflang="fr" href="https://gorillapdf.com/fr/ppt-en-pdf" />
+    <link rel="alternate" hreflang="es" href="https://gorillapdf.com/es/ppt-a-pdf" />
+    <link rel="alternate" hreflang="pt" href="https://gorillapdf.com/pt/ppt-para-pdf" />
+    <link rel="alternate" hreflang="ja" href="https://gorillapdf.com/ja/ppt-pdf" />
+    <link rel="alternate" hreflang="it" href="https://gorillapdf.com/it/da-ppt-a-pdf" />
+	<link rel="alternate" hreflang="ru" href="https://gorillapdf.com/ru/ppt-v-pdf" />
+	<link rel="alternate" hreflang="mk" href="https://gorillapdf.com/mk/ppt-vo-pdf" />
+	<link rel="alternate" hreflang="tr" href="https://gorillapdf.com/tr/ppt-pdf-cevirme" />
+	<link rel="alternate" hreflang="uk" href="https://gorillapdf.com/uk/ppt-v-pdf" />
+	<link rel="alternate" hreflang="id" href="https://gorillapdf.com/id/ppt-ke-pdf" />
+	<link rel="alternate" hreflang="ms" href="https://gorillapdf.com/ms/ppt-kepada-pdf" />
+	<link rel="alternate" hreflang="zh" href="https://gorillapdf.com/zh/ppt-pdf" /> 
+    <script type="application/ld+json">{ "@context": "https://schema.org", "@type": "WebApplication", "name": "PPT to PDF Converter", "description": "Free online PPT to PDF converter that will convert all your PowerPoint presentations to PDF files. Open the .PPT file, click on convert button and download the converted PDF file.", "image": "https://gorillapdf.com/img/ppt-pptx-potx-ppsx-odp-to-pdf.png", "applicationCategory": "BusinessApplication", "applicationSubCategory": "PDF Software","applicationSuite": "GorillaPDF", "operatingSystem": "All", "aggregateRating": { "@type": "AggregateRating", "ratingValue": <%= pageData.ratingAverage %>, "ratingCount": <%= pageData.numberOfVotes %>}, "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD"} }</script>
+	<% include partials/head %>
+    </head>
+<body>
+    <% include partials/menu %>
+    <div class="container container-cards">
+        <% include partials/upload-section %>
+            <div class="row justify-content-center">
+                <div class="col-sm-9 col-lg-6 col-xs-12">
+                    <% include partials/download-single-section %>
+                </div>
+            </div>
+            <% include partials/ad-section %>
+    </div>
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 headprod">
+                    <h2><%=root.services.powerpointtopdf.title2%></h2>
+                </div>
+            </div>
+            <div class="row whyuserow">
+                <div class="col-sm-6">
+                    <h3><%=root.services.powerpointtopdf.sTitle1%></h3>
+                    <p><%=root.services.powerpointtopdf.p1%></p>
+                    <p><%=root.services.powerpointtopdf.p2%></p>
+                </div>
+                <div class="col-sm-6 text-center">
+                    <img class="img-fluid" src="<%=root.services.powerpointtopdf.img2Url%>" 
+                    alt="<%=root.services.powerpointtopdf.img2Alt%>" />
+                </div>
+            </div>
+            <div class="row whyuserow">
+                <div class="col-sm-6 text-center">
+                    <img class="img-fluid" src="<%=root.services.powerpointtopdf.img3Url%>" 
+                    alt="<%=root.services.powerpointtopdf.img3Alt%>"  />
+                </div>
+                <div class="col-sm-6">
+                    <h3><%=root.services.powerpointtopdf.sTitle2%></h3>
+                    <p><%=root.services.powerpointtopdf.p3%></p>
+                    <p><%=root.services.powerpointtopdf.p4%></p>
+                    <p><%=root.services.powerpointtopdf.p5%></p>
+                </div>
+            </div>
+            <div class="row whyuserow">
+                <div class="col-sm-6">
+                    <h3><%=root.services.powerpointtopdf.sTitle3%></h3>
+                    <p><%=root.services.powerpointtopdf.p6%></p>
+                    <p><%=root.services.powerpointtopdf.p7%></p>
+                    <p><%=root.services.powerpointtopdf.p8%></p>
+               </div>
+                <div class="col-sm-6 text-center">
+                    <img class="img-fluid" src="<%=root.services.powerpointtopdf.img4Url%>"
+                     alt="<%=root.services.powerpointtopdf.img4Alt%>" />
+                </div>
+            </div>
+            <div class="row whyuserow">
+                <div class="col-sm-6 text-center">
+                    <img class="img-fluid" src="<%=root.services.powerpointtopdf.img5Url%>" 
+                    alt="<%=root.services.powerpointtopdf.img5Alt%>"  />
+                </div>
+                <div class="col-sm-6">
+                    <h3><%=root.services.powerpointtopdf.sTitle4%></h3>
+                    <p><%=root.services.powerpointtopdf.p10%></p>
+                    <p><%=root.services.powerpointtopdf.p11%></p>
+                </div>
+            </div>
+        </div>
+		<div class="container-fluid howtsec howtsecnew">
+            <div class="container blckprod">
+                <div class="row">
+                    <div class="col-sm-12 headprod">
+                        <h2><%=root.services.powerpointtopdf.title1%></h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <img src="<%=root.services.powerpointtopdf.img1Url%>" class="img-fluid" alt="<%=root.services.powerpointtopdf.img1Alt%>" />
+                    </div>
+                    <div class="col-sm-6">
+                        <ol>
+                            <li><%=root.services.powerpointtopdf.li11%></li>
+                            <li><%=root.services.powerpointtopdf.li22%></li>
+                            <li><%=root.services.powerpointtopdf.li33%></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+</div>
+		<div class="container">
+            <div class="row">
+                <div class="col-sm-12 headprod">
+                    <h2><%=root.services.powerpointtopdf.title3%></h2>
+                </div>
+            </div>
+            <div class="row">
+				<div class="col-sm-6 text-center">
+                    <img class="img-fluid" src="<%=root.services.powerpointtopdf.img6Url%>" 
+                    alt="<%=root.services.powerpointtopdf.img6Alt%>" />
+                </div>
+                <div class="col-sm-6">
+                    <p><%=root.services.powerpointtopdf.p12%></p>
+                    <p><%=root.services.powerpointtopdf.p13%></p>
+					<p><%=root.services.powerpointtopdf.p14%></p>
+					<p><%=root.services.powerpointtopdf.p15%></p>
+                </div>
+            </div>
+		</div>
+		<div class="container container-cards">
+             <div class="row justify-content-center">
+                <div class="col-sm-9 col-lg-6 col-xs-12">
+                    <% include partials/rating-section %>
+                </div>
+            </div>
+        </div>
+        <% include partials/footer %>
+        <script>window.addEventListener("load", gorillaHelper.onRaterLoad("#rater-step", "form-rating","gorillapdf-ppt-to-pdf", gorillaHelper.setCookieForPage("gorillapdf-ppt-to-pdf"), 365), false);</script>
+</body>
+</html>

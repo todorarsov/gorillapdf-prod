@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<% var lang=root.lang %>
+<html lang="<%= lang %>">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title><%=root.services.compresspdf.headTitle%> </title>
+    <meta name="description" content="<%=root.services.compresspdf.metaTitle%>">
+    <link rel="canonical" href="<%=root.domain%><%=root.services.compresspdf.url%>" />
+    <script type="application/ld+json"> {"@context": "https://schema.org","@type": "WebApplication","name": "Compress PDF","url": "https://gorillapdf.com/compress-pdf","description": "Reduce the PDF file size with the compress PDF tool. Provides four levels of compression: Low, Medium, High and Very High.","applicationCategory": "BusinessApplication","applicationSubCategory": "PDF Software","applicationSuite": "GorillaPDF","featureList": "Low PDF Compression, Medium PDF Compression, High PDF Compression, Very High PDF Compression","screenshot": "https://gorillapdf.com/img/compress-pdf-screenshot.png","operatingSystem": "All","aggregateRating": {"@type": "AggregateRating","ratingValue": <%= pageData.ratingAverage %>,"ratingCount": <%= pageData.numberOfVotes %>},"offers": {"@type": "Offer","price": "0","priceCurrency": "USD"}}</script>
+	<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What happens when you compress a PDF file?","acceptedAnswer":{"@type":"Answer","text":"When data compression is performed, data is encoded with fewer bits than the original representation, but that does not necessarily mean less information."}},{"@type":"Question","name":"How long does it take to compress a PDF?","acceptedAnswer":{"@type":"Answer","text":"The time you need to compress a PDF file depends on the file size. Smaller files typically need less time, and larger documents require more resources, which results in more time to compress."}},{"@type":"Question","name":"How to batch compress PDF files?","acceptedAnswer":{"@type":"Answer","text":"You can compress one PDF file per session. For batch compression, we can provide you with an API."}},{"@type":"Question","name":"Does compressing a PDF file have to reduce image quality?","acceptedAnswer":{"@type":"Answer","text":"Yes, JPEG is a lossy image file, but compression level can be adjusted to the degree where information loss is acceptable. There is a trade-off between PDF size and quality."}},{"@type":"Question","name":"Is it secure to use online PDF compress tool?","acceptedAnswer":{"@type":"Answer","text":"Yes, it’s 100% secure PDF compressor, and files are removed from secured server within 12 hours.\n"}},{"@type":"Question","name":"How to compress PDF to 500 KB?","acceptedAnswer":{"@type":"Answer","text":"You can compress a PDF document to 500 KB, depending on its original size, which should be approximately 4-6 MB. Then you can use the Very High Compression option to reduce the size to 500 KB or less."}},{"@type":"Question","name":"How to compress PDF to smaller without losing quality?","acceptedAnswer":{"@type":"Answer","text":"To compress a PDF without losing quality, downsample images, embed only essential font characters, and remove extra metadata or objects. By using Low and Medium compression with GorillaPDF compressor, the settings are balanced so you're are getting a high-quality PDF with the smallest possible size. Always back up the original file before compression."}},{"@type":"Question","name":"How to compress PDF to 200kb?","acceptedAnswer":{"@type":"Answer","text":"Here are the steps to compress a PDF to 200 KB using GorillaPDF compressor: 1) Open GorillaPDF compress tool 2) Drag and drop your file or click on 'Browse' in the file area. 3) Access the compressor tool 4) In the drop down menu, you'll see different options for compression. Select 'Very High Compression (lowest PDF quality)' 5) Preview the file and click 'Compress PDF' button 6) Download your compressed file, and ensure it's within the 200 KB limit. Please not that in order to compress a PDF document to 200KB, your original document should be within range of 2MB to 4MB."}}]}</script>
+    <link rel="alternate" hreflang="x-default" href="https://gorillapdf.com/compress-pdf" />
+    <link rel="alternate" hreflang="en" href="https://gorillapdf.com/compress-pdf" />
+    <link rel="alternate" hreflang="de" href="https://gorillapdf.com/de/pdf-verkleinern" />
+    <link rel="alternate" hreflang="fr" href="https://gorillapdf.com/fr/compresser-pdf" />
+    <link rel="alternate" hreflang="es" href="https://gorillapdf.com/es/comprimir-pdf" />
+    <link rel="alternate" hreflang="pt" href="https://gorillapdf.com/pt/comprimir-pdf" />
+    <link rel="alternate" hreflang="ja" href="https://gorillapdf.com/ja/compress-pdf" />
+    <link rel="alternate" hreflang="it" href="https://gorillapdf.com/it/comprimere-pdf" />
+	<link rel="alternate" hreflang="ru" href="https://gorillapdf.com/ru/szhat-pdf" />
+	<link rel="alternate" hreflang="mk" href="https://gorillapdf.com/mk/kompresiraj-pdf" />
+	<link rel="alternate" hreflang="tr" href="https://gorillapdf.com/tr/pdf-kucultme" />
+	<link rel="alternate" hreflang="uk" href="https://gorillapdf.com/uk/stisnuti-pdf" />
+	<link rel="alternate" hreflang="id" href="https://gorillapdf.com/id/kompres-pdf" />
+	<link rel="alternate" hreflang="ms" href="https://gorillapdf.com/ms/mampatkan-pdf" />
+	<link rel="alternate" hreflang="zh" href="https://gorillapdf.com/zh/compress-pdf" />
+    <% include partials/head %>
+</head>
+<body>
+    <% include partials/menu %>
+	<main>
+    <div class="container container-cards main-converter">
+        <% include partials/upload-section %>
+            <div class="row justify-content-center">
+                <div class="col-sm-9 col-lg-6 col-xs-12">
+                   <% include partials/download-single-section %>
+                </div>
+            </div>
+            <% include partials/ad-section %>
+    </div>
+<!-- HowTo --><div class="container-fluid howtsec howtsecnew">
+                <div class="container blckprod">
+                    <div class="row">
+                        <div class="col-sm-12 headprod">
+                                <h2>
+                                    <%=root.services.compresspdf.title1%>
+                                </h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                           <div class="video">
+            <div class="video__youtube" data-youtube>
+                <img src="/img/compress-pdf/how-to-compress-pdf.png" alt="How to compress PDF video tutorial" class="video__placeholder img-fluid" />
+                <button class="video__button" data-youtube-button="https://www.youtube.com/embed/aQt4-wNNNkI"></button>
+            </div>
+        </div>
+  <script>
+  (function (window) {
+
+    'use strict';
+
+    window.code = window.code || {};
+
+    window.code.lightweightYoutubePlayer = function () {
+
+        var dataYoutubeVideos = '[data-youtube]';
+
+        var youtubeVideos = [...document.querySelectorAll(dataYoutubeVideos)];
+
+        function init() {
+            youtubeVideos.forEach(function(element) {
+                bindYoutubeVideoEvent(element);
+            });
+        }
+
+        function bindYoutubeVideoEvent(element) {
+            var button = element.querySelector('[data-youtube-button]');
+
+            button.addEventListener('click', createIframe);
+        }
+
+        function createIframe(event) {
+            var url = event.target.dataset.youtubeButton;
+            var youtubePlaceholder = event.target.parentNode;
+
+            var htmlString = '<div class="video__youtube"> <iframe class="video__iframe" src="' + url + '?autoplay=1" frameborder="0" allowfullscreen></iframe></div>';
+
+            youtubePlaceholder.style.display = 'none';
+            youtubePlaceholder.insertAdjacentHTML('beforebegin', htmlString);
+            youtubePlaceholder.parentNode.removeChild(youtubePlaceholder);
+        }
+
+        return {
+           init: init
+        }
+    };
+
+})(window)
+
+ready();
+
+function ready() {
+    var lightweightYoutubePlayer = new code.lightweightYoutubePlayer()
+
+    if (document.readyState != 'loading') {
+        page.init()
+    } else {
+        document.addEventListener('DOMContentLoaded', lightweightYoutubePlayer.init);
+    }
+}
+  </script>
+                        </div>
+                        <div class="col-sm-6">
+                            <ol>
+                                <li>
+                                    <%=root.services.compresspdf.li1%>
+                                </li>
+                                <li>
+                                    <%=root.services.compresspdf.li2%>
+                                </li>
+                                <li>
+                                    <%=root.services.compresspdf.li3%>
+                                </li>
+                                <li>
+                                    <%=root.services.compresspdf.li4%>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+<!-- Benefits --><div class="container howtsecextra bene">
+  <div class="row">
+    <div class="col-sm-4"><h3><%=root.services.compresspdf.bene1Title%></h3><p><%=root.services.compresspdf.bene1Txt%></p></div>
+    <div class="col-sm-4"><h3><%=root.services.compresspdf.bene2Title%></h3><p><%=root.services.compresspdf.bene2Txt%></p></div>
+    <div class="col-sm-4"><h3><%=root.services.compresspdf.bene3Title%></h3><p><%=root.services.compresspdf.bene3Txt%></p></div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4"><h3><%=root.services.compresspdf.bene4Title%></h3><p><%=root.services.compresspdf.bene4Txt%></p></div>
+    <div class="col-sm-4"><h3><%=root.services.compresspdf.bene5Title%></h3><p><%=root.services.compresspdf.bene5Txt%></p></div>
+    <div class="col-sm-4"><h3><%=root.services.compresspdf.bene6Title%></h3><p><%=root.services.compresspdf.bene6Txt%></p></div>
+  </div>
+</div> <!-- End Benefits -->			
+<!-- Features --><div class="container howtsecextra">
+                <div class="row">
+                    <div class="col-sm-12 headprod">
+                        <h2><%=root.services.compresspdf.title2%></h2>
+                    </div>
+                </div>
+                <div class="row whyuserow">
+                    <div class="col-sm-6">
+                        <h3><%=root.services.compresspdf.sTitle1%></h3>
+                        <p><%=root.services.compresspdf.p1%></p>
+                        <p><%=root.services.compresspdf.p2%></p>
+					</div>
+                    <div class="col-sm-6 text-center">
+                        <img class="img-fluid" src="<%=root.services.compresspdf.img2Url%>" alt="<%=root.services.compresspdf.img2Alt%>" />
+                    </div>
+                </div>
+                <div class="row whyuserow">
+                    <div class="col-sm-6 text-center">
+                        <img class="img-fluid" src="<%=root.services.compresspdf.img3Url%>" alt="<%=root.services.compresspdf.img3Alt%>" />
+                    </div>
+                    <div class="col-sm-6">
+                        <h3><%=root.services.compresspdf.sTitle2%></h3>
+                        <p><%=root.services.compresspdf.p3%></p>
+                        <p><%=root.services.compresspdf.p4%></p>
+                    </div>
+                </div>
+                <div class="row whyuserow">
+                    <div class="col-sm-6">
+                        <h3><%=root.services.compresspdf.sTitle3%></h3>
+                        <p><%=root.services.compresspdf.p5%></p>
+                        <p><%=root.services.compresspdf.p6%></p>
+                    </div>
+                    <div class="col-sm-6 text-center">
+                        <img class="img-fluid" src="<%=root.services.compresspdf.img4Url%>" alt="<%=root.services.compresspdf.img4Alt%>" />
+                    </div>
+                </div>
+                <div class="row whyuserow">
+                    <div class="col-sm-6 text-center">
+                        <img class="img-fluid" src="<%=root.services.compresspdf.img5Url%>" alt="<%=root.services.compresspdf.img5Alt%>" />
+                    </div>
+                    <div class="col-sm-6">
+                        <h3><%=root.services.compresspdf.sTitle4%></h3>
+                        <p><%=root.services.compresspdf.p13%></p>
+                        <p><%=root.services.compresspdf.p14%></p>
+					</div>
+                </div>
+            </div>
+		
+<!-- Hightlight --><div class="container-fluid howtsec howtsecnew">
+            <div class="row">
+                <div class="col-sm-12 headprod">
+                    <h2><%=root.services.compresspdf.highlightTitle%></h2>
+                </div>
+            </div>
+            <div class="row">
+				<div class="col-sm-6 text-center">
+                    <img class="img-fluid" src="<%=root.services.compresspdf.highlightImgUrl%>" 
+                    alt="<%=root.services.compresspdf.highlightImgAlt%>" />
+                </div>
+                <div class="col-sm-6">
+                    <p><%=root.services.compresspdf.h1%></p>
+                    <p><%=root.services.compresspdf.h2%></p>
+					<p><%=root.services.compresspdf.h3%></p>
+					<p><%=root.services.compresspdf.h4%></p>
+					<p><%=root.services.compresspdf.h5%></p>
+                </div>
+            </div>
+</div>
+        
+<!-- FAQ -->
+<div class="container fuq">
+<h2><%=root.services.compresspdf.faqTitle%></h2>	
+  <div id="accordion">
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h5 class="mb-0">
+        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+          <%=root.services.compresspdf.faq1Q%>
+        </button>
+      </h5>
+    </div>
+
+    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+      <div class="card-body">
+       <%=root.services.compresspdf.faq1A%>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingTwo">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          <%=root.services.compresspdf.faq2Q%>
+        </button>
+      </h5>
+    </div>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+      <div class="card-body">
+        <%=root.services.compresspdf.faq2A%>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingThree">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+         <%=root.services.compresspdf.faq3Q%>
+        </button>
+      </h5>
+    </div>
+    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+      <div class="card-body">
+        <%=root.services.compresspdf.faq3A%>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingFour">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+         <%=root.services.compresspdf.faq4Q%>
+        </button>
+      </h5>
+    </div>
+    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+      <div class="card-body">
+        <%=root.services.compresspdf.faq4A%>
+      </div>
+    </div>
+  </div>
+   <div class="card">
+    <div class="card-header" id="headingFive">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+         <%=root.services.compresspdf.faq5Q%>
+        </button>
+      </h5>
+    </div>
+    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+      <div class="card-body">
+        <%=root.services.compresspdf.faq5A%>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingSix">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+         <%=root.services.compresspdf.faq6Q%>
+        </button>
+      </h5>
+    </div>
+    <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion">
+      <div class="card-body">
+        <%=root.services.compresspdf.faq6A%>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingSeven">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+         <%=root.services.compresspdf.faq7Q%>
+        </button>
+      </h5>
+    </div>
+    <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordion">
+      <div class="card-body">
+        <%=root.services.compresspdf.faq7A%>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingEight">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+         <%=root.services.compresspdf.faq8Q%>
+        </button>
+      </h5>
+    </div>
+    <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordion">
+      <div class="card-body">
+        <%=root.services.compresspdf.faq8A%>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+		
+<!-- Rating -->
+<div class="container container-cards">
+             <div class="row justify-content-center">
+                <div class="col-sm-9 col-lg-6 col-xs-12">
+                    <% include partials/rating-section %>
+                </div>
+            </div>
+        </div>
+		
+		</main>
+        <% include partials/footer %>
+        <script>window.addEventListener("load", gorillaHelper.onRaterLoad("#rater-step","form-rating","gorillapdf-compress-pdf",gorillaHelper.setCookieForPage("gorillapdf-compress-pdf"),365),!1);</script>
+</body>
+</html>

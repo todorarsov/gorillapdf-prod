@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<% var lang=root.lang %>
+<html lang="<%= lang %>">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title><%=root.services.pdftotxt.headTitle%> </title>
+    <meta name="description" content="<%=root.services.pdftotxt.metaTitle%>">
+    <link rel="canonical" href="<%=root.domain%><%=root.services.pdftotxt.url%>" />
+    <link rel="alternate" hreflang="x-default" href="https://gorillapdf.com/pdf-to-text" />
+    <link rel="alternate" hreflang="en" href="https://gorillapdf.com/pdf-to-text" />
+    <link rel="alternate" hreflang="fr" href="https://gorillapdf.com/fr/pdf-en-text" />
+    <link rel="alternate" hreflang="de" href="https://gorillapdf.com/de/pdf-in-text" />
+    <link rel="alternate" hreflang="es" href="https://gorillapdf.com/es/pdf-a-text" />
+    <link rel="alternate" hreflang="pt" href="https://gorillapdf.com/pt/pdf-para-text" />
+    <link rel="alternate" hreflang="ja" href="https://gorillapdf.com/ja/pdf-text" />
+    <link rel="alternate" hreflang="it" href="https://gorillapdf.com/it/da-pdf-a-txt" />
+	<link rel="alternate" hreflang="ru" href="https://gorillapdf.com/ru/pdf-v-txt" />
+	<link rel="alternate" hreflang="mk" href="https://gorillapdf.com/mk/pdf-vo-tekst" />
+	<link rel="alternate" hreflang="tr" href="https://gorillapdf.com/tr/pdf-text-cevirme" />
+	<link rel="alternate" hreflang="uk" href="https://gorillapdf.com/uk/pdf-to-text" />
+	<link rel="alternate" hreflang="id" href="https://gorillapdf.com/id/pdf-ke-teks" />
+	<link rel="alternate" hreflang="ms" href="https://gorillapdf.com/ms/pdf-to-text" />
+	<link rel="alternate" hreflang="zh" href="https://gorillapdf.com/zh/pdf-txt" />
+    <script type="application/ld+json">{ "@context": "https://schema.org", "@type": "WebApplication", "name": "PDF to TXT Converter", "description": "Free online PDF to TXT converter that converts PDF files to text files in a few seconds. Open the PDF file, click on convert button and download the converted text file.", "image": "https://gorillapdf.com/img/pdf-to-text.png", "applicationCategory": "BusinessApplication", "applicationSubCategory": "PDF Software", "operatingSystem": "All", "aggregateRating": { "@type": "AggregateRating", "ratingValue": <%= pageData.ratingAverage %>, "ratingCount": <%= pageData.numberOfVotes %>}, "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD"} }</script>
+   <% include partials/head %>
+</head>
+<body>
+    <% include partials/menu %>
+    <div class="container container-cards">
+        <% include partials/upload-section %>
+            <div class="row justify-content-center">
+                <div class="col-sm-9 col-lg-6 col-xs-12">
+                    <% include partials/download-single-section %>
+                </div>
+            </div>
+            <% include partials/ad-section %>
+    </div>
+        <div class="container blckprod">
+            <div class="row">
+                <div class="col-sm-12 headprod">
+                    <h2><%=root.services.pdftotxt.stepMainTitle%></h2>
+                </div>
+            </div>
+            <div class=row>
+                <div class="col-sm-4">
+                    <div class="htbox">
+                        <img src="<%=root.services.pdftotxt.step1ImgUrl%>" 
+                        alt="<%=root.services.pdftotxt.step1ImgAlt%>" />
+                        <h3 id="step1"><%=root.step1%></h3>
+                        <p><%=root.services.pdftotxt.step1Desc%></p>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="htbox">
+                        <img src="<%=root.services.pdftotxt.step2ImgUrl%>"
+                         alt="<%=root.services.pdftotxt.step2ImgAlt%>" />
+                        <h3 id="step2"><%=root.step2%></h3>
+                        <p><%=root.services.pdftotxt.step2Desc%></p>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="htbox">
+                        <img src="<%=root.services.pdftotxt.step3ImgUrl%>" 
+                        alt="<%=root.services.pdftotxt.step3ImgAlt%>" />
+                        <h3 id="step3"><%=root.step3%></h3>
+                        <p><%=root.services.pdftotxt.step3Desc%></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 headprod">
+                    <h2><%=root.services.pdftotxt.boxLargeTitle%></h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 colrg fourreas">
+                    <h3><%=root.services.pdftotxt.box1Title%></h3>
+                    <p><%=root.services.pdftotxt.box1Desc%></p>
+                </div>
+                <div class="col-sm-6 fourreas">
+                    <h3><%=root.services.pdftotxt.box2Title%></h3>
+                    <p><%=root.services.pdftotxt.box2Desc%></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 colrg coltp fourreas">
+                    <h3><%=root.services.pdftotxt.box3Title%></h3>
+                    <p><%=root.services.pdftotxt.box3Desc%></p>
+                </div>
+                <div class="col-sm-6 coltp fourreas">
+                    <h3><%=root.services.pdftotxt.box4Title%></h3>
+                    <p><%=root.services.pdftotxt.box4Desc%></p>
+                </div>
+            </div>
+        </div>
+		<div class="container">
+		<div class="row justify-content-center">
+                <div class="col-sm-9 col-lg-6 col-xs-12">
+                    <% include partials/rating-section %>
+                </div>
+        </div>
+		</div>
+        <% include partials/footer %>
+        <script>window.addEventListener("load", gorillaHelper.onRaterLoad("#rater-step", "form-rating","gorillapdf-pdf-to-txt", gorillaHelper.setCookieForPage("gorillapdf-pdf-to-txt"), 365), false);</script>
+</body>
+</html>

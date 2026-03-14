@@ -1,0 +1,18 @@
+<div id="errorWrapper" hidden='true'>
+    <div id="errorMessageLeft">
+    <span id="errorMessage"></span>
+    <button id="errorShowMore" data-l10n-id="error_more_info">
+       <%=root.services.pdfreader.moreInformation%>
+    </button>
+    <button id="errorShowLess" data-l10n-id="error_less_info" hidden='true'>
+        <%=root.services.pdfreader.lessInformation%>
+    </button>
+    </div>
+    <div id="errorMessageRight">
+    <button id="errorClose" data-l10n-id="error_close">
+        <%=root.services.pdfreader.close%>
+    </button>
+    </div>
+    <div class="clearBoth"></div>
+    <textarea id="errorMoreInfo" hidden='true' readonly="readonly"></textarea>
+    </div>

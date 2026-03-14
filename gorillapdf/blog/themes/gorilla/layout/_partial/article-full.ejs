@@ -1,0 +1,42 @@
+<div class="blog-post">
+    <!-- Title -->
+    <h1 class="blog-post-title"><%- item.title || item.link%></h1>
+    <!-- Date and Author -->
+    <p class="blog-post-meta">
+        <%= item.date.format(config.date_format) %>
+        <% if(item.author) { %>
+            by <%- item.author %>
+        <% } %>
+    </p>
+    <!-- Content -->
+    <%- item.content %>
+    <hr />
+    <!-- Tags and Categories links -->
+    <%- partial('article-tags', {item: item}) %>
+    <%- partial('article-categories', {item: item}) %>
+	<!-- Social -->
+<div class="social-share">
+<%- share_post("facebook") %>
+<%- share_post("twitter") %>
+<%- share_post("linkedin") %>
+</div>
+	<!-- Author -->
+<div class="author">
+<div class="row">	
+
+<% if(page.author == "Darko") { %>
+<div class="col-sm-2 autcent">
+<img src="/img/darko-atanasov.png" alt="Author: Darko Atanasov">
+<a href="https://www.linkedin.com/in/darkoatanasov/"><i class="fab fa-linkedin-in"></i></a> <a href="mailto: darko@gorillapdf.com"><i class="fas fa-envelope"></i></a>
+</div>
+<div class="col-sm-10">
+<p id="header-page-author">Written by <a href="https://gorillapdf.com/about#darko"><%= page.author %></a></p>
+<p>He writes about digital trends, tips on improving productivity and software solutions for busy people.</p>
+</div>
+<% } else { %>
+No author.
+<% } %>
+</div>
+</div>
+
+</div>

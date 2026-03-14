@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<%var lang=root.lang %>
+<html lang="<%=lang%>">
+<head>
+	<% include partials/head %> 
+	<title>GorillaPDF - 404 Error</title>
+</head>
+<body>
+<div id="notfound">
+	<div class="notfound">
+		<div class="notfound-404">
+			<h1>404</h1>
+			<h2><%=root.error.text%></h2>
+			<img style="float:left" alt="GorillaPDF Logo" title="GorillaPDF" src="/img/gorillapdf-logo.png" />
+		</div>
+		<a href="/"><%=root.error.goToHomepage%></a>
+	</div>
+</div>
+</body>
+</html>

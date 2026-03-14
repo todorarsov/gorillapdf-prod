@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<%var lang=root.lang %>
+    <html lang="<%=lang%>">
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>
+            <%=root.index.headTitle%>
+        </title>
+        <meta name="description" content="<%=root.index.metaDescription%>">
+        <link rel="canonical" href="<%=root.index.canonical%>" />
+        <link rel="alternate" hreflang="x-default" href="https://gorillapdf.com/" />
+        <link rel="alternate" hreflang="en" href="https://gorillapdf.com/" />
+        <link rel="alternate" hreflang="de" href="https://gorillapdf.com/de" />
+        <link rel="alternate" hreflang="fr" href="https://gorillapdf.com/fr" />
+        <link rel="alternate" hreflang="es" href="https://gorillapdf.com/es" />
+        <link rel="alternate" hreflang="pt" href="https://gorillapdf.com/pt" />
+        <link rel="alternate" hreflang="ja" href="https://gorillapdf.com/ja" />
+        <link rel="alternate" hreflang="id" href="https://gorillapdf.com/id" />
+        <link rel="alternate" hreflang="it" href="https://gorillapdf.com/it" />
+        <link rel="alternate" hreflang="mk" href="https://gorillapdf.com/mk" />
+        <link rel="alternate" hreflang="tr" href="https://gorillapdf.com/tr" />
+        <link rel="alternate" hreflang="ru" href="https://gorillapdf.com/ru" />
+        <link rel="alternate" hreflang="zh" href="https://gorillapdf.com/zh" />
+        <link rel="alternate" hreflang="uk" href="https://gorillapdf.com/uk" />
+        <link rel="alternate" hreflang="ms" href="https://gorillapdf.com/ms" />
+        <script
+            type="application/ld+json">{"@context": "https://schema.org","@type": "Organization","name": "GorillaPDF","alternateName": "PDF Converter","url": "https://gorillapdf.com/","logo": "https://gorillapdf.com/img/gorilla-logo.png","foundingDate": "2020","founders": [{"@type": "Person","name": "Todor Arsov"}, {"@type": "Person","name": "Darko Atanasov"}],"contactPoint": {"@type": "ContactPoint","contactType": "Email support","email": "gorilla@gorillapdf.com"},"sameAs": ["https://www.facebook.com/GorillaPDF/","https://twitter.com/GorillaPdf","https://www.youtube.com/channel/UCwZ-91cOLX-Q0fR8fLzIOWw","https://www.linkedin.com/company/gorillapdf/","https://gorillapdf.com/"]}</script>
+        <script
+            type="application/ld+json">{"@context": "http://schema.org","@type": "WebSite","name": "GorillaPDF","url": "https://gorillapdf.com"} </script>
+        <% include partials/head %>
+    </head>
+
+    <body>
+        <% include partials/menu %>
+            <div class="container-fluid bg-3 text-center">
+                <div class="container">
+                    <h1>
+                        <%=root.index.header1%>
+                    </h1>
+                    <p class="lead">
+                        <%=root.index.header2%>
+                    </p>
+                    <main class="cards">
+                        <% for(var i=0; i<homeData.length; i++) {%>
+                            <article class="card" href="<%= homeData[i].url %>">
+                                <a class="custom-box-href" href="<%= homeData[i].url %>"> 
+                                    <img src="<%= homeData[i].imgUrl %>" alt="<%= homeData[i].imgAlt %>" 
+                                    height="32px;" width="48px" /> 
+                                    <div class="text">
+                                      <span class="home-title"> <%= homeData[i].text %></span>
+                                      <%if(homeData[i].imgUrl ==="/img/pdf-to-word/en/pdf-to-word-icon.png"){ %> <span class="badge badge-warning"><%=root.index.new%></span> <% } %>
+                                      <%if(homeData[i].imgUrl ==="/img/pdf-to-excel/en/pdf-to-excel-icn.png"){ %> <span class="badge badge-warning"><%=root.index.soon%></span> <% } %>
+                                      <%if(homeData[i].imgUrl ==="/img/pdf-to-ppt/en/pdf-to-ppt-icn.png"){ %> <span class="badge badge-warning"><%=root.index.soon%></span> <% } %>
+
+                                      <p><%= homeData[i].homepageDesc %></p>  
+                                    </div>
+                                   
+                              </a>
+                             
+                            </article>
+                         <% } %>
+    
+               
+                          
+                </div>
+      
+            </div>
+
+            <%if(lang==="en" ){ %>
+                
+				<article>
+				<div class="container px-4 mt-5">
+                        <div class="row gx-5">
+						<div class="col-12">
+				<header><h2 class="text-center">The Ultimate PDF Converter for Busy Professionals</h2></header>
+				</div></div></div>
+				<section>
+				<div class="container-fluid homebn1">
+                    <div class="container px-4">
+                        <div class="row gx-5">
+						<div class="col-md-6 my-auto">
+                            <h3 class="mb-5">Perfectly formatted PDFs from every office document.</h3>
+                            <p>Looking to convert your Microsoft Office files to professional-looking PDFs? Your search ends here with our suite of converters!</p>
+<p>With our <a href="https://gorillapdf.com/word-to-pdf" title="Word to PDF converter online">Word to PDF Converter</a>, you can eliminate formatting errors and produce sleek, shareable documents.</p>
+<p>Concerned about complex Excel spreadsheets? Our <a href="https://gorillapdf.com/excel-to-pdf" title="Excel to PDF converter">Excel to PDF Converter</a> ensures consistent formatting, providing you with peace of mind.</p>
+<p>And for presentations, our <a href="https://gorillapdf.com/ppt-to-pdf" title="PPT to PDF converter">PowerPoint to PDF tool</a> enables you to captivate your audience with visually appealing, easy-to-navigate PDFs.</p>
+<p>Opt for GorillaPDF tools for a seamless, high-quality conversion experience.</p></div>
+ <div class="col-md-6"><img src="https://gorillapdf.com/img/index/en/convert-microsoft-office-files-to-pdf.png" class="img-fluid mx-auto d-block" alt="Convert Microsoft Office Documents to PDF files"></div>
+                        </div>
+                    </div>
+                </div>
+				</section>
+				
+				<section>
+				<div class="container-fluid homebn1">
+                    <div class="container px-4">
+                        <div class="row gx-5">
+						<div class="col-md-6 my-auto">
+                            <h3 class="mb-5">Reduce the size of your PDF files by up to 95%.</h3>
+                            <p>Don't let oversized PDF files hinder your productivity.</p>
+<p>Whether you need to transmit large files to clients, archive crucial documents in the cloud, or simply conserve space on your hard drive, our complimentary online <a href="https://gorillapdf.com/compress-pdf" title="Compress PDF tool">PDF Compressor</a> is at your service.</p>
+<p>In just a few clicks, you can reduce the size of your PDF files while preserving image and font quality, along with other essential details.</p>
+</div>
+ <div class="col-md-6"><img src="https://gorillapdf.com/img/index/en/reduce-pdf-size-with-compression.png" class="img-fluid mx-auto d-block" alt="Compress PDF files by 95%"></div>
+                        </div>
+                    </div>
+                </div>
+				</section>
+				
+				<section>
+				<div class="container-fluid homebn1">
+                    <div class="container px-4">
+                        <div class="row gx-5">
+						<div class="col-md-6 my-auto">
+                            <h3 class="mb-5">Safeguard your significant PDF files with the PDF protect tool.</h3>
+                            <p>Secure your confidential PDF documents effortlessly with our robust <a href="https://gorillapdf.com/password-protect-pdf" title="Password Protect PDF">Password Protect PDF tool</a>.</p>
+<p>Should you need to remove the protection, simply utilize the <a href="https://gorillapdf.com/unlock-pdf" title="Unlock PDF">PDF Unlock tool</a>.</p>
+<p>Ideal for legal documents, financial reports, and other sensitive data, our tools provide security and ensure the smooth operation of your business.</p>
+</div>
+ <div class="col-md-6"><img src="https://gorillapdf.com/img/index/en/secure-your-pdf-files.png" class="img-fluid mx-auto d-block" alt="Secure your PDF files with 256-bit AES encryption"></div>
+                        </div>
+                    </div>
+                </div>
+				</section>
+				
+				<section>
+				<div class="container-fluid homebn1">
+                    <div class="container px-4">
+                        <div class="row gx-5">
+						<div class="col-md-6 my-auto">
+                            <h3 class="mb-5">Create PDFs with multiple images & extract text from files.</h3>
+                            <p>Ideal for crafting reports, invoices, proposals, and other crucial documents, our <a href="https://gorillapdf.com/jpg-to-pdf" title="JPG to PDF converter">JPG to PDF</a> and <a href="https://gorillapdf.com/png-to-pdf" title="PNG to PDF converter">PNG to PDF</a> converters transform your images into professional-grade PDF documents in moments.</p>
+							<p>And with built-in OCR technology, you can even convert scanned documents into editable text with the <a href="https://gorillapdf.com/online-ocr">OCR service</a>, saving you time and hassle.</p>
+						</div>
+						<div class="col-md-6"><img src="https://gorillapdf.com/img/index/en/image-to-pdf-converters.png" class="img-fluid mx-auto d-block" alt="GorillaPDF features JPG to PDF, PNG to PDF and Online OCR converters"></div>
+                        </div>
+                    </div>
+                </div>
+				</section>
+				
+				<section>
+				<div class="container-fluid homebn1">
+                    <div class="container px-4">
+                        <div class="row gx-5">
+						<div class="col-md-6 my-auto">
+                            <h3 class="mb-5">Effortlessly combine, arrange and organize your PDFs.</h3>
+                            <p>Enhance your productivity with our user-friendly and effective <a href="https://gorillapdf.com/merge-pdf" title="Merge PDF">PDF merge tool</a>.</p>
+							<p>Simply upload your files, position them in the preferred order, and let our tool handle the rest.</p>
+							<p>Whether you are a busy professional, a student, or someone who regularly works with PDF documents, our merge tool is the ideal solution to streamline your document management.</p>
+						</div>
+						<div class="col-md-6"><img src="https://gorillapdf.com/img/index/en/merge-pdf-files.png" class="img-fluid mx-auto d-block" alt="Merge multiple PDF files into one"></div>
+                        </div>
+                    </div>
+                </div>
+				</section>
+				</article>
+				<section>
+				<div class="container-fluid testimoni mt-5">
+                    <div class="container px-4">
+                        <div class="row justify-content-md-center gx-5">
+						<div class="col-md-6">
+                            
+                            <i class="lead">"GorillaPDF is a free, online, PDF converter. It's very simple and easy to use and is a great alternative to paid PDF converter software such as Adobe. You can easily convert any file into a PDF."</i>
+							<p class="text-center mt-1">Jessi N. - Director of Marketing & Business Development</p>
+						</div>
+					</div>
+					<div class="row gx-5 mt-5">		
+						<div class="col-md-12 text-center">
+                          <h2 class="text-secondary">Review GorillaPDF on Capterra & G2.</h2>
+						</div>
+				    </div>
+					<div class="row gx-5">		
+						<div class="col-md-6 text-center border-right">
+                          <img src="https://gorillapdf.com/img/index/en/gorillapdf-capterra-reviews.png" class="img-fluid" rel="nofollow" alt="GorillaPDF Capterra Reviews">
+						</div>
+						<div class="col-md-6 text-center">
+                            <img src="https://gorillapdf.com/img/index/en/gorillapdf-g2-crowd-reviews.png" class="img-fluid" alt="GorillaPDF G2 Crowd Reviews">
+						</div>
+					</div>
+                    </div>
+                </div>
+				</section>
+                <div class="container-fluid ltstnews">
+                    <div class="container">
+                        <h2>Latest From The Blog</h2>
+                        <div class="cards">
+						<article class="col-md-4">
+  <img src="https://gorillapdf.com/blog/when-to-use-pdf-encryption-for-personal-documents/when-use-pdf-encryption-for-pdf-documents.jpg" alt="PDF Encryption for Personal Documents" class="img-fluid" />
+                  <div class="text">
+                                    <h3>PDF Encryption for Personal Documents</h3><a class="btn btn-secondary btn-sm"
+                                        href="https://gorillapdf.com/blog/when-to-use-pdf-encryption-for-personal-documents/"
+                                        role="button">Read</a>
+                                    </div>
+                             
+                            </article>
+						<article class="col-md-4">
+                    <img src="https://gorillapdf.com/blog/how-to-combine-multiple-images-into-pdf/how-to-combine-multiple-images-into-pdf.jpg"
+                                        alt="How to combine multiple images to PDF" class="img-fluid" />
+                                        <div class="text">
+                                            <h3>How to Combine Images to PDF</h3><a class="btn btn-secondary btn-sm"
+                                            href="https://gorillapdf.com/blog/how-to-combine-multiple-images-into-pdf/"
+                                            role="button">Read</a>
+                                        </div>
+                                 </article>
+						<article class="col-md-4">
+                                 
+                                        <img src="https://gorillapdf.com/blog/how-to-convert-a-web-page-to-pdf-in-different-ways/how-to-convert-a-web-page-to-pdf.png"
+                                        alt="How to Convert Web Page to PDF?" class="img-fluid" />
+                                        <div class="text">
+                                        <h3>How To Convert Web Page to PDF</h3><a class="btn btn-secondary btn-sm"
+                                    href="https://gorillapdf.com/blog/how-to-convert-a-web-page-to-pdf-in-different-ways/"
+                                    role="button">Read</a>
+                                        </div>
+                             
+                                </article>   
+							</div><div class="row">
+                            <div class="col-sm-12"><a class="gorilla-btn"
+                                    href="https://gorillapdf.com/blog/" title="GorillaPDF Blog">See All</a></div>
+                        </div>
+                    </div>
+                </div>
+				</main>
+                <% } %>
+                    <% include partials/footer %>
+    </body>
+
+    </html>

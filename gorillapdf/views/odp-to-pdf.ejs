@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<% var lang=root.lang %>
+    <html lang="<%= lang %>">
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>
+            <%=root.services.odptopdf.headTitle%>
+        </title>
+        <meta name="description" content="<%=root.services.odptopdf.metaTitle%>">
+        <link rel="canonical" href="<%=root.domain%><%=root.services.odptopdf.url%>" />
+        <link rel="alternate" hreflang="x-default" href="https://gorillapdf.com/odp-to-pdf" />
+        <link rel="alternate" hreflang="en" href="https://gorillapdf.com/odp-to-pdf" />
+        <link rel="alternate" hreflang="de" href="https://gorillapdf.com/de/odp-in-pdf" />
+        <link rel="alternate" hreflang="fr" href="https://gorillapdf.com/fr/odp-en-pdf" />
+        <link rel="alternate" hreflang="es" href="https://gorillapdf.com/es/odp-a-pdf" />
+        <link rel="alternate" hreflang="pt" href="https://gorillapdf.com/pt/odp-para-pdf" />
+        <link rel="alternate" hreflang="ja" href="https://gorillapdf.com/ja/odp-pdf" />
+        <link rel="alternate" hreflang="it" href="https://gorillapdf.com/it/da-odp-a-pdf" />
+        <link rel="alternate" hreflang="ru" href="https://gorillapdf.com/ru/odp-v-pdf" />
+        <link rel="alternate" hreflang="mk" href="https://gorillapdf.com/mk/odp-vo-pdf" />
+        <link rel="alternate" hreflang="tr" href="https://gorillapdf.com/tr/odp-pdf-cevirme" />
+        <link rel="alternate" hreflang="uk" href="https://gorillapdf.com/uk/odp-v-pdf" />
+        <link rel="alternate" hreflang="id" href="https://gorillapdf.com/id/odp-ke-pdf" />
+        <link rel="alternate" hreflang="ms" href="https://gorillapdf.com/ms/odp-kepada-pdf" />
+        <link rel="alternate" hreflang="zh" href="https://gorillapdf.com/zh/odp-pdf" />
+        <% include partials/head %>
+            <script type="application/ld+json">
+                {
+                    "@context": "https://schema.org",
+                    "@type": "WebApplication",
+                    "name": "ODP to PDF Converter",
+                    "description": "Convert OpenOffice slides and presentations into PDF free. Load your file, and click on Convert button. After converting, download your file.",
+                    "applicationCategory": "BusinessApplication",
+                    "applicationSubCategory": "PDF Software",
+					"applicationSuite": "GorillaPDF",
+                    "operatingSystem": "All",
+                    "aggregateRating": {
+                        "@type": "AggregateRating",
+                        "ratingValue": <%= pageData.ratingAverage %>,
+                        "ratingCount": <%= pageData.numberOfVotes %>
+                    },
+                    "offers": {
+                        "@type": "Offer",
+                        "price": "0",
+                        "priceCurrency": "USD"
+                    }
+                }
+            </script>
+    </head>
+
+    <body>
+        <% include partials/menu %>
+            <div class="container container-cards">
+                <% include partials/upload-section %>
+                    <div class="row justify-content-center">
+                        <div class="col-sm-9 col-lg-6 col-xs-12">
+                            <% include partials/rating-section %>
+                                <% include partials/download-single-section %>
+                        </div>
+                    </div>
+                    <% include partials/ad-section %>
+            </div>
+            <div class="container-fluid howtsec">
+                <div class="container blckprod">
+                    <div class="row">
+                        <div class="col-sm-12 headprod">
+                                <h2> <%=root.services.odptopdf.title1%> </h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <img src="<%=root.services.odptopdf.img1Url%>" alt="<%=root.services.odptopdf.img1Alt%>" class="img-fluid" />
+                        </div>
+                        <div class="col-sm-6">
+                            <ol>
+                                <li>
+                                    <%=root.services.odptopdf.li1%>
+                                </li>
+                                <li>
+                                    <%=root.services.odptopdf.li2%>
+                                </li>
+                                <li>
+                                    <%=root.services.odptopdf.li3%>
+                                </li>
+                                <li>
+                                    <%=root.services.odptopdf.li4%>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 headprod">
+                        <h2>
+                            <%=root.services.odptopdf.title2%>
+                        </h2>
+                    </div>
+                </div>
+                <div class="row whyuserow">
+                    <div class="col-sm-6">
+                        <h3>
+                            <%=root.services.odptopdf.sTitle1%>
+                        </h3>
+                        <p>
+                            <%=root.services.odptopdf.p1%>
+                        </p>
+                        <p>
+                            <%=root.services.odptopdf.p2%>
+                        </p>
+                    </div>
+                    <div class="col-sm-6 text-center">
+                        <img class="img-fluid" src="<%=root.services.odptopdf.img2Url%>" alt="<%=root.services.odptopdf.img2Alt%>" />
+                    </div>
+                </div>
+                <div class="row whyuserow">
+                    <div class="col-sm-6 text-center">
+                        <img class="img-fluid" src="<%=root.services.odptopdf.img3Url%>" alt="<%=root.services.odptopdf.img3Alt%>" />
+                    </div>
+                    <div class="col-sm-6">
+                        <h3>
+                            <%=root.services.odptopdf.sTitle2%>
+                        </h3>
+                        <p>
+                            <%=root.services.odptopdf.p3%>
+                        </p>
+                        <p>
+                            <%=root.services.odptopdf.p4%>
+                        </p>
+                    </div>
+                </div>
+                <div class="row whyuserow">
+                    <div class="col-sm-6">
+                        <h3>
+                            <%=root.services.odptopdf.sTitle3%>
+                        </h3>
+                        <p>
+                            <%=root.services.odptopdf.p5%>
+                        </p>
+                        <p>
+                            <%=root.services.odptopdf.p6%>
+                        </p>
+                    </div>
+                    <div class="col-sm-6 text-center">
+                        <img class="img-fluid" src="<%=root.services.odptopdf.img4Url%>" alt="<%=root.services.odptopdf.img4Alt%>" />
+                    </div>
+                </div>
+                <div class="row whyuserow">
+                    <div class="col-sm-6 text-center">
+                        <img class="img-fluid" src="<%=root.services.odptopdf.img5Url%>" alt="<%=root.services.odptopdf.img5Alt%>" />
+                    </div>
+                    <div class="col-sm-6">
+                        <h3>
+                            <%=root.services.odptopdf.sTitle4%>
+                        </h3>
+                        <p>
+                            <%=root.services.odptopdf.p7%>
+                        </p>
+                        <p>
+                            <%=root.services.odptopdf.p8%>
+                        </p>
+                        <p>
+                            <%=root.services.odptopdf.p9%>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <% include partials/footer %>
+                <script>window.addEventListener("load", gorillaHelper.onRaterLoad("#rater-step", "form-rating", "gorillapdf-odp-pdf", gorillaHelper.setCookieForPage("gorillapdf-odp-pdf"), 365), false);</script>
+    </body>
+
+    </html>

@@ -1,0 +1,28 @@
+<div class="findbar hidden doorHanger" id="findbar">
+    <div id="findbarInputContainer">
+    <input id="findInput" class="toolbarField" title="<%=root.services.pdfreader.find%>" placeholder="<%=root.services.pdfreader.findText%>" tabindex="91" data-l10n-id="find_input">
+    <div class="splitToolbarButton">
+    <button id="findPrevious" class="toolbarButton findPrevious" title="<%=root.services.pdfreader.previousText%>" tabindex="92" data-l10n-id="find_previous">
+    <span data-l10n-id="find_previous_label"><%=root.services.pdfreader.previous%></span>
+    </button>
+    <div class="splitToolbarButtonSeparator"></div>
+    <button id="findNext" class="toolbarButton findNext" title="<%=root.services.pdfreader.nextText%>" tabindex="93" data-l10n-id="find_next">
+    <span data-l10n-id="find_next_label"><%=root.services.pdfreader.next%></span>
+    </button>
+    </div>
+    </div>
+    <div id="findbarOptionsOneContainer">
+    <input type="checkbox" id="findHighlightAll" class="toolbarField" tabindex="94">
+    <label for="findHighlightAll" class="toolbarLabel" data-l10n-id="find_highlight"><%=root.services.pdfreader.highlightAll%></label>
+    <input type="checkbox" id="findMatchCase" class="toolbarField" tabindex="95">
+    <label for="findMatchCase" class="toolbarLabel" data-l10n-id="find_match_case_label"><%=root.services.pdfreader.matchCase%></label>
+    </div>
+    <div id="findbarOptionsTwoContainer">
+    <input type="checkbox" id="findEntireWord" class="toolbarField" tabindex="96">
+    <label for="findEntireWord" class="toolbarLabel" data-l10n-id="find_entire_word_label"><%=root.services.pdfreader.wholeWords%></label>
+    <span id="findResultsCount" class="toolbarLabel hidden"></span>
+    </div>
+    <div id="findbarMessageContainer">
+    <span id="findMsg" class="toolbarLabel"></span>
+    </div>
+    </div> 

@@ -1,0 +1,27 @@
+<div class="ready-convert-section">
+
+    <div id="postDataStatus2">
+        <progress id="progressBar2" class="el-display-none" value="0" max="100"></progress>
+        <div id="status2"></div>
+    </div>
+
+</div>
+<div class="upload-file-btn">
+    <button type="button" id="submit-btn-simple" onclick="gorillaHelper.makeRequestToServerSimple('<%=pageData.serviceName%>')" class="btn btn-danger btn-lg el-margin-top-10"><i class="fa fa-cog"></i>
+        <%= pageData.buttonTitle %>
+    </button>
+    <button type="button" id="start-over-simple" onclick="gorillaHelper.startOver()" class="btn btn-outline-danger btn-lg el-margin-top-10">
+        <i class="fa fa-plus-circle"></i>
+        <%=root.upload.startOver%>
+    </button>
+</div>
+<div id="invalid-url" class="el-margin-top-10 el-display-none">
+    <div class='alert alert-danger'>
+        <strong><i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+             Sorry we can't recognize this url. Please add valid URL or don't forget to include http:// or https:// at the start </strong></div>
+</div>
+<div id="secured-url" class="el-margin-top-10 el-display-none">
+    <div class='alert alert-danger'>
+        <strong><i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+             Sorry, we couldn't process this URL because of security access from the remote server </strong></div>
+</div>

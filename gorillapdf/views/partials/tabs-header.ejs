@@ -1,0 +1,19 @@
+<style>
+    a#profile-tab {
+    background-color: grey;
+}
+a#home-tab{
+    background-color: darkgray;
+}
+</style>
+<% if(pageData.serviceName==="html-to-pdf" ){ %>
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#pills-home" role="tab">Upload HTML
+  file</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#pills-profile" role="tab">Enter URL</a>
+        </li>
+    </ul>
+    <% } %>

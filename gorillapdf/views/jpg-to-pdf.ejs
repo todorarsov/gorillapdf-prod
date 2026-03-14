@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<% var lang=__('root.lang') %>
+<html lang="<%= lang %>">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title><%=root.services.jpgtopdf.headTitle%> </title>
+    <meta name="description" content="<%=root.services.jpgtopdf.metaTitle%>">
+     <link rel="canonical" href="<%=root.domain%><%=root.services.jpgtopdf.url%>" />
+     <link rel="alternate" hreflang="x-default" href="https://gorillapdf.com/jpg-to-pdf" />
+     <link rel="alternate" hreflang="en" href="https://gorillapdf.com/jpg-to-pdf" />
+     <link rel="alternate" hreflang="fr" href="https://gorillapdf.com/fr/jpg-en-pdf" />
+     <link rel="alternate" hreflang="de" href="https://gorillapdf.com/de/jpg-in-pdf" />
+     <link rel="alternate" hreflang="es" href="https://gorillapdf.com/es/jpg-a-pdf" />
+     <link rel="alternate" hreflang="pt" href="https://gorillapdf.com/pt/jpg-para-pdf" />
+     <link rel="alternate" hreflang="ja" href="https://gorillapdf.com/ja/jpg-pdf" />
+     <link rel="alternate" hreflang="it" href="https://gorillapdf.com/it/da-jpg-a-pdf" />
+     <link rel="alternate" hreflang="ru" href="https://gorillapdf.com/ru/jpg-v-pdf" />
+     <link rel="alternate" hreflang="mk" href="https://gorillapdf.com/mk/jpg-vo-pdf" />
+     <link rel="alternate" hreflang="tr" href="https://gorillapdf.com/tr/jpg-pdf-cevirme" />
+     <link rel="alternate" hreflang="uk" href="https://gorillapdf.com/uk/jpg-to-pdf" />
+     <link rel="alternate" hreflang="id" href="https://gorillapdf.com/id/jpg-ke-pdf" />
+     <link rel="alternate" hreflang="ms" href="https://gorillapdf.com/ms/jpg-kepada-pdf" />
+     <link rel="alternate" hreflang="zh" href="https://gorillapdf.com/zh/jpg-pdf" />
+	 <script type="application/ld+json">{"@context": "https://schema.org","@type": "WebApplication","name": "JPG to PDF Converter","description": "Free online JPG to PDF converter that converts images to PDF files in a few seconds. Open the files, click on convert button and download the converted file.","image":"https://gorillapdf.com/img/feature/jpg-to-pdf-converter.png","applicationCategory": "BusinessApplication","applicationSubCategory": "PDF Software","brand": "applicationSuite","operatingSystem": "All","aggregateRating": {"@type": "AggregateRating","ratingValue": <%= pageData.ratingAverage %>,"ratingCount": <%= pageData.numberOfVotes %>},"offers": {"@type": "Offer","price": "0","priceCurrency": "USD" } } </script>
+     <% include partials/head %>
+    </head>
+<body>
+    <% include partials/menu %>
+    <div class="container container-cards">
+      <% include partials/upload-section %>
+          <div class="row justify-content-center">
+              <div class="col-sm-9 col-lg-6 col-xs-12">
+                  <% include partials/rating-section %>
+                  <% include partials/download-single-section %>
+              </div>
+          </div>
+          <% include partials/ad-section %>
+  </div>
+        <div class="container-fluid howtsec">
+            <div class="container blckprod">
+                <div class="row">
+                    <div class="col-sm-12 headprod">
+                        <h2><%=root.services.jpgtopdf.stepMainTitle%></h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <img class="img-fluid" src="<%=root.services.jpgtopdf.stepImgUrl%>"
+                         alt="<%=root.services.jpgtopdf.stepImgAlt%>" />
+                    </div>
+                    <div class="col-sm-6">
+                        <ol>
+                            <li><%=root.services.jpgtopdf.li1%></li>
+                            <li><%=root.services.jpgtopdf.li2%></li>
+                            <li><%=root.services.jpgtopdf.li3%></li>
+                            <li><%=root.services.jpgtopdf.li4%></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+         <div class="container">
+            <div class="row">
+                <div class="col-sm-12 headprod">
+                    <h2><%=root.services.jpgtopdf.title2%></h2>
+                </div>
+            </div>
+            <div class="row whyuserow">
+                <div class="col-sm-6">
+                    <h3><%=root.services.jpgtopdf.sTitle1%></h3>
+                    <p><%=root.services.jpgtopdf.p1%></p>
+                    <p><%=root.services.jpgtopdf.p2%></p>
+                </div>
+                <div class="col-sm-6 text-center">
+                    <img class="img-fluid" src="<%=root.services.jpgtopdf.img2Url%>" 
+                    alt="<%=root.services.jpgtopdf.img2Alt%>" />
+                </div>
+            </div>
+            <div class="row whyuserow">
+                <div class="col-sm-6 text-center">
+                    <img class="img-fluid" src="<%=root.services.jpgtopdf.img3Url%>" 
+                    alt="<%=root.services.jpgtopdf.img3Alt%>"  />
+                </div>
+                <div class="col-sm-6">
+                    <h3><%=root.services.jpgtopdf.sTitle2%></h3>
+                    <p><%=root.services.jpgtopdf.p3%></p>
+                    <p><%=root.services.jpgtopdf.p4%></p>
+                </div>
+            </div>
+            <div class="row whyuserow">
+                <div class="col-sm-6">
+                    <h3><%=root.services.jpgtopdf.sTitle3%></h3>
+                    <p><%=root.services.jpgtopdf.p5%></p>
+					<p><%=root.services.jpgtopdf.p6%></p>
+					<p><%=root.services.jpgtopdf.p7%></p>
+                </div>
+                <div class="col-sm-6 text-center">
+                    <img class="img-fluid" src="<%=root.services.jpgtopdf.img4Url%>"
+                    alt="<%=root.services.jpgtopdf.img4Alt%>" />
+                </div>
+            </div>
+            <div class="row whyuserow">
+                <div class="col-sm-6 text-center">
+                    <img class="img-fluid" src="<%=root.services.jpgtopdf.img5Url%>"
+                    alt="<%=root.services.jpgtopdf.img5Alt%>" />
+                </div>
+                <div class="col-sm-6">
+                    <h3><%=root.services.jpgtopdf.sTitle4%></h3>
+                    <p><%=root.services.jpgtopdf.p8%></p>
+                    <p><%=root.services.jpgtopdf.p9%></p>
+                </div>
+            </div>
+        </div>
+<!-- <div class="container-fluid howtsec">		
+<div class="container blckprod">
+<div class="row">
+                <div class="col-sm-12 headprod">
+                    <h2>FAQ</h2>
+                </div>
+            </div>
+ <div id="accordion">
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h5 class="mb-0">
+        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Do you provide a Desktop version?
+        </button>
+      </h5>
+    </div>
+
+    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+      <div class="card-body">
+        No. The JPG to PDF converter as any other tool from the toolset runs online. You can access the PDF converter with any device as long as you have an Internet connection. 
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingTwo">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Is it free to use?
+        </button>
+      </h5>
+    </div>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+      <div class="card-body">
+       Yes, the JPG to PDF online app is free to use. You can change an unlimited number of images to a PDF files for free. 
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingThree">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Do you provide an API?
+        </button>
+      </h5>
+    </div>
+    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+      <div class="card-body">
+         At request. Contact us and let's discuss.
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div> -->
+
+  <% include partials/footer %>
+  <script>window.addEventListener("load", gorillaHelper.onRaterLoad("#rater-step", "form-rating","gorillapdf-jpg-to-pdf", gorillaHelper.setCookieForPage("gorillapdf-jpg-to-pdf"), 365), false);</script>
+</body>
+</html>

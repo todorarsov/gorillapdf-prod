@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<%var lang=root.lang %>
+<html lang="<%=lang%>">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title><%=root.contact.headTitle%></title>
+    <meta name="description" content="<%=root.contact.metaDescription%>">
+    <link rel="canonical" href="<%=root.contact.canonical%>"/>
+    <link rel="alternate" hreflang="x-default" href="https://gorillapdf.com/contact" />
+    <link rel="alternate" hreflang="en" href="https://gorillapdf.com/contact" />
+    <link rel="alternate" hreflang="de" href="https://gorillapdf.com/de/kontakt" />
+    <link rel="alternate" hreflang="fr" href="https://gorillapdf.com/fr/contacter" />
+    <link rel="alternate" hreflang="es" href="https://gorillapdf.com/es/contactanos" />
+    <link rel="alternate" hreflang="pt" href="https://gorillapdf.com/pt/entre-em-contato" />
+    <link rel="alternate" hreflang="ja" href="https://gorillapdf.com/ja/contact" />
+    <link rel="alternate" hreflang="id" href="https://gorillapdf.com/id/kontak" />
+    <link rel="alternate" hreflang="it" href="https://gorillapdf.com/it/contact" />
+    <link rel="alternate" hreflang="mk" href="https://gorillapdf.com/mk/contact" />
+    <link rel="alternate" hreflang="tr" href="https://gorillapdf.com/tr/contact" />
+    <link rel="alternate" hreflang="ru" href="https://gorillapdf.com/ru/contact" />
+    <link rel="alternate" hreflang="zh" href="https://gorillapdf.com/zh/contact" />
+    <link rel="alternate" hreflang="uk" href="https://gorillapdf.com/uk/contact" />
+    <link rel="alternate" hreflang="ms" href="https://gorillapdf.com/ms/hubungi-kami" />
+
+    <% include partials/head %>
+</head>
+<body>
+    <% include partials/menu %>
+        <div class="container container-cards">
+            <h1>
+                <%=root.contact.text%>
+            </h1><br>
+            <div class="row">
+                <div class="col-sm-12">
+                    <form action="/contact" enctype="multipart/form-data" method="POST">  
+                        <div class="form-group">
+                            <input type="email" placeholder="<%= root.contact.emailAddress %>" class="form-control" name="email" id="email" aria-describedby="emailHelp" placeholder="Enter email" required>
+                            <small id="emailHelp" class="form-text text-muted"><%= root.contact.emailHelp %></small>
+                        </div>
+                        <div class="form-group">
+                            <select class="custom-select" id="subject" name="subject" required>
+                                <option value="General Information" selected><%= root.contact.generalInfo %></option>
+                                <option value="Suggest Feature"><%= root.contact.suggestFeature %></option>
+                                <option value="Report Problem"><%= root.contact.reportProblem %></option>
+                                <option value="Privacy"><%= root.contact.privacy %></option>
+                              </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea rows="8" class="form-control" id="emailBody" name="emailBody" maxlength="10000" placeholder="Message" required></textarea>
+                        </div>
+                        <% if(status!==""){ %>
+                            <div class='alert alert-success'>
+                                <strong><i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                                    <%= root.contact.mailSent %>
+                                </strong>
+                            </div>
+                        <%}%>
+                        <div class="g-recaptcha" data-sitekey="6LfQtdwSAAAAALGLyuJa83KnCQ5Q39OPhdgyDqsr" data-callback="enableSubmitButton"></div>
+                        <button type="submit" class="btn btn-danger" onclick="sendEmailToServer()" disabled><%= root.contact.sendEmail %></button>
+                        <input type="hidden" name="g-recaptcha-response" id="g-recaptcha-response">
+                        <div id="recaptchaLabel" style="display: none;" class="alert alert-danger">
+                            <strong><i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                                You are not able to send email. Re-captcha not enabled, please enable from Cookie Settings in the Footer section
+                            </strong>
+                        </div>
+                    </form> 
+                </div>
+            </div>
+        </div>
+        <% include partials/footer %>
+      
+</body>
+<script>
+
+
+var storedPreferences = JSON.parse(localStorage.getItem('consentManagerData')) || {};
+
+var recaptchaEnabled = storedPreferences.states && storedPreferences.states.recaptcha;
+
+    document.addEventListener('DOMContentLoaded', function () {
+    var recaptchaLabel = document.getElementById('recaptchaLabel');
+    if (recaptchaLabel && !recaptchaEnabled) {
+        // Show the recaptchaLabel on page load if reCAPTCHA is not enabled
+        recaptchaLabel.style.display = 'block';
+    }
+});
+
+const sendEmailToServer = function () {
+
+
+
+// Now you can use the recaptchaEnabled variable to determine if reCAPTCHA is enabled
+if (recaptchaEnabled) {
+    let formData = new FormData();
+    const baseUrl = window.location.origin + "/";
+    let email = document.querySelector("#email").value;
+    let subject = document.querySelector("#subject").value;
+    let emailBody = document.querySelector("#emailBody").value;
+    
+    const notyf = new Notyf();
+    const isValidEmail = validateEmail(email);
+    
+    let captchaResponse = grecaptcha.getResponse(); // You need to get this from reCAPTCHA API
+    formData.append("g-recaptcha-response", captchaResponse);
+    console.log(captchaResponse)
+    if (console.log(validateEmail), "" !== email && "" !== subject && "" !== emailBody && isValidEmail) {
+  
+        
+        if (formData) {
+            formData.append("email", email);
+            formData.append("subject", subject);
+            formData.append("emailBody", emailBody);
+            
+            axios.create({
+                baseURL: baseUrl,
+                headers: {
+                    "Content-Type": "multipart/form-data",
+                    crossDomain: true
+                }
+            }).post("contact", formData)
+            .then(response => {
+                notyf.success(ejs.render("<%= root.contact.mailSent %>"));
+            })
+            .catch(error => {
+                notyf.error(ejs.render("<%= root.contact.mailError %>"));
+            });
+        } else {
+            notyf.error(ejs.render("<%= root.contact.mailError %>"));
+        }
+    } else {
+        notyf.error(ejs.render("<%= root.contact.mailFieldsRequired %>"));
+    }
+} else {
+    document.getElementById('recaptchaLabel').style.display = 'block';
+       notyf.error(ejs.render("You are not able to send email. Re-captcha not enabled, please enable from Cookie Settings in the Footer section"));
+}
+    
+};
+
+function enableSubmitButton() {
+            document.querySelector(".btn-danger").removeAttribute("disabled");
+        }
+        
+function validateEmail(e)
+{return/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(String(e).toLowerCase())}
+</script>
+</html>

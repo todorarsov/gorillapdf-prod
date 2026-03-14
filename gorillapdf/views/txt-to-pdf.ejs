@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<% var lang=root.lang %>
+<html lang="<%= lang %>">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title><%=root.services.txttopdf.headTitle%> </title>
+    <meta name="description" content="<%=root.services.txttopdf.metaTitle%>">
+    <link rel="canonical" href="<%=root.domain%><%=root.services.txttopdf.url%>" />
+    <link rel="alternate" hreflang="x-default" href="https://gorillapdf.com/txt-to-pdf" />
+    <link rel="alternate" hreflang="en" href="https://gorillapdf.com/txt-to-pdf" />
+    <link rel="alternate" hreflang="fr" href="https://gorillapdf.com/fr/txt-en-pdf" />
+    <link rel="alternate" hreflang="de" href="https://gorillapdf.com/de/txt-in-pdf" />
+    <link rel="alternate" hreflang="es" href="https://gorillapdf.com/es/txt-a-pdf" />
+    <link rel="alternate" hreflang="pt" href="https://gorillapdf.com/pt/txt-para-pdf" />
+    <link rel="alternate" hreflang="ja" href="https://gorillapdf.com/ja/txt-pdf" />
+    <link rel="alternate" hreflang="it" href="https://gorillapdf.com/it/da-txt-a-pdf" />
+	<link rel="alternate" hreflang="ru" href="https://gorillapdf.com/ru/txt-v-pdf" />
+	<link rel="alternate" hreflang="mk" href="https://gorillapdf.com/mk/tekst-vo-pdf" />
+	<link rel="alternate" hreflang="tr" href="https://gorillapdf.com/tr/txt-pdf-cevirme" />
+	<link rel="alternate" hreflang="uk" href="https://gorillapdf.com/uk/txt-to-pdf" />
+	<link rel="alternate" hreflang="id" href="https://gorillapdf.com/id/txt-ke-pdf" />
+	<link rel="alternate" hreflang="ms" href="https://gorillapdf.com/ms/txt-to-pdf" />
+	<link rel="alternate" hreflang="zh" href="https://gorillapdf.com/zh/txt-pdf" />
+    <script type="application/ld+json">{ "@context": "https://schema.org", "@type": "WebApplication", "name": "TXT to PDF Converter", "description": "Free online TXT to PDF converter to transform plain text files such as Notepad or WordPad to PDF documents.", "image": "https://gorillapdf.com/img/txt-to-pdf/en/free-online-txt-to-pdf-converter.webp", "applicationCategory": "BusinessApplication", "applicationSubCategory": "PDF Software", "operatingSystem": "All", "aggregateRating": { "@type": "AggregateRating", "ratingValue": <%= pageData.ratingAverage %>, "ratingCount": <%= pageData.numberOfVotes %>}, "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD"} }</script>
+	<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Does the .txt to PDF converter support batch conversion?","acceptedAnswer":{"@type":"Answer","text":"No, the current service does not support batch conversions. However, batch conversions can be utilized with GorillaPDF API."}},{"@type":"Question","name":"How do I convert text to PDF on iPhone?","acceptedAnswer":{"@type":"Answer","text":"To convert text to PDF on an iPhone using a web-based solution, simply open your preferred web browser on the iPhone, navigate to the TXT to PDF converter website, and follow the instructions to convert your file."}},{"@type":"Question","name":"How to convert copied text to PDF?","acceptedAnswer":{"@type":"Answer","text":"To convert copied text to PDF, paste the copied text into your text editor of choice such as Notepad or WordPad. Then, save the file in .txt format and use the tool to convert it into a PDF document."}},{"@type":"Question","name":"How do I convert text messages to PDF?","acceptedAnswer":{"@type":"Answer","text":"To convert text messages to PDF using a web-based converter, first save or copy your text messages into a text file format (.txt). Then, upload this file to the TXT to PDF converter service and proceed with the conversion process as guided."}}]}</script><script type="application/ld+json">{"@context":"http://schema.org","@type":"VideoObject","name":"How to convert TXT to PDF","description":"Easy way to create a PDF document from text file in .txt file format. Save your text in a text editor such as Notepad or WordPad. Then upload your .txt file in the TXT to PDF conversion tool and conver it to PDF document, ready for download.","thumbnailUrl":"https://i.ytimg.com/vi/cW4DI4snotY/default.jpg","uploadDate":"2020-05-27T17:50:41Z","duration":"PT1M18S","embedUrl":"https://www.youtube.com/embed/cW4DI4snotY","interactionCount":"16013"}</script>
+   <% include partials/head %>
+</head>
+<body>
+    <% include partials/menu %>
+	<main>
+    <div class="container container-cards">
+        <% include partials/upload-section %>
+            <div class="row justify-content-center">
+                <div class="col-sm-9 col-lg-6 col-xs-12">
+                  <% include partials/download-single-section %>
+                </div>
+            </div>
+            <% include partials/ad-section %>
+    </div>
+<!-- Benefits --><div class="container howtsecextra bene">
+  <div class="row">
+    <div class="col-sm-4"><h3><%=root.services.txttopdf.bene1Title%></h3><p><%=root.services.txttopdf.bene1Txt%></p></div>
+    <div class="col-sm-4"><h3><%=root.services.txttopdf.bene2Title%></h3><p><%=root.services.txttopdf.bene2Txt%></p></div>
+    <div class="col-sm-4"><h3><%=root.services.txttopdf.bene3Title%></h3><p><%=root.services.txttopdf.bene3Txt%></p></div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4"><h3><%=root.services.txttopdf.bene4Title%></h3><p><%=root.services.txttopdf.bene4Txt%></p></div>
+    <div class="col-sm-4"><h3><%=root.services.txttopdf.bene5Title%></h3><p><%=root.services.txttopdf.bene5Txt%></p></div>
+    <div class="col-sm-4"><h3><%=root.services.txttopdf.bene6Title%></h3><p><%=root.services.txttopdf.bene6Txt%></p></div>
+  </div>
+</div>
+<!-- HowTo --><div class="container-fluid howtsec howtsecnew">
+                <div class="container blckprod">
+                    <div class="row">
+                        <div class="col-sm-12 headprod">
+                                <h2>
+                                    <%=root.services.txttopdf.title1%>
+                                </h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                           <div class="video">
+            <div class="video__youtube" data-youtube>
+                <img src="<%=root.services.txttopdf.img1Url%>" alt="<%=root.services.txttopdf.img1Alt%>" class="video__placeholder img-fluid" />
+                <button class="video__button" data-youtube-button="https://www.youtube.com/embed/cW4DI4snotY"></button>
+            </div>
+        </div>
+  <script>
+  (function (window) {
+
+    'use strict';
+
+    window.code = window.code || {};
+
+    window.code.lightweightYoutubePlayer = function () {
+
+        var dataYoutubeVideos = '[data-youtube]';
+
+        var youtubeVideos = [...document.querySelectorAll(dataYoutubeVideos)];
+
+        function init() {
+            youtubeVideos.forEach(function(element) {
+                bindYoutubeVideoEvent(element);
+            });
+        }
+
+        function bindYoutubeVideoEvent(element) {
+            var button = element.querySelector('[data-youtube-button]');
+
+            button.addEventListener('click', createIframe);
+        }
+
+        function createIframe(event) {
+            var url = event.target.dataset.youtubeButton;
+            var youtubePlaceholder = event.target.parentNode;
+
+            var htmlString = '<div class="video__youtube"> <iframe class="video__iframe" src="' + url + '?autoplay=1" frameborder="0" allowfullscreen></iframe></div>';
+
+            youtubePlaceholder.style.display = 'none';
+            youtubePlaceholder.insertAdjacentHTML('beforebegin', htmlString);
+            youtubePlaceholder.parentNode.removeChild(youtubePlaceholder);
+        }
+
+        return {
+           init: init
+        }
+    };
+
+})(window)
+
+ready();
+
+function ready() {
+    var lightweightYoutubePlayer = new code.lightweightYoutubePlayer()
+
+    if (document.readyState != 'loading') {
+        page.init()
+    } else {
+        document.addEventListener('DOMContentLoaded', lightweightYoutubePlayer.init);
+    }
+}
+  </script>
+                        </div>
+                        <div class="col-sm-6">
+                            <ol>
+                                <li>
+                                    <%=root.services.txttopdf.li1%>
+                                </li>
+                                <li>
+                                    <%=root.services.txttopdf.li2%>
+                                </li>
+                                <li>
+                                    <%=root.services.txttopdf.li3%>
+                                </li>
+                                <li>
+                                    <%=root.services.txttopdf.li4%>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+<!-- Features --><div class="container howtsecextra">
+                <div class="row">
+                    <div class="col-sm-12 headprod">
+                        <h2><%=root.services.txttopdf.title2%></h2>
+                    </div>
+                </div>
+                <div class="row whyuserow">
+                    <div class="col-sm-6">
+                        <h3><%=root.services.txttopdf.sTitle1%></h3>
+                        <p><%=root.services.txttopdf.p1%></p>
+                        <p><%=root.services.txttopdf.p2%></p>
+						<p><%=root.services.txttopdf.p3%></p>
+					</div>
+                    <div class="col-sm-6 text-center">
+                        <img class="img-fluid" src="<%=root.services.txttopdf.img2Url%>" alt="<%=root.services.txttopdf.img2Alt%>" />
+                    </div>
+                </div>
+                <div class="row whyuserow">
+                    <div class="col-sm-6 text-center">
+                        <img class="img-fluid" src="<%=root.services.txttopdf.img3Url%>" alt="<%=root.services.txttopdf.img3Alt%>" />
+                    </div>
+                    <div class="col-sm-6">
+                        <h3><%=root.services.txttopdf.sTitle2%></h3>
+                        <p><%=root.services.txttopdf.p4%></p>
+                        <p><%=root.services.txttopdf.p5%></p>
+                    </div>
+                </div>
+                <div class="row whyuserow">
+                    <div class="col-sm-6">
+                        <h3><%=root.services.txttopdf.sTitle3%></h3>
+                        <p><%=root.services.txttopdf.p6%></p>
+                        <p><%=root.services.txttopdf.p7%></p>
+                    </div>
+                    <div class="col-sm-6 text-center">
+                        <img class="img-fluid" src="<%=root.services.txttopdf.img4Url%>" alt="<%=root.services.txttopdf.img4Alt%>" />
+                    </div>
+                </div>
+                <div class="row whyuserow">
+                    <div class="col-sm-6 text-center">
+                        <img class="img-fluid" src="<%=root.services.txttopdf.img5Url%>" alt="<%=root.services.txttopdf.img5Alt%>" />
+                    </div>
+                    <div class="col-sm-6">
+                        <h3><%=root.services.txttopdf.sTitle4%></h3>
+                        <p><%=root.services.txttopdf.p8%></p>
+                        <p><%=root.services.txttopdf.p9%></p>
+						<p><%=root.services.txttopdf.p10%></p>
+					</div>
+                </div>
+            </div>
+<!-- Hightlight --><div class="container-fluid howtsec howtsecnew">
+            <div class="row">
+                <div class="col-sm-12 headprod">
+                    <h2><%=root.services.txttopdf.highlightTitle%></h2>
+                </div>
+            </div>
+            <div class="row">
+				<div class="col-sm-6 text-center">
+                    <img class="img-fluid" src="<%=root.services.txttopdf.highlightImgUrl%>" 
+                    alt="<%=root.services.txttopdf.highlightImgAlt%>" />
+                </div>
+                <div class="col-sm-6">
+                    <p><%=root.services.txttopdf.h1%></p>
+                    <p><%=root.services.txttopdf.h2%></p>
+					<p><%=root.services.txttopdf.h3%></p>
+					<p><%=root.services.txttopdf.h4%></p>
+				</div>
+            </div>
+</div>
+<!-- FAQ --><div class="container fuq">
+<h2><%=root.services.txttopdf.faqTitle%></h2>	
+  <div id="accordion">
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h5 class="mb-0">
+        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+          <%=root.services.txttopdf.faq1Q%>
+        </button>
+      </h5>
+    </div>
+
+    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+      <div class="card-body">
+       <%=root.services.txttopdf.faq1A%>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingTwo">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          <%=root.services.txttopdf.faq2Q%>
+        </button>
+      </h5>
+    </div>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+      <div class="card-body">
+        <%=root.services.txttopdf.faq2A%>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingThree">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+         <%=root.services.txttopdf.faq3Q%>
+        </button>
+      </h5>
+    </div>
+    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+      <div class="card-body">
+        <%=root.services.txttopdf.faq3A%>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingFour">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+         <%=root.services.txttopdf.faq4Q%>
+        </button>
+      </h5>
+    </div>
+    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+      <div class="card-body">
+        <%=root.services.txttopdf.faq4A%>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<!-- Rating --><div class="container container-cards">
+             <div class="row justify-content-center">
+                <div class="col-sm-9 col-lg-6 col-xs-12">
+                    <% include partials/rating-section %>
+                </div>
+            </div>
+      </div>         
+</main>
+        <% include partials/footer %>
+        <script>window.addEventListener("load", gorillaHelper.onRaterLoad("#rater-step", "form-rating","gorillapdf-txt-to-pdf", gorillaHelper.setCookieForPage("gorillapdf-txt-to-pdf"), 365), false);</script>
+</body>
+</html>

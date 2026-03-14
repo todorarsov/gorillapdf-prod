@@ -1,0 +1,53 @@
+{
+    "name": "gorilla-pdf",
+    "version": "1.5.0",
+    "private": true,
+    "scripts": {
+        "build": "npm install",
+        "build-dist": "npm install --prefix ./dist ",
+        "build-dist-blog": "npm install --prefix ./dist/blog ",
+        "start": "node app.js",
+        "myScript": "node -e 'require(\"./test\").init()'",
+        "db": "run-func db.js init",
+        "dist": "gulp all-files",
+        "dist-path": "cd /dist",
+        "blog-path": "cd /dist/blog",
+        "production-app": "npm run dist & npm run dist-path & npm run build-dist",
+        "production-blog": "npm run blog-path & npm run build-dist-blog",
+        "production": "npm run production-app & npm run production-blog"
+    },
+    "dependencies": {
+        "@supercharge/request-ip": "^1.1.2",
+        "compression": "^1.7.4",
+        "connect-multiparty": "^2.2.0",
+        "connect-slashes": "^1.4.0",
+        "cookie-parser": "^1.4.5",
+        "del": "^5.1.0",
+        "dotenv": "^16.0.3",
+        "ejs": "^2.5.7",
+        "express": "^4.18.0",
+        "gulp": "^4.0.2",
+        "gulp-autoprefixer": "^8.0.0",
+        "gulp-concat": "^2.6.1",
+        "gulp-csso": "^4.0.1",
+        "gulp-ejs-minify": "^1.0.4",
+        "gulp-flatten": "^0.4.0",
+        "gulp-htmlmin": "^5.0.1",
+        "gulp-minify": "^3.1.0",
+        "gulp-uglify-es": "^3.0.0",
+        "i18n": "^0.10.0",
+        "mongoose": "^4.6.8",
+        "multer": "^1.4.3",
+        "nodemailer": "^6.7.0",
+        "nodemon": "^2.0.20",
+        "popper.js": "^1.16.1",
+        "run-func": "^3.0.0",
+        "run-sequence": "^1.2.2"
+    },
+    "devDependencies": {
+        "eslint": "^8.2.0",
+        "eslint-config-defaults": "^9.0.0",
+        "webpack": "^5.64.1",
+        "webpack-cli": "^4.9.1"
+    }
+}

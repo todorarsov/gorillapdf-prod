@@ -1,0 +1,17 @@
+<div class="ready-convert-section el-display-none">
+    <div id="postDataStatus">
+        <progress id="progressBar" class="el-display-none" value="0" max="100"></progress>
+        <div id="status"></div>
+    </div>
+    <div class="upload-file-btn">
+        <button id="submit-btn" type="submit" onclick="gorillaHelper.postUploadFile('fileToBeProcessed', '<%=pageData.serviceName%>',true)" class="btn btn-danger btn-lg el-margin-top-10"><i class="fa fa-cog"></i>
+            <%= pageData.buttonTitle %>
+        </button>
+        <button type="button" id="start-over" onclick="gorillaHelper.startOver()" class="btn btn-outline-danger btn-lg el-margin-top-10">
+            <i class="fa fa-plus-circle"></i>
+            <%=root.upload.startOver%>
+        </button>
+    </div>
+    <input type="hidden" id="processCompleteHidden" value="" />
+    <input type="hidden" id="fileUploadedPath" value="" />
+</div>

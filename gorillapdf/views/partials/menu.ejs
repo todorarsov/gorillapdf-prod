@@ -1,0 +1,144 @@
+<% var lang=root.lang %>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-52F8638" height="0" width="0"
+    style="display:none;visibility:hidden"></iframe></noscript>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="container">
+            <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+                <ul class="navbar-nav mr-auto">
+                    <li id="home" class="nav-item text-uppercase">
+                        <a href="/<%=root.index.url%>" class="nav-link">
+                            <%=root.index.text%>
+                        </a>
+                    </li> 
+
+                    <li>
+                        <div class="dropdown">
+                            <a class="dropdown-toggle nav-link text-uppercase" data-toggle="dropdown" href="#" aria-expanded="false">
+                                <%=root.toolsmain.text%>
+                                    <span class="caret"></span>
+                            </a>
+                            <div class="dropdown-menu dropdown-multicol2new">
+                                <div class="dropdown-col">
+                                    <a class="dropdown-item" href="/<%=root.services.txttopdf.url%>">
+                                        <%=root.services.txttopdf.text%>
+                                    </a>
+                                    <a class="dropdown-item" href="/<%=root.services.jpgtopdf.url%>">
+                                        <%=root.services.jpgtopdf.text%>
+                                    </a>
+                                    <a class="dropdown-item" href="/<%=root.services.pngtopdf.url%>">
+                                        <%=root.services.pngtopdf.text%>
+                                    </a>
+                                    <a class="dropdown-item" href="/<%=root.services.passwordprotectpdf.url%>">
+                                        <%=root.services.passwordprotectpdf.text%>
+                                    </a>
+                                    <a class="dropdown-item" href="/<%=root.services.odttopdf.url%>">
+                                        <%=root.services.odttopdf.text%>
+                                    </a>
+                                    <a class="dropdown-item" href="/<%=root.services.odstopdf.url%>">
+                                        <%=root.services.odstopdf.text%>
+                                    </a>
+                                    <a class="dropdown-item" href="/<%=root.services.odptopdf.url%>">
+                                        <%=root.services.odptopdf.text%>
+                                    </a>
+                                    <a class="dropdown-item" href="/<%=root.services.htmltopdf.url%>">
+                                        <%=root.services.htmltopdf.text%>
+                                    </a>
+                                    <a class="dropdown-item" href="/<%=root.services.onlineocr.url%>">
+                                        <%=root.services.onlineocr.text%>
+                                    </a>
+                                </div>
+                                <div class="dropdown-col">
+                                    <a class="dropdown-item" href="/<%=root.services.unlockpdf.url%>">
+                                        <%=root.services.unlockpdf.text%>
+                                    </a>
+                                    <a class="dropdown-item" href="/<%=root.services.wordtopdf.url%>">
+                                        <%=root.services.wordtopdf.text%>
+                                    </a>
+                                    <a class="dropdown-item" href="/<%=root.services.exceltopdf.url%>">
+                                        <%=root.services.exceltopdf.text%>
+                                    </a>
+                                    <a class="dropdown-item" href="/<%=root.services.powerpointtopdf.url%>">
+                                        <%=root.services.powerpointtopdf.text%>
+                                    </a>
+                                    <a class="dropdown-item" href="/<%=root.services.compresspdf.url%>">
+                                        <%=root.services.compresspdf.text%>
+                                    </a>
+                                    <a class="dropdown-item" href="/<%=root.services.pdftotxt.url%>">
+                                        <%=root.services.pdftotxt.text%>
+                                    </a>
+                                    <a class="dropdown-item" href="/<%=root.services.pdfreader.url%>">
+                                        <%=root.services.pdfreader.text%>
+                                    </a>
+                                    <a class="dropdown-item" href="/<%=root.services.mergepdf.url%>">
+                                        <%=root.services.mergepdf.text%>
+                                    </a>
+                                    <a class="dropdown-item" href="/<%=root.services.pdftoword.url%>">
+                                        <%=root.services.pdftoword.text%>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="mx-auto order-0">
+                <a class="navbar-brand mx-auto" href="/<%=root.index.url%>"><img alt="GorillaPDF Logo" title="GorillaPDF" src="/img/gorillapdf-logo.png" /></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/<%=root.about.url%>">
+                            <%=root.about.text%>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/<%=root.contact.url%>">
+                            <%=root.contact.text%>
+                        </a>
+                    </li>
+                    <%if(lang==="en" ){ %>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/<%=root.blog.url%>">
+                                <%=root.blog.text%>
+                            </a>
+                        </li>
+                        <% } %>
+                            <li class="dropdown nav" style="display:block">
+
+                                <div class="dropdown">
+                                    <a class="dropdown-toggle nav-link text-uppercase" data-toggle="dropdown" href="#" aria-expanded="false">
+                                        <i class="fa fa-globe" style="font-size:16px;color:#000000;margin-left:15px;"></i>
+                                        <span class="lang-indicator">
+                                            <%=lang%>
+                                        </span>
+                                        <span class="caret"></span></a>
+                                    <div class="dropdown-menu dropdown-multicol2">
+                                        <div class="dropdown-col">
+                                            <a class="dropdown-item" href="/" onclick="gorillaHelper.changeLanguage('en')">English</a>
+                                            <a class="dropdown-item" href="/de" onclick="gorillaHelper.changeLanguage('de')">Deutsch</a>
+                                            <a class="dropdown-item" href="/es" onclick="gorillaHelper.changeLanguage('es')">Español</a>
+                                            <a class="dropdown-item" href="/fr" onclick="gorillaHelper.changeLanguage('fr')">Française</a>
+                                            <a class="dropdown-item" href="/pt" onclick="gorillaHelper.changeLanguage('pt')">Português</a>
+                                            <a class="dropdown-item" href="/it" onclick="gorillaHelper.changeLanguage('it')">Italiano</a>
+                                            <a class="dropdown-item" href="/ru" onclick="gorillaHelper.changeLanguage('ru')">Pусский</a>
+                                        </div>
+                                        <div class="dropdown-col">
+                                            <a class="dropdown-item" href="/mk" onclick="gorillaHelper.changeLanguage('mk')">Македонски</a>
+                                            <a class="dropdown-item" href="/tr" onclick="gorillaHelper.changeLanguage('tr')">Türkçe</a>
+                                            <a class="dropdown-item" href="/uk" onclick="gorillaHelper.changeLanguage('uk')">Українська</a>
+                                            <a class="dropdown-item" href="/id" onclick="gorillaHelper.changeLanguage('id')">Bahasa Indonesia</a>
+                                            <a class="dropdown-item" href="/ms" onclick="gorillaHelper.changeLanguage('ms')">Bahasa Melayu</a>
+                                            <a class="dropdown-item" href="/zh" onclick="gorillaHelper.changeLanguage('zh')">中文 (简体)</a>
+                                            <a class="dropdown-item" href="/ja" onclick="gorillaHelper.changeLanguage('ja')">日本語</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                </ul>
+            </div>
+        </div>
+    </nav>

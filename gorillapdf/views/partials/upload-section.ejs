@@ -1,0 +1,65 @@
+<% var translated=root%>
+    <% var mainUrl=pageData.serviceName%>
+        <div class="main-upload-content">
+            <h1>
+                <%= pageData.page %>
+            </h1>
+            <div class="lead quote-tool-text">
+                <h2><%= pageData.cardHeader %></h2>
+            </div>
+            <% include tabs-header %>
+                <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="pills-home" role="tabpanel">
+                        <% include upload-dropzone %>
+                    </div>
+                    <div class="tab-pane fade" id="pills-profile" role="tabpanel">
+                        <% if(pageData.serviceName==="html-to-pdf" ){ %>
+                            <% include html-convert-wrapper %>
+                    <%}%>      
+                    </div>
+                </div>
+        </div>
+        <script>
+            const displayMessage = new Notyf();
+            const translationToJs = {
+                lang: ejs.render("<%= translated.lang %>"),
+                serviceName: ejs.render("<%= pageData.serviceName %>"),
+                processingLabel: ejs.render("<%= pageData.processing %>"),
+                genericError: ejs.render("<%= translated.messages.genericError%>"),
+                compressFail: ejs.render("<%= translated.messages.compressFail%>"),
+                passwordIncorrect: ejs.render("<%= translated.messages.passwordIncorrect%>"),
+                invalidField: ejs.render("<%= translated.messages.invalidField%>"),
+                labelIdle: ejs.render("<%- translated.messages.labelIdle%>"),
+                mergeError: ejs.render("<%= translated.messages.mergeError%>"),
+                minimumFiles: ejs.render("<%= translated.messages.minimumFiles%>"),
+                alreadyVoted: ejs.render("<%= translated.rating.alreadyVoted%>"),
+                compressFail: ejs.render("<%= translated.messages.compressFail%>"),
+                errorEncrypted: ejs.render("<%= translated.messages.errorEncrypted%>"),
+                noFileSelected: ejs.render("<%= translated.messages.noFileSelected%>"),
+                urlNotRecognized: ejs.render("<%= translated.messages.urlNotRecognized%>"),
+                urlSecured: ejs.render("<%= translated.messages.urlSecured%>"),
+                passwordValid: ejs.render("<%= translated.messages.passwordValid%>"),
+                passwordBetween: ejs.render("<%= translated.messages.passwordBetween%>"),
+                fileAdded: ejs.render("<%= translated.messages.fileAdded%>"),
+                maximumSize: ejs.render("<%= translated.messages.maximumSize%>"),
+            }
+            const configurationByService = gorillaHelper.configurationByUrl(translationToJs.serviceName);
+
+            gorillaHelper.filePondSetup();
+
+            pond.on('addfile', (error, file) => {
+                if (error) {
+                    displayMessage.error(error.main);
+                    pond.removeFile(file);
+                    return;
+                }
+                const filesLength = pond.getFiles().length;;
+                gorillaHelper.genericAddFileBehaviour(filesLength);
+            });
+
+            pond.on('removefile', (error, file) => {
+                if (error) return;
+                const filesLength = pond.getFiles().length;;
+                gorillaHelper.genericRemoveFileBehaviour(filesLength);
+            });
+        </script>

@@ -1,0 +1,45 @@
+version: "3.9"
+
+services:
+  backend:
+    build:
+      context: ./gorillapdf-api
+      dockerfile: Dockerfile
+    container_name: gorillapdf-backend
+    restart: unless-stopped
+    ports:
+      - "7001:7001"
+    env_file:
+      - ./gorillapdf-api/.env
+    volumes:
+      - uploads:/app/public/uploads
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:7001/"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+  frontend:
+    build:
+      context: ./gorillapdf
+      dockerfile: Dockerfile
+    container_name: gorillapdf-frontend
+    restart: unless-stopped
+    ports:
+      - "5001:5001"
+    env_file:
+      - ./gorillapdf/.env
+    depends_on:
+      - backend
+    environment:
+      API_URL: "http://backend:7001"
+    volumes:
+      - uploads:/app/public/uploads
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5001/"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+volumes:
+  uploads:

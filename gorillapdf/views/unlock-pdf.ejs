@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<%var lang=root.lang %>
+<html lang="<%=lang%>">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title><%=root.services.unlockpdf.headTitle%> </title>
+    <meta name="description" content="<%=root.services.unlockpdf.metaTitle%>">
+    <link rel="canonical" href="<%=root.domain%><%=root.services.unlockpdf.url%>" />  
+    <link rel="alternate" hreflang="x-default" href="https://gorillapdf.com/unlock-pdf" />
+    <link rel="alternate" hreflang="en" href="https://gorillapdf.com/unlock-pdf" />
+    <link rel="alternate" hreflang="de" href="https://gorillapdf.com/de/pdf-entsperren" />
+    <link rel="alternate" hreflang="fr" href="https://gorillapdf.com/fr/deverrouiller-pdf" />
+    <link rel="alternate" hreflang="es" href="https://gorillapdf.com/es/desbloquear-pdf" />
+    <link rel="alternate" hreflang="pt" href="https://gorillapdf.com/pt/desbloquear-pdf" />
+    <link rel="alternate" hreflang="ja" href="https://gorillapdf.com/ja/unlock-pdf" />
+    <link rel="alternate" hreflang="it" href="https://gorillapdf.com/it/sblocca-pdf" />
+	<link rel="alternate" hreflang="ru" href="https://gorillapdf.com/ru/razblokirovat-pdf" />
+	<link rel="alternate" hreflang="mk" href="https://gorillapdf.com/mk/otkluchi-pdf" />
+	<link rel="alternate" hreflang="tr" href="https://gorillapdf.com/tr/pdf-sifre-kaldirma" />
+	<link rel="alternate" hreflang="uk" href="https://gorillapdf.com/uk/rozblokuvati-pdf" />
+	<link rel="alternate" hreflang="id" href="https://gorillapdf.com/id/buka-kunci-pdf" />
+	<link rel="alternate" hreflang="ms" href="https://gorillapdf.com/ms/buka-kunci-pdf" />
+	<link rel="alternate" hreflang="zh" href="https://gorillapdf.com/zh/unlock-pdf" />
+	<script type="application/ld+json">{"@context": "https://schema.org","@type": "WebApplication","name": "Unlock PDF","description": "Unlock your protect PDF files by simply entering the password. Our tool will remove the protection from your PDF document.","applicationCategory": "BusinessApplication","applicationSubCategory": "PDF Software","operatingSystem": "All","aggregateRating": {"@type": "AggregateRating","ratingValue": <%= pageData.ratingAverage %>,"ratingCount": <%= pageData.numberOfVotes %>},"offers": {"@type": "Offer","price": "0","priceCurrency": "USD"}}</script>
+    <% include partials/head %>
+</head>
+<body>
+    <% include partials/menu %>
+        <div class="container container-cards">
+            <% include partials/upload-section %>
+                <div class="row justify-content-center">
+                    <div class="col-sm-9 col-lg-6 col-xs-12">
+                        <% include partials/rating-section %>
+                        <% include partials/download-single-section %>
+                    </div>
+                </div>
+                <% include partials/ad-section %>
+        </div>
+        <div class="container blckprod">
+            <div class="row">
+                <div class="col-sm-12 headprod">
+                    <h2><%=root.services.unlockpdf.stepMainTitle%></h2>
+                </div>
+            </div>
+            <div class=row>
+                <div class="col-sm-4">
+                    <div class="htbox">
+                        <img src="<%=root.services.unlockpdf.step1ImgUrl%>" 
+                        alt="<%=root.services.unlockpdf.step1ImgAlt%>" />
+                        <h3 id="step1"><%=root.step1%></h3>
+                        <p><%=root.services.unlockpdf.step1Desc%></p>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="htbox">
+                        <img src="<%=root.services.unlockpdf.step2ImgUrl%>" 
+                        alt="<%=root.services.unlockpdf.step2ImgAlt%>" />
+                        <h3 id="step2"><%=root.step2%></h3>
+                        <p><%=root.services.unlockpdf.step2Desc%></p>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="htbox">
+                        <img src="<%=root.services.unlockpdf.step3ImgUrl%>"
+                         alt="<%=root.services.unlockpdf.step3ImgAlt%>" />
+                        <h3 id="step3"><%=root.step3%></h3>
+                        <p><%=root.services.unlockpdf.step3Desc%></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 headprod">
+                    <h2><%=root.services.unlockpdf.title2%></h2>
+                </div>
+            </div>
+            <div class="row whyuserow">
+                <div class="col-sm-6">
+                    <h3><%=root.services.unlockpdf.sTitle1%></h3>
+                    <p><%=root.services.unlockpdf.p1%></p>
+                    <p><%=root.services.unlockpdf.p2%></p>
+                    <p><%=root.services.unlockpdf.p3%></p>
+                </div>
+                <div class="col-sm-6 text-center">
+                    <img class="img-fluid" src="<%=root.services.unlockpdf.img2Url%>" 
+                    alt="<%=root.services.unlockpdf.img2Alt%>" />
+                </div>
+            </div>
+            <div class="row whyuserow">
+                <div class="col-sm-6 text-center">
+                    <img class="img-fluid" src="<%=root.services.unlockpdf.img3Url%>" 
+                    alt="<%=root.services.unlockpdf.img3Alt%>"  />
+                </div>
+                <div class="col-sm-6">
+                    <h3><%=root.services.unlockpdf.sTitle2%></h3>
+                    <p><%=root.services.unlockpdf.p4%></p>
+                    <p><%=root.services.unlockpdf.p5%></p>
+                </div>
+            </div>
+            <div class="row whyuserow">
+                <div class="col-sm-6">
+                    <h3><%=root.services.unlockpdf.sTitle3%></h3>
+                    <p><%=root.services.unlockpdf.p7%></p>
+                    <p><%=root.services.unlockpdf.p8%></p>
+                    <p><%=root.services.unlockpdf.p9%></p>
+               </div>
+                <div class="col-sm-6 text-center">
+                    <img class="img-fluid" src="<%=root.services.unlockpdf.img4Url%>"
+                     alt="<%=root.services.unlockpdf.img4Alt%>" />
+                </div>
+            </div>
+            <div class="row whyuserow">
+                <div class="col-sm-6 text-center">
+                    <img class="img-fluid" src="<%=root.services.unlockpdf.img5Url%>" 
+                    alt="<%=root.services.unlockpdf.img5Alt%>"  />
+                </div>
+                <div class="col-sm-6">
+                    <h3><%=root.services.unlockpdf.sTitle4%></h3>
+                    <p><%=root.services.unlockpdf.p10%></p>
+                    <p><%=root.services.unlockpdf.p11%></p>
+                    <p><%=root.services.unlockpdf.p12%></p>
+                </div>
+            </div>
+        </div>
+        <% include partials/footer %>
+        <script>window.addEventListener("load",gorillaHelper.onRaterLoad("#rater-step","form-rating","gorillapdf-decrypt-pdf",gorillaHelper.setCookieForPage("gorillapdf-decrypt-pdf"),365),!1);</script>
+</body>
+</html>
