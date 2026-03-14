@@ -1,0 +1,16 @@
+{
+  "apps": [
+    {
+      "name": "backend",
+      "script": "index.js",     
+      "watch": false,
+      "restart_delay": 1000
+    },
+    {
+      "name": "cleanup",
+      "script": "cleanup.js",
+      "cron_restart": "0 * * * *", 
+      "watch": false
+    }
+  ]
+}
