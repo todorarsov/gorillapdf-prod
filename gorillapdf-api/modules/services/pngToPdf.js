@@ -14,7 +14,7 @@ const convertWithOptions = (uploadedFiles, callback) => {
         const convertedDocFileName = `${shortid.generate()}${PNG_TO_PDF_FILENAME}`;
         doc.pipe(fs.createWriteStream(DEFAULT_FOLDER_PATH + convertedDocFileName));
         uploadedFileArrayWithPath.forEach(function(element, idx, array) {
-			doc.image(element, 15, 15, {width: 570})
+            doc.image(element, 15, 15, { width: 570, height: 770 });
             if (idx === array.length - 1) {} else doc.addPage();
         });
         doc.save();

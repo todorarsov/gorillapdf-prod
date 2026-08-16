@@ -2,75 +2,161 @@
 
 const fs = require('fs');
 const path = require('path');
-const async = require('async');
 const tmp = require('tmp');
 const { execFile } = require('child_process');
+const { pathToFileURL } = require('url');
+
+const SOFFICE_PATHS = {
+    darwin: ['/Applications/LibreOffice.app/Contents/MacOS/soffice'],
+    linux: ['/usr/bin/libreoffice', '/usr/bin/soffice'],
+    win32: [
+        path.join(process.env['PROGRAMFILES(X86)'] || '', 'LIBREO~1/program/soffice.exe'),
+        path.join(process.env['PROGRAMFILES(X86)'] || '', 'LibreOffice/program/soffice.exe'),
+        path.join(process.env.PROGRAMFILES || '', 'LibreOffice/program/soffice.exe'),
+    ]
+};
+
+function findSoffice() {
+    const paths = SOFFICE_PATHS[process.platform];
+
+    if (!paths) {
+        throw new Error(`Operating system not yet supported: ${process.platform}`);
+    }
+
+    const soffice = paths.find((filePath) => filePath && fs.existsSync(filePath));
+
+    if (!soffice) {
+        throw new Error('Could not find soffice binary');
+    }
+
+    return soffice;
+}
+
+function safeSourceName(sourceName, format) {
+    const fallback = `source.${format === 'pdf' ? 'docx' : 'bin'}`;
+    const baseName = path.basename(sourceName || fallback).replace(/[^\w.\-() ]+/g, '_');
+    const withName = baseName || fallback;
+
+    return path.extname(withName) ? withName : `${withName}.bin`;
+}
+
+function readConvertedFile(tempDir, sourceName, format, callback) {
+    const expectedPath = path.join(tempDir, `${path.parse(sourceName).name}.${format}`);
+
+    fs.readFile(expectedPath, (expectedError, buffer) => {
+        if (!expectedError) {
+            callback(null, buffer);
+            return;
+        }
+
+        fs.readdir(tempDir, (listError, files) => {
+            if (listError) {
+                callback(expectedError);
+                return;
+            }
+
+            const convertedName = files.find((file) => file.toLowerCase().endsWith(`.${format.toLowerCase()}`));
+
+            if (!convertedName) {
+                callback(expectedError);
+                return;
+            }
+
+            fs.readFile(path.join(tempDir, convertedName), callback);
+        });
+    });
+}
 
 const convertWithOptions = (document, format, filter, options, callback) => {
     const tmpOptions = (options || {}).tmpOptions || {};
     const asyncOptions = (options || {}).asyncOptions || {};
-    const tempDir = tmp.dirSync({prefix: 'libreofficeConvert_', unsafeCleanup: true, ...tmpOptions});
-    const installDir = tmp.dirSync({prefix: 'soffice', unsafeCleanup: true, ...tmpOptions});
-    return async.auto({
-        soffice: (callback) => {
-            let paths = [];
-            switch (process.platform) {
-                case 'darwin': paths = ['/Applications/LibreOffice.app/Contents/MacOS/soffice'];
-                    break;
-                case 'linux': paths = ['/usr/bin/libreoffice', '/usr/bin/soffice'];
-                    break;
-                case 'win32': paths = [
-                    path.join(process.env['PROGRAMFILES(X86)'], 'LIBREO~1/program/soffice.exe'),
-                    path.join(process.env['PROGRAMFILES(X86)'], 'LibreOffice/program/soffice.exe'),
-                    path.join(process.env.PROGRAMFILES, 'LibreOffice/program/soffice.exe'),
-                ];
-                    break;
-                default:
-                    return callback(new Error(`Operating system not yet supported: ${process.platform}`));
+    const execOptions = (options || {}).execOptions || {};
+    const tempDir = tmp.dirSync({ prefix: 'libreofficeConvert_', unsafeCleanup: true, ...tmpOptions });
+    const profileDir = tmp.dirSync({ prefix: 'libreofficeProfile_', unsafeCleanup: true, ...tmpOptions });
+    const sourceName = safeSourceName((options || {}).sourceName, format);
+    const sourcePath = path.join(tempDir.name, sourceName);
+
+    try {
+        const soffice = findSoffice();
+
+        fs.writeFile(sourcePath, document, (writeError) => {
+            if (writeError) {
+                tempDir.removeCallback();
+                profileDir.removeCallback();
+                callback(writeError);
+                return;
             }
 
-            return async.filter(
-                paths,
-                (filePath, callback) => fs.access(filePath, err => callback(null, !err)),
-                (err, res) => {
-                    if (res.length === 0) {
-                        return callback(new Error('Could not find soffice binary'));
-                    }
+            const outputFormat = filter ? `${format}:${filter}` : format;
+            const userInstallation = pathToFileURL(profileDir.name).href;
+            const args = [
+                '--headless',
+                '--nologo',
+                '--nofirststartwizard',
+                '--nolockcheck',
+                '--nodefault',
+                `-env:UserInstallation=${userInstallation}`,
+                '--convert-to',
+                outputFormat,
+                '--outdir',
+                tempDir.name,
+                sourcePath
+            ];
 
-                    return callback(null, res[0]);
+            execFile(soffice, args, {
+                timeout: execOptions.timeout || 120000,
+                maxBuffer: execOptions.maxBuffer || 1024 * 1024 * 10,
+                env: {
+                    ...process.env,
+                    HOME: profileDir.name
                 }
-            );
-        },
-        saveSource: callback => fs.writeFile(path.join(tempDir.name, 'source'), document, callback),
-        convert: ['soffice', 'saveSource', (results, callback) => {
-            let command = `${results.soffice}  --headless --convert-to ${format}`;
-            if (filter !== undefined) {
-                command += `:"${filter}"`;
-            }
-            command += ` --outdir ${tempDir.name} ${path.join(tempDir.name, 'source')}`;
-            const args = command.split(' ');
-            return execFile(results.soffice, args, callback);
-        }],
-        loadDestination: ['convert', (results, callback) =>
-            async.retry({
-                times: asyncOptions.times || 3,
-                interval: asyncOptions.interval || 200
-            }, (callback) => fs.readFile(path.join(tempDir.name, `source.${format}`), callback), callback)
-        ]
-    }, (err, res) => {
+            }, (convertError, stdout, stderr) => {
+                if (convertError) {
+                    tempDir.removeCallback();
+                    profileDir.removeCallback();
+                    convertError.message = `${convertError.message}\nstdout: ${stdout}\nstderr: ${stderr}`;
+                    callback(convertError);
+                    return;
+                }
+
+                let attempts = 0;
+                const maxAttempts = asyncOptions.times || 10;
+                const interval = asyncOptions.interval || 250;
+
+                const load = () => {
+                    attempts += 1;
+                    readConvertedFile(tempDir.name, sourceName, format, (readError, buffer) => {
+                        if (!readError) {
+                            tempDir.removeCallback();
+                            profileDir.removeCallback();
+                            callback(null, buffer);
+                            return;
+                        }
+
+                        if (attempts >= maxAttempts) {
+                            tempDir.removeCallback();
+                            profileDir.removeCallback();
+                            readError.message = `${readError.message}\nstdout: ${stdout}\nstderr: ${stderr}`;
+                            callback(readError);
+                            return;
+                        }
+
+                        setTimeout(load, interval);
+                    });
+                };
+
+                load();
+            });
+        });
+    } catch (error) {
         tempDir.removeCallback();
-        installDir.removeCallback();
-
-        if (err) {
-            return callback(err);
-        }
-
-        return callback(null, res.loadDestination);
-    });
+        profileDir.removeCallback();
+        callback(error);
+    }
 };
 
 const convert = (document, format, filter, callback) => {
-    return convertWithOptions(document, format, filter, {}, callback)
+    return convertWithOptions(document, format, filter, {}, callback);
 };
 
 module.exports = {

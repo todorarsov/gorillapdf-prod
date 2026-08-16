@@ -20,7 +20,7 @@ router.post('/excel-to-pdf', upload.single('fileToBeProcessed'), (req, res) => {
         if(req.file.mimetype === "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" || 
         req.file.mimetype === "application/vnd.ms-excel" || 
         req.file.mimetype === "application/vnd.ms-excel.sheet.binary.macroEnabled.12" || req.file.mimetype === "application/vnd.oasis.opendocument.spreadsheet" 
-        || req.file.mimeType==="application/octet-stream") {
+        || req.file.mimetype==="application/octet-stream") {
             officeToPdf.convert(req.file, callback => {
                 callback.error ? res.json({ error: callback.error }) : 
                 res.json({ downloadUrl: `${apiHost}${callback.downloadUrl}` })
