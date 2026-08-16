@@ -20,7 +20,7 @@ router.post('/odp-to-pdf', upload.single('fileToBeProcessed'), (req, res) =>
     try{
         if(req.file.mimetype === "application/vnd.ms-powerpoint" || req.file.mimetype === "application/vnd.openxmlformats-officedocument.presentationml.presentation" 
         || req.file.mimetype === "application/vnd.openxmlformats-officedocument.presentationml.template" || req.file.mimetype === "application/vnd.openxmlformats-officedocument.presentationml.slideshow" 
-        || req.file.mimetype === "application/vnd.oasis.opendocument.presentation" || req.file.mimeType==="application/octet-stream") {
+        || req.file.mimetype === "application/vnd.oasis.opendocument.presentation" || req.file.mimetype==="application/octet-stream") {
         officeToPdf.convert(req.file, callback => {
             callback.error ? res.json({ error: callback.error }) : 
             res.json({ downloadUrl: `${apiHost}${callback.downloadUrl}` })

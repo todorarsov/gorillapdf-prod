@@ -4,7 +4,7 @@ FROM node:20.17.0-bullseye AS backend-builder
 # Set working directory
 WORKDIR /usr/src/app
 
-# Install system dependencies including LibreOffice, Ghostscript, Tesseract
+# Install system dependencies including LibreOffice, Ghostscript, Tesseract, and xvfb
 RUN apt-get update && apt-get install -y \
     python3 \
     python3-pip \
@@ -56,6 +56,9 @@ ENV PORT=7001
 
 # Expose backend port
 EXPOSE 7001
+
+# Make sure xvfb-run is available in PATH (already comes with xvfb)
+RUN which xvfb-run
 
 # Start backend and cleanup via PM2 in foreground (Docker-friendly)
 CMD ["pm2-runtime", "processes.json"]
